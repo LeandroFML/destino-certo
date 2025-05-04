@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino Certo - Turismo Acessível para Todos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <div class="logo-text">DestinoCerto</div>
+                    <span class="logo-badge">Acessibilidade</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <a href="#destinations" class="nav-link">Destinos Acessíveis</a>
+                <a href="#accessibility-guide" class="nav-link">Guia de Mobilidade</a>
+                <a href="#project-info" class="nav-link">Sobre o Projeto</a>
+            </nav>
+
+            <div class="user-actions">
+                <button class="language-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span>Português (BR)</span>
+                </button>
+
+                <div class="user-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <div class="user-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="img/Design sem nome.png" alt="Destino Certo - Encontre destinos acessíveis para todos">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Turismo Acessível para Todos</h1>
+                <p>Encontre destinos com acessibilidade e mobilidade para uma experiência inclusiva</p>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="container search-container">
+            <div class="search-bar">
+                <div class="search-field location-field">
+                    <label>Localização</label>
+                    <div class="input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <input type="text" id="location-input" placeholder="Para onde você vai?">
+                    </div>
+                </div>
+
+                <div class="search-field date-field">
+                    <label>Datas</label>
+                    <div class="input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <input type="text" id="date-input" placeholder="Adicione datas">
+                    </div>
+                </div>
+
+                <div class="search-field accessibility-field">
+                    <label>Necessidades</label>
+                    <div class="input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="10" r="3"></circle>
+                            <path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path>
+                        </svg>
+                        <select id="accessibility-select">
+                            <option value="">Selecione o tipo de acessibilidade</option>
+                            <option value="Cadeira de rodas">Cadeira de rodas</option>
+                            <option value="Rampas">Rampas de Acesso</option>
+                            <option value="Elevadores">Elevadores</option>
+                            <option value="Banheiros">Banheiros Adaptados</option>
+                            <option value="Piso Tátil">Piso Tátil</option>
+                        </select>
+                        <button class="search-button" id="search-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessibility Filters -->
+    <section class="container section">
+        <div class="section-header">
+            <h2>Filtrar por Acessibilidade</h2>
+            <button class="more-filters-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                Mais filtros
+            </button>
+        </div>
+
+        <div class="filters-grid" id="accessibility-filters">
+            <!-- Filtros serão inseridos via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Featured Accessible Destinations -->
+    <section id="destinations" class="container section">
+        <div class="section-header">
+            <h2 id="destinations-title">Destinos com Acessibilidade</h2>
+            <button class="view-all-button" id="clear-filters-button">Ver todos</button>
+        </div>
+
+        <div id="search-results-container">
+            <!-- Mensagem de nenhum resultado (inicialmente oculta) -->
+            <div id="no-results" class="no-results hidden">
+                <div class="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </div>
+                <h3>Nenhum resultado encontrado</h3>
+                <p>Não encontramos destinos que correspondam aos seus critérios de pesquisa.</p>
+                <button class="clear-button" id="clear-filters-button-alt">Limpar filtros</button>
+            </div>
+
+            <!-- Grid de destinos -->
+            <div class="destinations-grid" id="destinations-grid">
+                <!-- Destinos serão inseridos via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section class="nearby-section">
+        <div class="container">
+            <h2>Atrações Próximas para Visitar</h2>
+
+            <div class="attractions-grid" id="attractions-grid">
+                <!-- Atrações serão inseridas via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessibility Guide -->
+    <section id="accessibility-guide" class="container section">
+        <div class="guide-card">
+            <div class="guide-content">
+                <h2>Guia de Mobilidade e Acessibilidade</h2>
+                <p>
+                    Nosso guia completo ajuda você a entender os diferentes tipos de acessibilidade disponíveis em destinos
+                    turísticos, permitindo planejar sua viagem com confiança e segurança.
+                </p>
+
+                <div class="guide-features">
+                    <div class="guide-feature">
+                        <div class="feature-icon wheelchair-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="10" r="3"></circle>
+                                <path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Acessibilidade para Cadeirantes</h3>
+                            <p>Informações sobre rampas, elevadores e espaços adaptados.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-feature">
+                        <div class="feature-icon info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Informações Acessíveis</h3>
+                            <p>Recursos para deficiência visual e auditiva em atrações turísticas.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-feature">
+                        <div class="feature-icon assistance-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Serviços de Assistência</h3>
+                            <p>Guias especializados e serviços de apoio para viajantes com necessidades especiais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="download-button" id="guide-download-button">Baixar Guia Completo</button>
+            </div>
+
+            <div class="guide-image">
+                <img src="https://via.placeholder.com/800x600" alt="Guia de Acessibilidade">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Info -->
+    <section id="project-info" class="project-info-section">
+        <div class="container text-center">
+            <h2>Sobre o Projeto</h2>
+            <p>
+                Este projeto foi desenvolvido por estudantes do curso de programação para a feira do curso, com o objetivo
+                de promover a mobilidade e acessibilidade no turismo.
+            </p>
+            <div class="project-buttons">
+                <button class="white-button" id="team-button">Conheça a Equipe</button>
+                <button class="outline-button" id="more-info-button">Saiba Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Projeto</h3>
+                    <ul>
+                        <li><button class="footer-link" data-scroll-to="project-info">Sobre Nós</button></li>
+                        <li><button class="footer-link" id="mission-button">Nossa Missão</button></li>
+                        <li><button class="footer-link" id="team-button-alt">Equipe</button></li>
+                        <li><button class="footer-link">Contato</button></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><button class="footer-link" id="guide-button">Guia de Acessibilidade</button></li>
+                        <li><button class="footer-link" id="certifications-button">Certificações</button></li>
+                        <li><button class="footer-link" id="partners-button">Parceiros</button></li>
+                        <li><button class="footer-link" id="reviews-button">Avaliações</button></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinos</h3>
+                    <ul>
+                        <li><button class="footer-link" id="beaches-button">Praias Acessíveis</button></li>
+                        <li><button class="footer-link" id="parks-button">Parques Nacionais</button></li>
+                        <li><button class="footer-link" id="cities-button">Cidades Históricas</button></li>
+                        <li><button class="footer-link">Roteiros Adaptados</button></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Feira do Curso</h3>
+                    <ul>
+                        <li><button class="footer-link" id="programming-button">Programação</button></li>
+                        <li><button class="footer-link" id="other-projects-button">Outros Projetos</button></li>
+                        <li><button class="footer-link">Instituição</button></li>
+                        <li><button class="footer-link">Apoiadores</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>© 2023 Destino Certo - Projeto Acadêmico</p>
+                    <span class="separator">·</span>
+                    <button class="footer-link" id="privacy-button">Privacidade</button>
+                    <span class="separator">·</span>
+                    <button class="footer-link" id="terms-button">Termos</button>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modais -->
+    <div class="modal" id="destination-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-destination-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body" id="destination-modal-content">
+                <!-- Conteúdo do modal será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="guide-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-guide-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h2>Guia de Mobilidade e Acessibilidade</h2>
+                <p>
+                    Nosso guia completo contém informações detalhadas sobre acessibilidade em destinos turísticos,
+                    incluindo:
+                </p>
+                <ul>
+                    <li>Símbolos internacionais de acessibilidade</li>
+                    <li>Direitos das pessoas com deficiência em viagens</li>
+                    <li>Checklist para planejar uma viagem acessível</li>
+                    <li>Dicas para diferentes tipos de necessidades</li>
+                    <li>Contatos de emergência e suporte</li>
+                </ul>
+                <div class="info-box">
+                    <p>
+                        Em um cenário real, este botão permitiria o download de um PDF completo com o guia de acessibilidade.
+                        Para fins de demonstração, estamos simulando esta funcionalidade.
+                    </p>
+                </div>
+                <div class="modal-buttons">
+                    <button class="primary-button" id="download-guide-button">Baixar Guia (PDF)</button>
+                    <button class="secondary-button" id="close-guide-modal-btn">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="team-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-team-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h2>Nossa Equipe</h2>
+                <p>
+                    Este projeto foi desenvolvido por estudantes do curso de programação como parte do trabalho para a
+                    feira do curso, com foco no tema de mobilidade.
+                </p>
+                <div class="team-grid">
+                    <!-- Membros da equipe serão inseridos via JavaScript -->
+                </div>
+                <div class="info-box">
+                    <p>
+                        Este projeto foi desenvolvido como parte do trabalho acadêmico para a feira do curso de programação,
+                        com o objetivo de demonstrar como a tecnologia pode ser usada para promover a acessibilidade e
+                        mobilidade no turismo.
+                    </p>
+                </div>
+                <button class="secondary-button" id="close-team-modal-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="privacy-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-privacy-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h2>Política de Privacidade</h2>
+                <p>
+                    O Destino Certo está comprometido com a proteção da sua privacidade. Esta política explica como
+                    coletamos e usamos seus dados:
+                </p>
+                <ul>
+                    <li>Coletamos apenas informações necessárias para melhorar sua experiência</li>
+                    <li>Não compartilhamos seus dados com terceiros sem seu consentimento</li>
+                    <li>Utilizamos cookies para personalizar sua experiência no site</li>
+                    <li>Você pode solicitar a exclusão dos seus dados a qualquer momento</li>
+                </ul>
+                <button class="secondary-button" id="close-privacy-modal-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="terms-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-terms-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h2>Termos de Uso</h2>
+                <p>
+                    Ao utilizar o Destino Certo, você concorda com os seguintes termos:
+                </p>
+                <ul>
+                    <li>Este é um projeto acadêmico desenvolvido para fins educacionais</li>
+                    <li>As informações fornecidas são apenas para demonstração</li>
+                    <li>Não nos responsabilizamos por decisões tomadas com base nas informações do site</li>
+                    <li>Não é permitido copiar ou distribuir o conteúdo sem autorização</li>
+                </ul>
+                <button class="secondary-button" id="close-terms-modal-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="programming-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-programming-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h2>Programação da Feira do Curso</h2>
+                <div class="schedule-day">
+                    <h3>Dia 1 - Abertura</h3>
+                    <ul class="schedule-list">
+                        <li>
+                            <span>09:00 - Cerimônia de Abertura</span>
+                            <span class="venue">Auditório Principal</span>
+                        </li>
+                        <li>
+                            <span>10:30 - Apresentação dos Projetos</span>
+                            <span class="venue">Sala 101</span>
+                        </li>
+                        <li>
+                            <span>14:00 - Palestra: Tecnologia e Acessibilidade</span>
+                            <span class="venue">Auditório Principal</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="schedule-day">
+                    <h3>Dia 2 - Demonstrações</h3>
+                    <ul class="schedule-list">
+                        <li>
+                            <span>09:00 - Demonstração: Destino Certo</span>
+                            <span class="venue">Estande 5</span>
+                        </li>
+                        <li>
+                            <span>11:00 - Workshop: Desenvolvimento Web</span>
+                            <span class="venue">Laboratório 3</span>
+                        </li>
+                        <li>
+                            <span>15:00 - Painel: Futuro da Programação</span>
+                            <span class="venue">Auditório Principal</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="secondary-button" id="close-programming-modal-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="partners-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-partners-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h2>Nossos Parceiros</h2>
+                <p>
+                    Agradecemos às instituições e empresas que apoiam nosso projeto de turismo acessível:
+                </p>
+                <div class="partners-grid" id="partners-grid">
+                    <!-- Parceiros serão inseridos via JavaScript -->
+                </div>
+                <button class="secondary-button" id="close-partners-modal-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
