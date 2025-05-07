@@ -27,12 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ]
 
-  const accessibleDestinations = [
+  const accommodations = [
     {
-      name: "Praia do Forte, Bahia",
+      name: "Pousada Brisa do Mar",
       image: "https://via.placeholder.com/400x300",
       rating: "4.8",
-      description: "Praia com esteiras especiais para cadeirantes e estrutura completa de acessibilidade.",
+      price: 350,
+      description: "Pousada à beira-mar com quartos adaptados e vista deslumbrante para o oceano.",
+      details: {
+        rooms: 2,
+        bathrooms: 1,
+        capacity: 4,
+      },
+      location: "Praia do Forte, Bahia",
       accessibilityFeatures: [
         {
           name: "Rampas de Acesso",
@@ -47,15 +54,139 @@ document.addEventListener("DOMContentLoaded", () => {
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 16h16"></path></svg>`,
         },
       ],
+      nearbyAttractions: ["Projeto TAMAR", "Mercado de Artesanato", "Reserva Natural"],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "15/06/2023",
+          activities: [
+            {
+              time: "09:00",
+              title: "Check-in",
+              description: "Recepção com equipe especializada em acessibilidade.",
+            },
+            {
+              time: "12:00",
+              title: "Almoço no Restaurante da Pousada",
+              description: "Cardápio com opções para dietas especiais.",
+            },
+            {
+              time: "15:00",
+              title: "Visita ao Projeto TAMAR",
+              description: "Atração totalmente acessível com trilhas adaptadas.",
+            },
+          ],
+        },
+        {
+          day: "Dia 2",
+          date: "16/06/2023",
+          activities: [
+            {
+              time: "08:00",
+              title: "Café da manhã",
+              description: "Buffet variado com atendimento personalizado.",
+            },
+            {
+              time: "10:00",
+              title: "Passeio pela praia",
+              description: "Cadeiras anfíbias disponíveis mediante agendamento.",
+            },
+            {
+              time: "14:00",
+              title: "Tour pelo Mercado de Artesanato",
+              description: "Local com acessibilidade completa e guias especializados.",
+            },
+          ],
+        },
+      ],
     },
     {
-      name: "Parque Ibirapuera, São Paulo",
+      name: "Hotel Central Park",
       image: "https://via.placeholder.com/400x300",
-      rating: "4.9",
-      description: "Parque urbano com trilhas acessíveis, banheiros adaptados e playground inclusivo.",
+      rating: "4.7",
+      price: 520,
+      description: "Hotel no coração da cidade com excelente infraestrutura para pessoas com mobilidade reduzida.",
+      details: {
+        rooms: 3,
+        bathrooms: 2,
+        capacity: 6,
+      },
+      location: "São Paulo, SP",
       accessibilityFeatures: [
         {
-          name: "Trilhas Acessíveis",
+          name: "Elevadores",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
+        },
+        {
+          name: "Banheiros Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+        },
+        {
+          name: "Piso Tátil",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
+        },
+      ],
+      nearbyAttractions: ["Parque Ibirapuera", "Museu de Arte", "Shopping Center"],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "20/07/2023",
+          activities: [
+            {
+              time: "14:00",
+              title: "Check-in",
+              description: "Recepção com equipe especializada e assistência personalizada.",
+            },
+            {
+              time: "16:00",
+              title: "Tour pelo hotel",
+              description: "Apresentação das instalações e recursos de acessibilidade.",
+            },
+            {
+              time: "19:00",
+              title: "Jantar no restaurante do hotel",
+              description: "Cardápio com opções para diversas restrições alimentares.",
+            },
+          ],
+        },
+        {
+          day: "Dia 2",
+          date: "21/07/2023",
+          activities: [
+            {
+              time: "09:00",
+              title: "Visita ao Parque Ibirapuera",
+              description: "Transporte adaptado e guia especializado disponíveis.",
+            },
+            {
+              time: "13:00",
+              title: "Almoço em restaurante parceiro",
+              description: "Local totalmente acessível próximo ao parque.",
+            },
+            {
+              time: "15:00",
+              title: "Visita ao Museu de Arte",
+              description: "Museu com instalações acessíveis e exposições táteis.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Pousada Montanha Verde",
+      image: "https://via.placeholder.com/400x300",
+      rating: "4.6",
+      price: 280,
+      description: "Pousada em meio à natureza com chalés adaptados e trilhas acessíveis.",
+      details: {
+        rooms: 1,
+        bathrooms: 1,
+        capacity: 2,
+      },
+      location: "Campos do Jordão, SP",
+      accessibilityFeatures: [
+        {
+          name: "Rampas de Acesso",
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
         },
         {
@@ -63,39 +194,141 @@ document.addEventListener("DOMContentLoaded", () => {
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
         },
         {
-          name: "Playground Inclusivo",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M9 16h.01M15 16h.01M9 14a3 3 0 100-6 3 3 0 000 6zM15 14a3 3 0 100-6 3 3 0 000 6z"></path></svg>`,
+          name: "Estacionamento",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
+        },
+      ],
+      nearbyAttractions: ["Parque Amantikir", "Teleférico", "Centro Histórico"],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "10/08/2023",
+          activities: [
+            {
+              time: "12:00",
+              title: "Check-in",
+              description: "Recepção com assistência personalizada para hospedagem.",
+            },
+            {
+              time: "15:00",
+              title: "Passeio pelo jardim da pousada",
+              description: "Caminhos adaptados com belas paisagens naturais.",
+            },
+            {
+              time: "18:00",
+              title: "Jantar especial",
+              description: "Gastronomia típica da montanha com opções para dietas especiais.",
+            },
+          ],
+        },
+        {
+          day: "Dia 2",
+          date: "11/08/2023",
+          activities: [
+            {
+              time: "09:30",
+              title: "Visita ao Parque Amantikir",
+              description: "Jardins com caminhos acessíveis e belezas naturais.",
+            },
+            {
+              time: "14:00",
+              title: "Passeio de teleférico",
+              description: "Cabines adaptadas para cadeiras de rodas com vista panorâmica.",
+            },
+            {
+              time: "17:00",
+              title: "Tour pelo Centro Histórico",
+              description: "Visita guiada com informações sobre a história local.",
+            },
+          ],
         },
       ],
     },
     {
-      name: "Museu do Amanhã, Rio de Janeiro",
+      name: "Resort Sol Nascente",
       image: "https://via.placeholder.com/400x300",
-      rating: "4.7",
-      description: "Museu totalmente acessível com audiodescrição, piso tátil e intérpretes de libras.",
+      rating: "4.9",
+      price: 890,
+      description: "Resort all-inclusive com infraestrutura completa de acessibilidade e atividades adaptadas.",
+      details: {
+        rooms: 2,
+        bathrooms: 2,
+        capacity: 5,
+      },
+      location: "Porto de Galinhas, PE",
       accessibilityFeatures: [
+        {
+          name: "Rampas de Acesso",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+        },
         {
           name: "Elevadores",
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
         },
         {
-          name: "Audiodescrição",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 010-7.072m12.728 0l-3.536 3.536m-3.536 3.536L7.758 8.464"></path></svg>`,
+          name: "Banheiros Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
         },
         {
-          name: "Piso Tátil",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
+          name: "Piscina Acessível",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M7 21l4-9"></path><path d="M17 21l-4-9"></path><path d="M2 6h4c2 0 4 1.1 4 4"></path><path d="M22 6h-4c-2 0-4 1.1-4 4"></path></svg>`,
+        },
+      ],
+      nearbyAttractions: ["Praia de Porto de Galinhas", "Passeio de Jangada", "Recife Antigo"],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "05/09/2023",
+          activities: [
+            {
+              time: "11:00",
+              title: "Check-in",
+              description: "Recepção VIP com bebida de boas-vindas e assistência personalizada.",
+            },
+            {
+              time: "13:00",
+              title: "Almoço no restaurante principal",
+              description: "Buffet internacional com estações de serviço adaptadas.",
+            },
+            {
+              time: "16:00",
+              title: "Atividades na piscina",
+              description: "Piscina com rampa de acesso e cadeira elevadora.",
+            },
+          ],
+        },
+        {
+          day: "Dia 2",
+          date: "06/09/2023",
+          activities: [
+            {
+              time: "08:00",
+              title: "Café da manhã",
+              description: "Buffet variado com opções para todos os tipos de dietas.",
+            },
+            {
+              time: "10:00",
+              title: "Passeio à Praia",
+              description: "Esteiras na areia e cadeiras anfíbias disponíveis.",
+            },
+            {
+              time: "15:00",
+              title: "Passeio de jangada adaptado",
+              description: "Embarcação especial com acessibilidade para cadeirantes.",
+            },
+          ],
         },
       ],
     },
   ]
 
-  const nearbyAttractions = [
+  const attractions = [
     {
       name: "Projeto TAMAR",
       image: "https://via.placeholder.com/300x200",
       distance: "2 km da Praia do Forte",
       description: "Centro de conservação de tartarugas marinhas com estrutura acessível para visitantes.",
+      price: 45,
       accessibilityFeatures: [
         {
           name: "Rampas",
@@ -106,54 +339,77 @@ document.addEventListener("DOMContentLoaded", () => {
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
         },
       ],
+      details: {
+        duration: "2-3 horas",
+        bestTime: "Manhã ou fim de tarde",
+        services: "Guias especializados, Cadeiras de rodas disponíveis",
+      },
     },
     {
-      name: "Mercado Municipal",
+      name: "Parque Ibirapuera",
       image: "https://via.placeholder.com/300x200",
-      distance: "1,5 km do Parque Ibirapuera",
-      description: "Mercado tradicional com corredores amplos e elevadores para acesso aos mezaninos.",
-      accessibilityFeatures: [
-        {
-          name: "Elevadores",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-        },
-        {
-          name: "Corredores Amplos",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 16h16"></path></svg>`,
-        },
-      ],
-    },
-    {
-      name: "Pão de Açúcar",
-      image: "https://via.placeholder.com/300x200",
-      distance: "3 km do Museu do Amanhã",
-      description: "Ponto turístico com bondinho acessível e mirantes adaptados para cadeirantes.",
-      accessibilityFeatures: [
-        {
-          name: "Bondinho Acessível",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>`,
-        },
-        {
-          name: "Mirantes Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-      ],
-    },
-    {
-      name: "Jardim Botânico",
-      image: "https://via.placeholder.com/300x200",
-      distance: "4 km do Museu do Amanhã",
-      description: "Jardim com trilhas acessíveis e placas em braile para identificação das espécies.",
+      distance: "1,5 km do Hotel Central Park",
+      description: "Maior parque urbano de São Paulo com trilhas acessíveis e atividades inclusivas.",
+      price: 0,
       accessibilityFeatures: [
         {
           name: "Trilhas Acessíveis",
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
         },
         {
-          name: "Placas em Braile",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
+          name: "Banheiros Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
         },
       ],
+      details: {
+        duration: "Meio dia a dia inteiro",
+        bestTime: "Manhã (dias de semana)",
+        services: "Empréstimo de cadeiras de rodas, mapas táteis, bicicletário adaptado",
+      },
+    },
+    {
+      name: "Teleférico de Campos do Jordão",
+      image: "https://via.placeholder.com/300x200",
+      distance: "3 km da Pousada Montanha Verde",
+      description: "Passeio panorâmico com cabines adaptadas e vista para toda a cidade.",
+      price: 80,
+      accessibilityFeatures: [
+        {
+          name: "Cabines Adaptadas",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>`,
+        },
+        {
+          name: "Rampas de Acesso",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+        },
+      ],
+      details: {
+        duration: "1 hora",
+        bestTime: "Final da tarde para o pôr do sol",
+        services: "Assistentes para embarque, descontos para PCDs",
+      },
+    },
+    {
+      name: "Passeio de Jangada nas Piscinas Naturais",
+      image: "https://via.placeholder.com/300x200",
+      distance: "4 km do Resort Sol Nascente",
+      description: "Passeio em jangadas adaptadas para conhecer as famosas piscinas naturais.",
+      price: 95,
+      accessibilityFeatures: [
+        {
+          name: "Jangadas Adaptadas",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M7 21l4-9"></path><path d="M17 21l-4-9"></path><path d="M2 6h4c2 0 4 1.1 4 4"></path><path d="M22 6h-4c-2 0-4 1.1-4 4"></path></svg>`,
+        },
+        {
+          name: "Coletes Especiais",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"></path></svg>`,
+        },
+      ],
+      details: {
+        duration: "3-4 horas",
+        bestTime: "Maré baixa - consultar horários",
+        services: "Equipe treinada para assistência, equipamentos adaptados",
+      },
     },
   ]
 
@@ -161,9 +417,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const state = {
     searchLocation: "",
     searchDate: "",
-    selectedAccessibility: "",
+    selectedPrice: "",
+    priceRange: 500,
     activeFilters: [],
-    filteredDestinations: [...accessibleDestinations],
+    filteredAccommodations: [...accommodations],
     showSearchResults: false,
     modalContent: null,
   }
@@ -197,24 +454,24 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Renderizar destinos
-  function renderDestinations() {
-    const destinationsGrid = document.getElementById("destinations-grid")
+  // Renderizar hospedagens
+  function renderAccommodations() {
+    const accommodationsGrid = document.getElementById("accommodations-grid")
     const noResults = document.getElementById("no-results")
 
-    if (state.filteredDestinations.length === 0 && state.showSearchResults) {
-      destinationsGrid.innerHTML = ""
+    if (state.filteredAccommodations.length === 0 && state.showSearchResults) {
+      accommodationsGrid.innerHTML = ""
       noResults.classList.remove("hidden")
     } else {
       noResults.classList.add("hidden")
-      destinationsGrid.innerHTML = ""
+      accommodationsGrid.innerHTML = ""
 
-      state.filteredDestinations.forEach((destination) => {
-        const destinationCard = document.createElement("div")
-        destinationCard.className = "destination-card"
+      state.filteredAccommodations.forEach((accommodation) => {
+        const accommodationCard = document.createElement("div")
+        accommodationCard.className = "accommodation-card"
 
         let accessibilityIconsHTML = ""
-        destination.accessibilityFeatures.forEach((feature) => {
+        accommodation.accessibilityFeatures.forEach((feature) => {
           accessibilityIconsHTML += `
                         <div class="accessibility-icon" title="${feature.name}">
                             ${feature.icon}
@@ -223,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         let featuresHTML = ""
-        destination.accessibilityFeatures.forEach((feature) => {
+        accommodation.accessibilityFeatures.forEach((feature) => {
           featuresHTML += `
                         <span class="feature-tag">
                             ${feature.icon}
@@ -232,51 +489,82 @@ document.addEventListener("DOMContentLoaded", () => {
                     `
         })
 
-        destinationCard.innerHTML = `
-                    <div class="destination-image">
-                        <img src="${destination.image}" alt="${destination.name}">
+        accommodationCard.innerHTML = `
+                    <div class="accommodation-image">
+                        <img src="${accommodation.image}" alt="${accommodation.name}">
                         <div class="accessibility-icons">
                             ${accessibilityIconsHTML}
                         </div>
                     </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-name">${destination.name}</h3>
-                            <div class="destination-rating">
+                    <div class="accommodation-content">
+                        <div class="accommodation-header">
+                            <h3 class="accommodation-name">${accommodation.name}</h3>
+                            <div class="accommodation-rating">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="star-icon">
                                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                 </svg>
-                                <span class="rating-value">${destination.rating}</span>
+                                <span class="rating-value">${accommodation.rating}</span>
                             </div>
                         </div>
-                        <p class="destination-description">${destination.description}</p>
+                        <p class="accommodation-description">${accommodation.description}</p>
+                        
+                        <div class="price-tag">
+                            R$ ${accommodation.price}/noite
+                        </div>
+                        
+                        <div class="accommodation-details">
+                            <div class="detail-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <span>${accommodation.details.rooms} quartos</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                                </svg>
+                                <span>${accommodation.location}</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 010 7.75"></path>
+                                </svg>
+                                <span>Para ${accommodation.details.capacity} pessoas</span>
+                            </div>
+                        </div>
+
                         <div class="accessibility-features">
                             <h4 class="features-title">Recursos de acessibilidade:</h4>
                             <div class="features-list">
                                 ${featuresHTML}
                             </div>
                         </div>
-                        <button class="details-button" data-destination="${destination.name}">Ver detalhes</button>
+
+                        <button class="details-button" data-accommodation="${accommodation.name}">Ver detalhes e itinerário</button>
                     </div>
                 `
 
-        destinationsGrid.appendChild(destinationCard)
+        accommodationsGrid.appendChild(accommodationCard)
       })
 
       // Adicionar event listeners aos botões de detalhes
       document.querySelectorAll(".details-button").forEach((button) => {
         button.addEventListener("click", function () {
-          const destinationName = this.getAttribute("data-destination")
-          const destination = state.filteredDestinations.find((d) => d.name === destinationName)
-          openDestinationModal(destination)
+          const accommodationName = this.getAttribute("data-accommodation")
+          const accommodation = state.filteredAccommodations.find((d) => d.name === accommodationName)
+          openAccommodationModal(accommodation)
         })
       })
     }
 
     // Atualizar título da seção
-    document.getElementById("destinations-title").textContent = state.showSearchResults
+    document.getElementById("accommodations-title").textContent = state.showSearchResults
       ? "Resultados da Pesquisa"
-      : "Destinos com Acessibilidade"
+      : "Hospedagens Acessíveis"
   }
 
   // Renderizar atrações próximas
@@ -284,7 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const attractionsGrid = document.getElementById("attractions-grid")
     attractionsGrid.innerHTML = ""
 
-    nearbyAttractions.forEach((attraction) => {
+    attractions.forEach((attraction) => {
       const attractionCard = document.createElement("div")
       attractionCard.className = "attraction-card"
 
@@ -298,6 +586,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 `
       })
 
+      const priceDisplay = attraction.price === 0 ? "Gratuito" : `R$ ${attraction.price},00 por pessoa`
+
       attractionCard.innerHTML = `
                 <div class="attraction-image">
                     <img src="${attraction.image}" alt="${attraction.name}">
@@ -308,6 +598,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="attraction-distance">${attraction.distance}</span>
                     </div>
                     <p class="attraction-description">${attraction.description}</p>
+                    
+                    <div class="price-tag">
+                        ${priceDisplay}
+                    </div>
+                    
                     <div class="attraction-features">
                         <h4 class="attraction-features-title">Acessibilidade:</h4>
                         <div class="attraction-features-list">
@@ -331,7 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".view-more-button").forEach((button) => {
       button.addEventListener("click", function () {
         const attractionName = this.getAttribute("data-attraction")
-        const attraction = nearbyAttractions.find((a) => a.name === attractionName)
+        const attraction = attractions.find((a) => a.name === attractionName)
         openAttractionModal(attraction)
       })
     })
@@ -350,8 +645,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="member-avatar">
                     <img src="https://via.placeholder.com/100" alt="Membro da equipe ${i}">
                 </div>
-                <h3 class="member-name">Estudante ${i}</h3>
-                <p class="member-role">Desenvolvedor</p>
+                <h3 class="member-name">Especialista ${i}</h3>
+                <p class="member-role">Consultor de Acessibilidade</p>
             `
 
       teamGrid.appendChild(teamMember)
@@ -387,38 +682,43 @@ document.addEventListener("DOMContentLoaded", () => {
       state.activeFilters.push(filterName)
     }
 
-    filterDestinations()
+    filterAccommodations()
     renderAccessibilityFilters()
-    renderDestinations()
+    renderAccommodations()
   }
 
-  function filterDestinations() {
-    if (state.activeFilters.length === 0 && !state.searchLocation && !state.selectedAccessibility) {
-      state.filteredDestinations = [...accessibleDestinations]
+  function filterAccommodations() {
+    if (state.activeFilters.length === 0 && !state.searchLocation && !state.selectedPrice && state.priceRange === 500) {
+      state.filteredAccommodations = [...accommodations]
       state.showSearchResults = false
     } else {
       state.showSearchResults = true
 
-      state.filteredDestinations = accessibleDestinations.filter((destination) => {
+      state.filteredAccommodations = accommodations.filter((accommodation) => {
         // Filtrar por localização
         const matchLocation =
-          !state.searchLocation || destination.name.toLowerCase().includes(state.searchLocation.toLowerCase())
+          !state.searchLocation || accommodation.location.toLowerCase().includes(state.searchLocation.toLowerCase())
 
-        // Filtrar por acessibilidade selecionada
-        const matchAccessibility =
-          !state.selectedAccessibility ||
-          destination.accessibilityFeatures.some((feature) =>
-            feature.name.toLowerCase().includes(state.selectedAccessibility.toLowerCase()),
-          )
+        // Filtrar por preço selecionado
+        let matchPriceSelect = true
+        if (state.selectedPrice) {
+          const [min, max] = state.selectedPrice.split("-").map((p) => Number.parseInt(p) || 1001)
+          matchPriceSelect = accommodation.price >= min && (max === "1000+" || accommodation.price <= max)
+        }
+
+        // Filtrar por slider de preço
+        const matchPriceRange = accommodation.price <= state.priceRange
 
         // Filtrar por filtros ativos
         const matchFilters =
           state.activeFilters.length === 0 ||
           state.activeFilters.every((filter) =>
-            destination.accessibilityFeatures.some((feature) => feature.name === filter),
+            accommodation.accessibilityFeatures.some(
+              (feature) => feature.name === filter || feature.name.includes(filter),
+            ),
           )
 
-        return matchLocation && matchAccessibility && matchFilters
+        return matchLocation && matchPriceSelect && matchPriceRange && matchFilters
       })
     }
   }
@@ -426,26 +726,29 @@ document.addEventListener("DOMContentLoaded", () => {
   function clearFilters() {
     state.searchLocation = ""
     state.searchDate = ""
-    state.selectedAccessibility = ""
+    state.selectedPrice = ""
+    state.priceRange = 500
     state.activeFilters = []
     state.showSearchResults = false
-    state.filteredDestinations = [...accessibleDestinations]
+    state.filteredAccommodations = [...accommodations]
 
     // Limpar campos de formulário
     document.getElementById("location-input").value = ""
     document.getElementById("date-input").value = ""
-    document.getElementById("accessibility-select").value = ""
+    document.getElementById("price-select").value = ""
+    document.getElementById("price-slider").value = 500
+    document.getElementById("price-value").textContent = `R$ 500`
 
     renderAccessibilityFilters()
-    renderDestinations()
+    renderAccommodations()
   }
 
   // Funções para manipular modais
-  function openDestinationModal(destination) {
-    const modalContent = document.getElementById("destination-modal-content")
+  function openAccommodationModal(accommodation) {
+    const modalContent = document.getElementById("accommodation-modal-content")
 
     let featuresHTML = ""
-    destination.accessibilityFeatures.forEach((feature) => {
+    accommodation.accessibilityFeatures.forEach((feature) => {
       featuresHTML += `
                 <div class="feature-card">
                     <div class="feature-card-icon">
@@ -453,7 +756,40 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="feature-card-content">
                         <h4>${feature.name}</h4>
-                        <p>Disponível em todo o local</p>
+                        <p>Disponível em toda a acomodação</p>
+                    </div>
+                </div>
+            `
+    })
+
+    let nearbyAttractionsHTML = ""
+    accommodation.nearbyAttractions.forEach((attraction) => {
+      nearbyAttractionsHTML += `<li>${attraction}</li>`
+    })
+
+    let itineraryHTML = ""
+    accommodation.itinerary.forEach((day) => {
+      let activitiesHTML = ""
+      day.activities.forEach((activity) => {
+        activitiesHTML += `
+                    <div class="itinerary-activity">
+                        <div class="itinerary-activity-time">${activity.time}</div>
+                        <div class="itinerary-activity-details">
+                            <div class="itinerary-activity-title">${activity.title}</div>
+                            <div class="itinerary-activity-description">${activity.description}</div>
+                        </div>
+                    </div>
+                `
+      })
+
+      itineraryHTML += `
+                <div class="itinerary-day">
+                    <div class="itinerary-day-header">
+                        <div class="itinerary-day-title">${day.day}</div>
+                        <div class="itinerary-day-date">${day.date}</div>
+                    </div>
+                    <div class="itinerary-activities">
+                        ${activitiesHTML}
                     </div>
                 </div>
             `
@@ -461,49 +797,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalContent.innerHTML = `
             <div class="modal-image">
-                <img src="${destination.image}" alt="${destination.name}">
+                <img src="${accommodation.image}" alt="${accommodation.name}">
             </div>
             <div class="modal-content-inner">
                 <div class="modal-header">
-                    <h2>${destination.name}</h2>
-                    <div class="destination-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="star-icon">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <span class="rating-value">${destination.rating}</span>
+                    <h2>${accommodation.name}</h2>
+                    <div class="price-tag">
+                        R$ ${accommodation.price}/noite
                     </div>
                 </div>
-                <p>${destination.description}</p>
+
+                <div class="accommodation-details">
+                    <div class="detail-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>${accommodation.details.rooms} quartos</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                        </svg>
+                        <span>${accommodation.location}</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 010 7.75"></path>
+                        </svg>
+                        <span>Para ${accommodation.details.capacity} pessoas</span>
+                    </div>
+                </div>
+                
+                <p>${accommodation.description}</p>
                 
                 <h3>Recursos de Acessibilidade</h3>
                 <div class="features-grid">
                     ${featuresHTML}
                 </div>
                 
+                <h3>Atrações Próximas</h3>
+                <ul>
+                    ${nearbyAttractionsHTML}
+                </ul>
+                
+                <div class="itinerary-section">
+                    <h3>Roteiro Sugerido</h3>
+                    <div class="itinerary-days">
+                        ${itineraryHTML}
+                    </div>
+                </div>
+                
                 <div class="info-box">
                     <p>
-                        Este destino possui equipe treinada para auxiliar pessoas com necessidades especiais. 
+                        Esta acomodação possui equipe treinada para auxiliar pessoas com necessidades especiais. 
                         Recomendamos contato prévio para garantir a melhor experiência.
                     </p>
                 </div>
                 
                 <div class="modal-buttons">
-                    <button class="primary-button">Reservar Visita</button>
-                    <button class="secondary-button" id="close-destination-modal-btn">Fechar</button>
+                    <button class="primary-button">Reservar agora</button>
+                    <button class="secondary-button" id="close-accommodation-modal-btn">Fechar</button>
                 </div>
             </div>
         `
 
-    document.getElementById("destination-modal").classList.add("active")
+    document.getElementById("accommodation-modal").classList.add("active")
 
     // Adicionar event listener ao botão de fechar
-    document.getElementById("close-destination-modal-btn").addEventListener("click", () => {
-      document.getElementById("destination-modal").classList.remove("active")
+    document.getElementById("close-accommodation-modal-btn").addEventListener("click", () => {
+      document.getElementById("accommodation-modal").classList.remove("active")
     })
   }
 
   function openAttractionModal(attraction) {
-    const modalContent = document.getElementById("destination-modal-content")
+    const modalContent = document.getElementById("attraction-modal-content")
 
     let featuresHTML = ""
     attraction.accessibilityFeatures.forEach((feature) => {
@@ -514,11 +885,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="feature-card-content">
                         <h4>${feature.name}</h4>
-                        <p>Disponível em todo o local</p>
+                        <p>Disponível em toda a atração</p>
                     </div>
                 </div>
             `
     })
+
+    const priceDisplay = attraction.price === 0 ? "Gratuito" : `R$ ${attraction.price},00 por pessoa`
 
     modalContent.innerHTML = `
             <div class="modal-image">
@@ -527,6 +900,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="modal-content-inner">
                 <div class="modal-header">
                     <h2>${attraction.name}</h2>
+                    <div class="price-tag">
+                        ${priceDisplay}
+                    </div>
                 </div>
                 
                 <div class="location-info">
@@ -536,23 +912,51 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 <p>${attraction.description}</p>
                 
+                <h3>Informações Úteis</h3>
+                <div class="accommodation-details">
+                    <div class="detail-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>Duração: ${attraction.details.duration}</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <span>Melhor horário: ${attraction.details.bestTime}</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 010 7.75"></path>
+                        </svg>
+                        <span>Serviços: ${attraction.details.services}</span>
+                    </div>
+                </div>
+                
                 <h3>Recursos de Acessibilidade</h3>
                 <div class="features-grid">
                     ${featuresHTML}
                 </div>
                 
                 <div class="modal-buttons">
-                    <button class="primary-button">Planejar Visita</button>
-                    <button class="secondary-button" id="close-destination-modal-btn">Fechar</button>
+                    <button class="primary-button">Reservar ingresso</button>
+                    <button class="secondary-button" id="close-attraction-modal-btn">Fechar</button>
                 </div>
             </div>
         `
 
-    document.getElementById("destination-modal").classList.add("active")
+    document.getElementById("attraction-modal").classList.add("active")
 
     // Adicionar event listener ao botão de fechar
-    document.getElementById("close-destination-modal-btn").addEventListener("click", () => {
-      document.getElementById("destination-modal").classList.remove("active")
+    document.getElementById("close-attraction-modal-btn").addEventListener("click", () => {
+      document.getElementById("attraction-modal").classList.remove("active")
     })
   }
 
@@ -560,7 +964,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function init() {
     // Renderizar componentes iniciais
     renderAccessibilityFilters()
-    renderDestinations()
+    renderAccommodations()
     renderAttractions()
     renderTeam()
     renderPartners()
@@ -569,13 +973,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("search-button").addEventListener("click", () => {
       state.searchLocation = document.getElementById("location-input").value
       state.searchDate = document.getElementById("date-input").value
-      state.selectedAccessibility = document.getElementById("accessibility-select").value
+      state.selectedPrice = document.getElementById("price-select").value
 
-      filterDestinations()
-      renderDestinations()
+      filterAccommodations()
+      renderAccommodations()
 
       // Rolar para a seção de resultados
-      document.getElementById("destinations").scrollIntoView({ behavior: "smooth" })
+      document.getElementById("accommodations").scrollIntoView({ behavior: "smooth" })
+    })
+
+    // Event listener para slider de preço
+    const priceSlider = document.getElementById("price-slider")
+    const priceValue = document.getElementById("price-value")
+
+    priceSlider.addEventListener("input", () => {
+      state.priceRange = Number.parseInt(priceSlider.value)
+      priceValue.textContent = `R$ ${state.priceRange}`
+
+      filterAccommodations()
+      renderAccommodations()
     })
 
     // Event listeners para limpar filtros
@@ -627,25 +1043,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("beaches-button").addEventListener("click", () => {
       state.searchLocation = "Praia"
       document.getElementById("location-input").value = "Praia"
-      filterDestinations()
-      renderDestinations()
-      document.getElementById("destinations").scrollIntoView({ behavior: "smooth" })
+      filterAccommodations()
+      renderAccommodations()
+      document.getElementById("accommodations").scrollIntoView({ behavior: "smooth" })
     })
 
     document.getElementById("parks-button").addEventListener("click", () => {
-      state.searchLocation = "Parque"
-      document.getElementById("location-input").value = "Parque"
-      filterDestinations()
-      renderDestinations()
-      document.getElementById("destinations").scrollIntoView({ behavior: "smooth" })
+      state.searchLocation = "Campos"
+      document.getElementById("location-input").value = "Campos"
+      filterAccommodations()
+      renderAccommodations()
+      document.getElementById("accommodations").scrollIntoView({ behavior: "smooth" })
     })
 
     document.getElementById("cities-button").addEventListener("click", () => {
-      state.searchLocation = "Museu"
-      document.getElementById("location-input").value = "Museu"
-      filterDestinations()
-      renderDestinations()
-      document.getElementById("destinations").scrollIntoView({ behavior: "smooth" })
+      state.searchLocation = "São Paulo"
+      document.getElementById("location-input").value = "São Paulo"
+      filterAccommodations()
+      renderAccommodations()
+      document.getElementById("accommodations").scrollIntoView({ behavior: "smooth" })
     })
 
     // Event listeners para fechar modais
@@ -669,23 +1085,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listeners para outros botões
     document.getElementById("mission-button").addEventListener("click", () => {
-      alert("Nossa missão é promover o turismo acessível e inclusivo para todos!")
+      alert("Nossa missão é facilitar o planejamento de viagens acessíveis para todos!")
     })
 
     document.getElementById("more-info-button").addEventListener("click", () => {
-      alert("Mais informações sobre o projeto seriam exibidas aqui!")
+      alert("Mais informações sobre o projeto de roteiros acessíveis seriam exibidas aqui!")
     })
 
     document.getElementById("certifications-button").addEventListener("click", () => {
-      alert("Certificações de acessibilidade e inclusão seriam exibidas aqui!")
+      alert("Certificações de acessibilidade e parceiros oficiais seriam exibidos aqui!")
     })
 
     document.getElementById("reviews-button").addEventListener("click", () => {
-      alert("Sistema de avaliações de acessibilidade seria exibido aqui!")
+      alert("Sistema de avaliações de acessibilidade de hospedagens seria exibido aqui!")
     })
 
     document.getElementById("other-projects-button").addEventListener("click", () => {
-      alert("Outros projetos da feira do curso seriam exibidos aqui!")
+      alert("Informações sobre recursos para pessoas com deficiência visual seriam exibidas aqui!")
+    })
+
+    // Fechar modais clicando fora
+    document.querySelectorAll(".modal").forEach((modal) => {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active")
+        }
+      })
     })
   }
 

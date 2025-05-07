@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destino Certo - Turismo Acessível para Todos</title>
+    <title>Destino Certo - Roteiros de Viagem Acessíveis</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,17 +11,21 @@
     <!-- Navigation Bar -->
     <header class="header">
         <div class="container header-container">
-            <div class="logo">
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <span><img src="img/Design sem nome.png" alt=""></span>
+                </div>
                 <a href="/" class="logo-link">
                     <div class="logo-text">DestinoCerto</div>
-                    <span class="logo-badge">Acessibilidade</span>
+                    <span class="logo-badge">Roteiros Acessíveis</span>
                 </a>
             </div>
 
             <nav class="main-nav">
-                <a href="#destinations" class="nav-link">Destinos Acessíveis</a>
-                <a href="#accessibility-guide" class="nav-link">Guia de Mobilidade</a>
-                <a href="#project-info" class="nav-link">Sobre o Projeto</a>
+                <a href="#accommodations" class="nav-link">Hospedagens</a>
+                <a href="#attractions" class="nav-link">Atrações</a>
+                <a href="#accessibility-guide" class="nav-link">Acessibilidade</a>
+                <a href="#project-info" class="nav-link">Sobre</a>
             </nav>
 
             <div class="user-actions">
@@ -56,11 +60,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-image">
-            <img src="https://via.placeholder.com/1920x500" alt="Destino Certo - Encontre destinos acessíveis para todos">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Turismo Acessível para Todos</h1>
-                <p>Encontre destinos com acessibilidade e mobilidade para uma experiência inclusiva</p>
+                <h1>Roteiros de Viagem Acessíveis</h1>
+                <p>Encontre hospedagens, atrações e roteiros perfeitos com todas as informações de acessibilidade</p>
             </div>
         </div>
 
@@ -91,21 +94,19 @@
                     </div>
                 </div>
 
-                <div class="search-field accessibility-field">
-                    <label>Necessidades</label>
+                <div class="search-field price-field">
+                    <label>Preço</label>
                     <div class="input-with-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <circle cx="12" cy="10" r="3"></circle>
-                            <path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path>
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
-                        <select id="accessibility-select">
-                            <option value="">Selecione o tipo de acessibilidade</option>
-                            <option value="Cadeira de rodas">Cadeira de rodas</option>
-                            <option value="Rampas">Rampas de Acesso</option>
-                            <option value="Elevadores">Elevadores</option>
-                            <option value="Banheiros">Banheiros Adaptados</option>
-                            <option value="Piso Tátil">Piso Tátil</option>
+                        <select id="price-select">
+                            <option value="">Selecione faixa de preço</option>
+                            <option value="0-200">Até R$ 200</option>
+                            <option value="200-500">R$ 200 - R$ 500</option>
+                            <option value="500-1000">R$ 500 - R$ 1000</option>
+                            <option value="1000+">Acima de R$ 1000</option>
                         </select>
                         <button class="search-button" id="search-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -119,10 +120,10 @@
         </div>
     </section>
 
-    <!-- Accessibility Filters -->
+    <!-- Accessibility and Price Filters -->
     <section class="container section">
         <div class="section-header">
-            <h2>Filtrar por Acessibilidade</h2>
+            <h2>Filtrar por Acessibilidade e Preço</h2>
             <button class="more-filters-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
                     <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -134,12 +135,25 @@
         <div class="filters-grid" id="accessibility-filters">
             <!-- Filtros serão inseridos via JavaScript -->
         </div>
+
+        <!-- Price Range Filter -->
+        <div class="price-range-container">
+            <h3>Faixa de Preço da Diária</h3>
+            <div class="price-slider-container">
+                <input type="range" min="0" max="1000" value="500" class="price-slider" id="price-slider">
+                <div class="price-labels">
+                    <span>R$ 0</span>
+                    <span id="price-value">R$ 500</span>
+                    <span>R$ 1000+</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Featured Accessible Destinations -->
-    <section id="destinations" class="container section">
+    <!-- Accommodations Section -->
+    <section id="accommodations" class="container section">
         <div class="section-header">
-            <h2 id="destinations-title">Destinos com Acessibilidade</h2>
+            <h2 id="accommodations-title">Hospedagens Acessíveis</h2>
             <button class="view-all-button" id="clear-filters-button">Ver todos</button>
         </div>
 
@@ -154,21 +168,21 @@
                     </svg>
                 </div>
                 <h3>Nenhum resultado encontrado</h3>
-                <p>Não encontramos destinos que correspondam aos seus critérios de pesquisa.</p>
+                <p>Não encontramos hospedagens que correspondam aos seus critérios de pesquisa.</p>
                 <button class="clear-button" id="clear-filters-button-alt">Limpar filtros</button>
             </div>
 
-            <!-- Grid de destinos -->
-            <div class="destinations-grid" id="destinations-grid">
-                <!-- Destinos serão inseridos via JavaScript -->
+            <!-- Grid de hospedagens -->
+            <div class="accommodations-grid" id="accommodations-grid">
+                <!-- Hospedagens serão inseridas via JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Nearby Attractions -->
-    <section class="nearby-section">
+    <section id="attractions" class="nearby-section">
         <div class="container">
-            <h2>Atrações Próximas para Visitar</h2>
+            <h2>Atrações e Passeios Próximos</h2>
 
             <div class="attractions-grid" id="attractions-grid">
                 <!-- Atrações serão inseridas via JavaScript -->
@@ -245,8 +259,8 @@
         <div class="container text-center">
             <h2>Sobre o Projeto</h2>
             <p>
-                Este projeto foi desenvolvido por estudantes do curso de programação para a feira do curso, com o objetivo
-                de promover a mobilidade e acessibilidade no turismo.
+                Este projeto foi desenvolvido para facilitar o planejamento de viagens acessíveis, 
+                com foco em informações detalhadas sobre hospedagens, atrações e necessidades de mobilidade.
             </p>
             <div class="project-buttons">
                 <button class="white-button" id="team-button">Conheça a Equipe</button>
@@ -278,27 +292,27 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Destinos</h3>
+                    <h3>Roteiros</h3>
                     <ul>
                         <li><button class="footer-link" id="beaches-button">Praias Acessíveis</button></li>
                         <li><button class="footer-link" id="parks-button">Parques Nacionais</button></li>
                         <li><button class="footer-link" id="cities-button">Cidades Históricas</button></li>
-                        <li><button class="footer-link">Roteiros Adaptados</button></li>
+                        <li><button class="footer-link">Roteiros Personalizados</button></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Feira do Curso</h3>
+                    <h3>Acessibilidade</h3>
                     <ul>
-                        <li><button class="footer-link" id="programming-button">Programação</button></li>
-                        <li><button class="footer-link" id="other-projects-button">Outros Projetos</button></li>
-                        <li><button class="footer-link">Instituição</button></li>
-                        <li><button class="footer-link">Apoiadores</button></li>
+                        <li><button class="footer-link" id="programming-button">Mobilidade Reduzida</button></li>
+                        <li><button class="footer-link" id="other-projects-button">Deficiência Visual</button></li>
+                        <li><button class="footer-link">Deficiência Auditiva</button></li>
+                        <li><button class="footer-link">Alimentação Especial</button></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-info">
-                    <p>© 2023 Destino Certo - Projeto Acadêmico</p>
+                    <p>© 2023 Destino Certo - Roteiros Acessíveis</p>
                     <span class="separator">·</span>
                     <button class="footer-link" id="privacy-button">Privacidade</button>
                     <span class="separator">·</span>
@@ -326,20 +340,37 @@
     </footer>
 
     <!-- Modais -->
-    <div class="modal" id="destination-modal">
+    <!-- Accommodation Modal -->
+    <div class="modal" id="accommodation-modal">
         <div class="modal-content">
-            <button class="close-button" id="close-destination-modal">
+            <button class="close-button" id="close-accommodation-modal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            <div class="modal-body" id="destination-modal-content">
+            <div class="modal-body" id="accommodation-modal-content">
                 <!-- Conteúdo do modal será inserido via JavaScript -->
             </div>
         </div>
     </div>
 
+    <!-- Attraction Modal -->
+    <div class="modal" id="attraction-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-attraction-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body" id="attraction-modal-content">
+                <!-- Conteúdo do modal será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Guide Modal -->
     <div class="modal" id="guide-modal">
         <div class="modal-content">
             <button class="close-button" id="close-guide-modal">
@@ -375,6 +406,7 @@
         </div>
     </div>
 
+    <!-- Outros modais existentes... -->
     <div class="modal" id="team-modal">
         <div class="modal-content">
             <button class="close-button" id="close-team-modal">
@@ -386,17 +418,16 @@
             <div class="modal-body">
                 <h2>Nossa Equipe</h2>
                 <p>
-                    Este projeto foi desenvolvido por estudantes do curso de programação como parte do trabalho para a
-                    feira do curso, com foco no tema de mobilidade.
+                    Este projeto foi desenvolvido por uma equipe especializada em acessibilidade e turismo, 
+                    buscando facilitar o planejamento de viagens para pessoas com necessidades especiais de mobilidade.
                 </p>
                 <div class="team-grid">
                     <!-- Membros da equipe serão inseridos via JavaScript -->
                 </div>
                 <div class="info-box">
                     <p>
-                        Este projeto foi desenvolvido como parte do trabalho acadêmico para a feira do curso de programação,
-                        com o objetivo de demonstrar como a tecnologia pode ser usada para promover a acessibilidade e
-                        mobilidade no turismo.
+                        Este projeto foi desenvolvido com foco em informações detalhadas sobre hospedagens, atrações e recursos de acessibilidade,
+                        para garantir que todos possam desfrutar de experiências de viagem incríveis.
                     </p>
                 </div>
                 <button class="secondary-button" id="close-team-modal-btn">Fechar</button>
@@ -443,9 +474,9 @@
                     Ao utilizar o Destino Certo, você concorda com os seguintes termos:
                 </p>
                 <ul>
-                    <li>Este é um projeto acadêmico desenvolvido para fins educacionais</li>
-                    <li>As informações fornecidas são apenas para demonstração</li>
-                    <li>Não nos responsabilizamos por decisões tomadas com base nas informações do site</li>
+                    <li>Este é um projeto focado em informações de acessibilidade para viajantes</li>
+                    <li>As informações fornecidas são baseadas em pesquisas e avaliações de usuários</li>
+                    <li>Recomendamos sempre confirmar detalhes de acessibilidade diretamente com os estabelecimentos</li>
                     <li>Não é permitido copiar ou distribuir o conteúdo sem autorização</li>
                 </ul>
                 <button class="secondary-button" id="close-terms-modal-btn">Fechar</button>
@@ -462,38 +493,33 @@
                 </svg>
             </button>
             <div class="modal-body">
-                <h2>Programação da Feira do Curso</h2>
+                <h2>Informações para Mobilidade Reduzida</h2>
+                <p>Nossa plataforma oferece informações detalhadas para pessoas com mobilidade reduzida:</p>
                 <div class="schedule-day">
-                    <h3>Dia 1 - Abertura</h3>
+                    <h3>Hospedagens</h3>
                     <ul class="schedule-list">
                         <li>
-                            <span>09:00 - Cerimônia de Abertura</span>
-                            <span class="venue">Auditório Principal</span>
+                            <span>Quartos adaptados com medidas e especificações</span>
                         </li>
                         <li>
-                            <span>10:30 - Apresentação dos Projetos</span>
-                            <span class="venue">Sala 101</span>
+                            <span>Acesso por rampas ou elevadores</span>
                         </li>
                         <li>
-                            <span>14:00 - Palestra: Tecnologia e Acessibilidade</span>
-                            <span class="venue">Auditório Principal</span>
+                            <span>Banheiros adaptados com barras de apoio</span>
                         </li>
                     </ul>
                 </div>
                 <div class="schedule-day">
-                    <h3>Dia 2 - Demonstrações</h3>
+                    <h3>Atrações</h3>
                     <ul class="schedule-list">
                         <li>
-                            <span>09:00 - Demonstração: Destino Certo</span>
-                            <span class="venue">Estande 5</span>
+                            <span>Informações sobre acessibilidade em pontos turísticos</span>
                         </li>
                         <li>
-                            <span>11:00 - Workshop: Desenvolvimento Web</span>
-                            <span class="venue">Laboratório 3</span>
+                            <span>Transporte adaptado entre atrações</span>
                         </li>
                         <li>
-                            <span>15:00 - Painel: Futuro da Programação</span>
-                            <span class="venue">Auditório Principal</span>
+                            <span>Estacionamento acessível e serviços de apoio</span>
                         </li>
                     </ul>
                 </div>
@@ -513,7 +539,7 @@
             <div class="modal-body">
                 <h2>Nossos Parceiros</h2>
                 <p>
-                    Agradecemos às instituições e empresas que apoiam nosso projeto de turismo acessível:
+                    Agradecemos às instituições e empresas que apoiam nossa plataforma de turismo acessível:
                 </p>
                 <div class="partners-grid" id="partners-grid">
                     <!-- Parceiros serão inseridos via JavaScript -->

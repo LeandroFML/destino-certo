@@ -71,6 +71,27 @@ img {
   padding-bottom: 16px;
 }
 
+/* Logo Container - Novo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  
+  background-image: url(img/Design\ sem\ nome.png);
+}
+
 .logo-link {
   display: flex;
   align-items: center;
@@ -158,12 +179,10 @@ img {
   position: relative;
   height: 500px;
   width: 100%;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-image: url("img/slogan.jfif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
@@ -258,6 +277,65 @@ img {
 
 .search-button:hover {
   opacity: 0.9;
+}
+
+/* Price Range Slider - Novo */
+.price-range-container {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.price-range-container h3 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.price-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #22c55e, #3b82f6);
+  outline: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.price-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #4b5563;
 }
 
 /* Section Headers */
@@ -391,14 +469,14 @@ img {
   background-color: #2563eb;
 }
 
-/* Destinations Grid */
-.destinations-grid {
+/* Accommodations Grid - Novo */
+.accommodations-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 }
 
-.destination-card {
+.accommodation-card {
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
@@ -407,16 +485,16 @@ img {
   transition: box-shadow 0.2s;
 }
 
-.destination-card:hover {
+.accommodation-card:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.destination-image {
+.accommodation-image {
   position: relative;
   height: 256px;
 }
 
-.destination-image img {
+.accommodation-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -438,22 +516,22 @@ img {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.destination-content {
+.accommodation-content {
   padding: 20px;
 }
 
-.destination-header {
+.accommodation-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
 }
 
-.destination-name {
+.accommodation-name {
   font-weight: 700;
   font-size: 1.125rem;
 }
 
-.destination-rating {
+.accommodation-rating {
   display: flex;
   align-items: center;
 }
@@ -467,9 +545,36 @@ img {
   margin-left: 4px;
 }
 
-.destination-description {
+.accommodation-description {
   color: #4b5563;
   margin-bottom: 12px;
+}
+
+/* Price tag - Novo */
+.price-tag {
+  display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  background-color: #ecfdf5;
+  color: #047857;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.accommodation-details {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
 .accessibility-features {
@@ -1140,6 +1245,87 @@ img {
   color: #2563eb;
 }
 
+/* Itinerary section - Novo */
+.itinerary-section {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.itinerary-section h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.itinerary-days {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itinerary-day {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+}
+
+.itinerary-day-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.itinerary-day-title {
+  font-weight: 600;
+  color: #111827;
+}
+
+.itinerary-day-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.itinerary-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itinerary-activity {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f9fafb;
+}
+
+.itinerary-activity-time {
+  min-width: 60px;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-right: 12px;
+}
+
+.itinerary-activity-details {
+  flex-grow: 1;
+}
+
+.itinerary-activity-title {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.itinerary-activity-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
 /* Media Queries */
 @media (min-width: 640px) {
   .hero-content h1 {
@@ -1154,7 +1340,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .destinations-grid {
+  .accommodations-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1177,6 +1363,10 @@ img {
 
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .itinerary-activity {
+    flex-direction: row;
   }
 }
 
@@ -1239,7 +1429,7 @@ img {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .destinations-grid {
+  .accommodations-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
