@@ -27,10 +27,44 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ]
 
+  // Dados da equipe
+  const teamMembers = [
+    {
+      name: "Vitor",
+      role: "Desenvolvedor Frontend",
+      image: "img/vitao_img.jpeg",
+    },
+    {
+      name: "Leandro",
+      role: "Especialista em Acessibilidade",
+      image: "img/leandro_img.jpeg",
+    },
+    {
+      name: "Leandro",
+      role: "Desenvolvedor Backend",
+      image: "img/leandro2_img",
+    },
+    {
+      name: "Jonathan",
+      role: "Designer UX/UI",
+      image: "img/jhow_img",
+    },
+    {
+      name: "Arthur",
+      role: "Gerente de Projeto",
+      image: "img/arthur_img.PNG",
+    },
+    {
+      name: "Mesquita",
+      role: "Especialista em Mobilidade",
+      image: "img/mesquita_img",
+    },
+  ]
+
   const accommodations = [
     {
       name: "Pousada Brisa do Mar",
-      image: "https://via.placeholder.com/400x300",
+      image: "img/brisa_img.jpg",
       rating: "4.8",
       price: 350,
       description: "Pousada à beira-mar com quartos adaptados e vista deslumbrante para o oceano.",
@@ -102,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Hotel Central Park",
-      image: "https://via.placeholder.com/400x300",
+      image: "img/park_img.jpg",
       rating: "4.7",
       price: 520,
       description: "Hotel no coração da cidade com excelente infraestrutura para pessoas com mobilidade reduzida.",
@@ -174,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Pousada Montanha Verde",
-      image: "https://via.placeholder.com/400x300",
+      image: "img/MV_img.jpg",
       rating: "4.6",
       price: 280,
       description: "Pousada em meio à natureza com chalés adaptados e trilhas acessíveis.",
@@ -246,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Resort Sol Nascente",
-      image: "https://via.placeholder.com/400x300",
+      image: "img/SN_img.jpg",
       rating: "4.9",
       price: 890,
       description: "Resort all-inclusive com infraestrutura completa de acessibilidade e atividades adaptadas.",
@@ -325,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const attractions = [
     {
       name: "Projeto TAMAR",
-      image: "https://via.placeholder.com/300x200",
+      image: "img/PT_img.jpg",
       distance: "2 km da Praia do Forte",
       description: "Centro de conservação de tartarugas marinhas com estrutura acessível para visitantes.",
       price: 45,
@@ -347,7 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Parque Ibirapuera",
-      image: "https://via.placeholder.com/300x200",
+      image: "img/ibira_img.jpg",
       distance: "1,5 km do Hotel Central Park",
       description: "Maior parque urbano de São Paulo com trilhas acessíveis e atividades inclusivas.",
       price: 0,
@@ -369,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Teleférico de Campos do Jordão",
-      image: "https://via.placeholder.com/300x200",
+      image: "img/teleferico_img.jpg",
       distance: "3 km da Pousada Montanha Verde",
       description: "Passeio panorâmico com cabines adaptadas e vista para toda a cidade.",
       price: 80,
@@ -391,7 +425,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Passeio de Jangada nas Piscinas Naturais",
-      image: "https://via.placeholder.com/300x200",
+      image: "img/jangada_img.avif",
       distance: "4 km do Resort Sol Nascente",
       description: "Passeio em jangadas adaptadas para conhecer as famosas piscinas naturais.",
       price: 95,
@@ -423,6 +457,11 @@ document.addEventListener("DOMContentLoaded", () => {
     filteredAccommodations: [...accommodations],
     showSearchResults: false,
     modalContent: null,
+  }
+
+  // Função para lidar com cliques genéricos em botões
+  function handleGenericButtonClick(message) {
+    alert(message || "Esta funcionalidade será implementada em breve!")
   }
 
   // Renderizar filtros de acessibilidade
@@ -637,41 +676,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const teamGrid = document.querySelector(".team-grid")
     teamGrid.innerHTML = ""
 
-    for (let i = 1; i <= 6; i++) {
+    teamMembers.forEach((member) => {
       const teamMember = document.createElement("div")
       teamMember.className = "team-member"
 
       teamMember.innerHTML = `
                 <div class="member-avatar">
-                    <img src="https://via.placeholder.com/100" alt="Membro da equipe ${i}">
+                    <img src="${member.image}" alt="${member.name}">
                 </div>
-                <h3 class="member-name">Especialista ${i}</h3>
-                <p class="member-role">Consultor de Acessibilidade</p>
+                <h3 class="member-name">${member.name}</h3>
+                <p class="member-role">${member.role}</p>
             `
 
       teamGrid.appendChild(teamMember)
-    }
-  }
-
-  // Renderizar parceiros
-  function renderPartners() {
-    const partnersGrid = document.getElementById("partners-grid")
-    partnersGrid.innerHTML = ""
-
-    for (let i = 1; i <= 6; i++) {
-      const partnerCard = document.createElement("div")
-      partnerCard.className = "partner-card"
-
-      partnerCard.innerHTML = `
-                <div class="partner-logo">
-                    <span>Logo Parceiro ${i}</span>
-                </div>
-                <h3 class="partner-name">Parceiro ${i}</h3>
-                <p class="partner-description">Apoiador do projeto</p>
-            `
-
-      partnersGrid.appendChild(partnerCard)
-    }
+    })
   }
 
   // Funções para manipular o estado
@@ -967,7 +985,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderAccommodations()
     renderAttractions()
     renderTeam()
-    renderPartners()
 
     // Event listeners para pesquisa
     document.getElementById("search-button").addEventListener("click", () => {
@@ -1032,10 +1049,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("programming-modal").classList.add("active")
     })
 
-    document.getElementById("partners-button").addEventListener("click", () => {
-      document.getElementById("partners-modal").classList.add("active")
-    })
-
     document.getElementById("guide-button").addEventListener("click", () => {
       document.getElementById("guide-modal").classList.add("active")
     })
@@ -1067,7 +1080,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event listeners para fechar modais
     document
       .querySelectorAll(
-        ".close-button, #close-guide-modal-btn, #close-team-modal-btn, #close-privacy-modal-btn, #close-terms-modal-btn, #close-programming-modal-btn, #close-partners-modal-btn",
+        ".close-button, #close-guide-modal-btn, #close-team-modal-btn, #close-privacy-modal-btn, #close-terms-modal-btn, #close-programming-modal-btn",
       )
       .forEach((button) => {
         button.addEventListener("click", () => {
@@ -1085,23 +1098,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listeners para outros botões
     document.getElementById("mission-button").addEventListener("click", () => {
-      alert("Nossa missão é facilitar o planejamento de viagens acessíveis para todos!")
+      handleGenericButtonClick("Nossa missão é facilitar o planejamento de viagens acessíveis para todos!")
     })
 
     document.getElementById("more-info-button").addEventListener("click", () => {
-      alert("Mais informações sobre o projeto de roteiros acessíveis seriam exibidas aqui!")
+      handleGenericButtonClick("Mais informações sobre o projeto de roteiros acessíveis seriam exibidas aqui!")
     })
 
     document.getElementById("certifications-button").addEventListener("click", () => {
-      alert("Certificações de acessibilidade e parceiros oficiais seriam exibidos aqui!")
+      handleGenericButtonClick("Certificações de acessibilidade e parceiros oficiais seriam exibidos aqui!")
     })
 
     document.getElementById("reviews-button").addEventListener("click", () => {
-      alert("Sistema de avaliações de acessibilidade de hospedagens seria exibido aqui!")
+      handleGenericButtonClick("Sistema de avaliações de acessibilidade de hospedagens seria exibido aqui!")
     })
 
     document.getElementById("other-projects-button").addEventListener("click", () => {
-      alert("Informações sobre recursos para pessoas com deficiência visual seriam exibidas aqui!")
+      handleGenericButtonClick("Informações sobre recursos para pessoas com deficiência visual seriam exibidas aqui!")
+    })
+
+    document.getElementById("resources-button").addEventListener("click", () => {
+      handleGenericButtonClick("Recursos adicionais para viajantes com necessidades especiais seriam exibidos aqui!")
     })
 
     // Fechar modais clicando fora
