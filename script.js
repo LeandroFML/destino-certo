@@ -31,33 +31,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const teamMembers = [
     {
       name: "Vitor",
-      role: "Desenvolvedor Frontend",
+      role: "Sub-Lider",
       image: "img/vitao_img.jpeg",
     },
     {
       name: "Leandro",
-      role: "Especialista em Acessibilidade",
+      role: "Conversa com Especialista",
       image: "img/leandro_img.jpeg",
     },
     {
       name: "Leandro",
-      role: "Desenvolvedor Backend",
-      image: "img/leandro2_img",
+      role: "Pesquisa de Campo",
+      image: "img/leandro2_img.jpeg",
     },
     {
       name: "Jonathan",
-      role: "Designer UX/UI",
-      image: "img/jhow_img",
+      role: "Documentação",
+      image: "img/jhow_img.jpeg",
     },
     {
       name: "Arthur",
-      role: "Gerente de Projeto",
+      role: "Lider",
       image: "img/arthur_img.PNG",
     },
     {
       name: "Mesquita",
-      role: "Especialista em Mobilidade",
-      image: "img/mesquita_img",
+      role: "Design Logo",
+      image: "img/mesquita_img.jpeg",
     },
   ]
 
