@@ -76,7 +76,7 @@ img {
   padding-bottom: 16px;
 }
 
-/* Logo Container - Novo */
+/* Logo Container */
 .logo-container {
   display: flex;
   align-items: center;
@@ -86,9 +86,6 @@ img {
 .logo-placeholder {
   width: 60px;
   height: 60px;
-
-  
- 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,65 +280,6 @@ img {
   opacity: 0.9;
 }
 
-/* Price Range Slider - Novo */
-.price-range-container {
-  margin-top: 20px;
-  padding: 16px;
-  background-color: #f9fafb;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-}
-
-.price-range-container h3 {
-  font-size: 1rem;
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-
-.price-slider-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.price-slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  background: linear-gradient(to right, #22c55e, #3b82f6);
-  outline: none;
-}
-
-.price-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid #3b82f6;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.price-slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid #3b82f6;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.price-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.875rem;
-  color: #4b5563;
-}
-
 /* Section Headers */
 .section-header {
   display: flex;
@@ -473,7 +411,7 @@ img {
   background-color: #2563eb;
 }
 
-/* Accommodations Grid - Novo */
+/* Accommodations Grid */
 .accommodations-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -552,18 +490,6 @@ img {
 .accommodation-description {
   color: #4b5563;
   margin-bottom: 12px;
-}
-
-/* Price tag - Novo */
-.price-tag {
-  display: inline-block;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  padding: 4px 12px;
-  background-color: #ecfdf5;
-  color: #047857;
-  font-weight: 600;
-  border-radius: 4px;
 }
 
 .accommodation-details {
@@ -915,7 +841,6 @@ img {
 .footer-column h3 {
   font-weight: 700;
   margin-bottom: 16px;
-  
 }
 
 .footer-column ul {
@@ -1192,49 +1117,6 @@ img {
   color: #4b5563;
 }
 
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 24px;
-}
-
-.partner-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.partner-logo {
-  width: 96px;
-  height: 96px;
-  background-color: #f3f4f6;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.partner-logo span {
-  font-size: 0.75rem;
-  color: #9ca3af;
-}
-
-.partner-name {
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.partner-description {
-  font-size: 0.875rem;
-  color: #6b7280;
-}
-
 .schedule-day {
   background-color: #f3f4f6;
   border-radius: 8px;
@@ -1270,7 +1152,7 @@ img {
   color: #2563eb;
 }
 
-/* Itinerary section - Novo */
+/* Itinerary section */
 .itinerary-section {
   background-color: #f9fafb;
   border-radius: 8px;
@@ -1382,10 +1264,6 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .partners-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1406,7 +1284,7 @@ img {
   }
 
   .search-bar {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0;
   }
 

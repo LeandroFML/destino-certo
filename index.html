@@ -82,31 +82,20 @@
                 </div>
 
                 <div class="search-field date-field">
-                    <label>Datas</label>
+                    <label>Necessidades de Acessibilidade</label>
                     <div class="input-with-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="10" r="3"></circle>
+                            <path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path>
                         </svg>
-                        <input type="text" id="date-input" placeholder="Adicione datas">
-                    </div>
-                </div>
-
-                <div class="search-field price-field">
-                    <label>Preço</label>
-                    <div class="input-with-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                        <select id="price-select">
-                            <option value="">Selecione faixa de preço</option>
-                            <option value="0-200">Até R$ 200</option>
-                            <option value="200-500">R$ 200 - R$ 500</option>
-                            <option value="500-1000">R$ 500 - R$ 1000</option>
-                            <option value="1000+">Acima de R$ 1000</option>
+                        <select id="accessibility-select">
+                            <option value="">Selecione o tipo de acessibilidade</option>
+                            <option value="Cadeira de rodas">Cadeira de rodas</option>
+                            <option value="Rampas">Rampas de Acesso</option>
+                            <option value="Elevadores">Elevadores</option>
+                            <option value="Banheiros">Banheiros Adaptados</option>
+                            <option value="Piso Tátil">Piso Tátil</option>
                         </select>
                         <button class="search-button" id="search-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -120,10 +109,10 @@
         </div>
     </section>
 
-    <!-- Accessibility and Price Filters -->
+    <!-- Accessibility Filters -->
     <section class="container section">
         <div class="section-header">
-            <h2>Filtrar por Acessibilidade e Preço</h2>
+            <h2>Filtrar por Acessibilidade</h2>
             <button class="more-filters-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
                     <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -134,19 +123,6 @@
 
         <div class="filters-grid" id="accessibility-filters">
             <!-- Filtros serão inseridos via JavaScript -->
-        </div>
-
-        <!-- Price Range Filter -->
-        <div class="price-range-container">
-            <h3>Faixa de Preço da Diária</h3>
-            <div class="price-slider-container">
-                <input type="range" min="0" max="1000" value="500" class="price-slider" id="price-slider">
-                <div class="price-labels">
-                    <span>R$ 0</span>
-                    <span id="price-value">R$ 500</span>
-                    <span>R$ 1000+</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -407,7 +383,7 @@
         </div>
     </div>
 
-    <!-- Outros modais existentes... -->
+    <!-- Team Modal -->
     <div class="modal" id="team-modal">
         <div class="modal-content">
             <button class="close-button" id="close-team-modal">
@@ -436,6 +412,7 @@
         </div>
     </div>
 
+    <!-- Privacy Modal -->
     <div class="modal" id="privacy-modal">
         <div class="modal-content">
             <button class="close-button" id="close-privacy-modal">
@@ -461,6 +438,7 @@
         </div>
     </div>
 
+    <!-- Terms Modal -->
     <div class="modal" id="terms-modal">
         <div class="modal-content">
             <button class="close-button" id="close-terms-modal">
@@ -485,6 +463,7 @@
         </div>
     </div>
 
+    <!-- Programming Modal -->
     <div class="modal" id="programming-modal">
         <div class="modal-content">
             <button class="close-button" id="close-programming-modal">

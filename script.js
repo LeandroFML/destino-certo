@@ -63,10 +63,86 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const accommodations = [
     {
+      name: "Hotel Copacabana Palace",
+      image: "img/palace_copacabana.jpg",
+      rating: "4.9",
+      description:
+        "Hotel histórico de luxo em Copacabana com quartos adaptados e serviços especializados para pessoas com deficiência.",
+      details: {
+        rooms: 239,
+        bathrooms: 1,
+        capacity: 4,
+      },
+      location: "Copacabana, Rio de Janeiro - RJ",
+      accessibilityFeatures: [
+        {
+          name: "Rampas de Acesso",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+        },
+        {
+          name: "Elevadores Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
+        },
+        {
+          name: "Banheiros Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+        },
+        {
+          name: "Piscina Acessível",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M7 21l4-9"></path><path d="M17 21l-4-9"></path><path d="M2 6h4c2 0 4 1.1 4 4"></path><path d="M22 6h-4c-2 0-4 1.1-4 4"></path></svg>`,
+        },
+      ],
+      nearbyAttractions: ["Cristo Redentor", "Pão de Açúcar", "Praia de Copacabana", "Forte de Copacabana"],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "15/03/2024",
+          activities: [
+            {
+              time: "09:00",
+              title: "Check-in no Hotel",
+              description:
+                "Recepção com equipe treinada para atendimento especializado e orientações sobre acessibilidade.",
+            },
+            {
+              time: "14:00",
+              title: "Visita ao Cristo Redentor",
+              description: "Transporte adaptado até o Corcovado com van especial para cadeirantes.",
+            },
+            {
+              time: "18:00",
+              title: "Jantar no Restaurante do Hotel",
+              description: "Cardápio com opções para dietas especiais e atendimento personalizado.",
+            },
+          ],
+        },
+        {
+          day: "Dia 2",
+          date: "16/03/2024",
+          activities: [
+            {
+              time: "08:00",
+              title: "Café da manhã",
+              description: "Buffet com estações de altura acessível e assistência disponível.",
+            },
+            {
+              time: "10:00",
+              title: "Passeio pela Praia de Copacabana",
+              description: "Cadeiras anfíbias disponíveis e acesso facilitado à praia.",
+            },
+            {
+              time: "15:00",
+              title: "Visita ao Pão de Açúcar",
+              description: "Bondinho com acesso para cadeirantes e vista panorâmica da cidade.",
+            },
+          ],
+        },
+      ],
+    },
+    {
       name: "Pousada Brisa do Mar",
       image: "img/brisa_img.jpg",
       rating: "4.8",
-      price: 350,
       description: "Pousada à beira-mar com quartos adaptados e vista deslumbrante para o oceano.",
       details: {
         rooms: 2,
@@ -138,7 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Hotel Central Park",
       image: "img/park_img.jpg",
       rating: "4.7",
-      price: 520,
       description: "Hotel no coração da cidade com excelente infraestrutura para pessoas com mobilidade reduzida.",
       details: {
         rooms: 3,
@@ -210,7 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Pousada Montanha Verde",
       image: "img/MV_img.jpg",
       rating: "4.6",
-      price: 280,
       description: "Pousada em meio à natureza com chalés adaptados e trilhas acessíveis.",
       details: {
         rooms: 1,
@@ -278,91 +352,71 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    {
-      name: "Resort Sol Nascente",
-      image: "img/SN_img.jpg",
-      rating: "4.9",
-      price: 890,
-      description: "Resort all-inclusive com infraestrutura completa de acessibilidade e atividades adaptadas.",
-      details: {
-        rooms: 2,
-        bathrooms: 2,
-        capacity: 5,
-      },
-      location: "Porto de Galinhas, PE",
-      accessibilityFeatures: [
-        {
-          name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Elevadores",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-        },
-        {
-          name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-        {
-          name: "Piscina Acessível",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M7 21l4-9"></path><path d="M17 21l-4-9"></path><path d="M2 6h4c2 0 4 1.1 4 4"></path><path d="M22 6h-4c-2 0-4 1.1-4 4"></path></svg>`,
-        },
-      ],
-      nearbyAttractions: ["Praia de Porto de Galinhas", "Passeio de Jangada", "Recife Antigo"],
-      itinerary: [
-        {
-          day: "Dia 1",
-          date: "05/09/2023",
-          activities: [
-            {
-              time: "11:00",
-              title: "Check-in",
-              description: "Recepção VIP com bebida de boas-vindas e assistência personalizada.",
-            },
-            {
-              time: "13:00",
-              title: "Almoço no restaurante principal",
-              description: "Buffet internacional com estações de serviço adaptadas.",
-            },
-            {
-              time: "16:00",
-              title: "Atividades na piscina",
-              description: "Piscina com rampa de acesso e cadeira elevadora.",
-            },
-          ],
-        },
-        {
-          day: "Dia 2",
-          date: "06/09/2023",
-          activities: [
-            {
-              time: "08:00",
-              title: "Café da manhã",
-              description: "Buffet variado com opções para todos os tipos de dietas.",
-            },
-            {
-              time: "10:00",
-              title: "Passeio à Praia",
-              description: "Esteiras na areia e cadeiras anfíbias disponíveis.",
-            },
-            {
-              time: "15:00",
-              title: "Passeio de jangada adaptado",
-              description: "Embarcação especial com acessibilidade para cadeirantes.",
-            },
-          ],
-        },
-      ],
-    },
   ]
 
   const attractions = [
+    {
+      name: "Cristo Redentor",
+      image: "img/cristo_Redentor.webp",
+      distance: "8 km do Hotel Copacabana Palace",
+      description:
+        "Uma das Sete Maravilhas do Mundo Moderno, localizada no topo do Corcovado. Possui acesso adaptado através do Trem do Corcovado e van especial para pessoas com mobilidade reduzida.",
+      accessibilityFeatures: [
+        {
+          name: "Trem Adaptado",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><circle cx="12" cy="12" r="2"></circle></svg>`,
+        },
+        {
+          name: "Van Especial",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+        },
+        {
+          name: "Banheiros Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+        },
+        {
+          name: "Plataforma Acessível",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
+        },
+      ],
+      details: {
+        duration: "3-4 horas (incluindo transporte)",
+        bestTime: "Manhã (8h às 11h) ou final da tarde (15h às 17h)",
+        services:
+          "Trem do Corcovado com vagão adaptado, van especial para cadeirantes, guias especializados, audioguia em português",
+      },
+    },
+    {
+      name: "Pão de Açúcar",
+      image: "img/pao_açucar.jpg",
+      distance: "3 km do Hotel Copacabana Palace",
+      description:
+        "Complexo turístico com bondinho que oferece vista panorâmica da cidade. Possui instalações adaptadas e bondinho acessível para cadeirantes.",
+      accessibilityFeatures: [
+        {
+          name: "Bondinho Adaptado",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>`,
+        },
+        {
+          name: "Rampas de Acesso",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+        },
+        {
+          name: "Banheiros Adaptados",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+        },
+      ],
+      details: {
+        duration: "2-3 horas",
+        bestTime: "Final da tarde para o pôr do sol",
+        services: "Bondinho com acesso para cadeirantes, estacionamento adaptado, loja de souvenirs acessível",
+      },
+    },
     {
       name: "Projeto TAMAR",
       image: "img/PT_img.jpg",
       distance: "2 km da Praia do Forte",
       description: "Centro de conservação de tartarugas marinhas com estrutura acessível para visitantes.",
-      price: 45,
       accessibilityFeatures: [
         {
           name: "Rampas",
@@ -384,7 +438,6 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "img/ibira_img.jpg",
       distance: "1,5 km do Hotel Central Park",
       description: "Maior parque urbano de São Paulo com trilhas acessíveis e atividades inclusivas.",
-      price: 0,
       accessibilityFeatures: [
         {
           name: "Trilhas Acessíveis",
@@ -401,58 +454,11 @@ document.addEventListener("DOMContentLoaded", () => {
         services: "Empréstimo de cadeiras de rodas, mapas táteis, bicicletário adaptado",
       },
     },
-    {
-      name: "Teleférico de Campos do Jordão",
-      image: "img/teleferico_img.jpg",
-      distance: "3 km da Pousada Montanha Verde",
-      description: "Passeio panorâmico com cabines adaptadas e vista para toda a cidade.",
-      price: 80,
-      accessibilityFeatures: [
-        {
-          name: "Cabines Adaptadas",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>`,
-        },
-        {
-          name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-      ],
-      details: {
-        duration: "1 hora",
-        bestTime: "Final da tarde para o pôr do sol",
-        services: "Assistentes para embarque, descontos para PCDs",
-      },
-    },
-    {
-      name: "Passeio de Jangada nas Piscinas Naturais",
-      image: "img/jangada_img.avif",
-      distance: "4 km do Resort Sol Nascente",
-      description: "Passeio em jangadas adaptadas para conhecer as famosas piscinas naturais.",
-      price: 95,
-      accessibilityFeatures: [
-        {
-          name: "Jangadas Adaptadas",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M7 21l4-9"></path><path d="M17 21l-4-9"></path><path d="M2 6h4c2 0 4 1.1 4 4"></path><path d="M22 6h-4c-2 0-4 1.1-4 4"></path></svg>`,
-        },
-        {
-          name: "Coletes Especiais",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"></path></svg>`,
-        },
-      ],
-      details: {
-        duration: "3-4 horas",
-        bestTime: "Maré baixa - consultar horários",
-        services: "Equipe treinada para assistência, equipamentos adaptados",
-      },
-    },
   ]
 
   // Estado da aplicação
   const state = {
     searchLocation: "",
-    searchDate: "",
-    selectedPrice: "",
-    priceRange: 500,
     activeFilters: [],
     filteredAccommodations: [...accommodations],
     showSearchResults: false,
@@ -547,10 +553,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <p class="accommodation-description">${accommodation.description}</p>
                         
-                        <div class="price-tag">
-                            R$ ${accommodation.price}/noite
-                        </div>
-                        
                         <div class="accommodation-details">
                             <div class="detail-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -625,8 +627,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 `
       })
 
-      const priceDisplay = attraction.price === 0 ? "Gratuito" : `R$ ${attraction.price},00 por pessoa`
-
       attractionCard.innerHTML = `
                 <div class="attraction-image">
                     <img src="${attraction.image}" alt="${attraction.name}">
@@ -637,10 +637,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="attraction-distance">${attraction.distance}</span>
                     </div>
                     <p class="attraction-description">${attraction.description}</p>
-                    
-                    <div class="price-tag">
-                        ${priceDisplay}
-                    </div>
                     
                     <div class="attraction-features">
                         <h4 class="attraction-features-title">Acessibilidade:</h4>
@@ -706,7 +702,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterAccommodations() {
-    if (state.activeFilters.length === 0 && !state.searchLocation && !state.selectedPrice && state.priceRange === 500) {
+    if (state.activeFilters.length === 0 && !state.searchLocation) {
       state.filteredAccommodations = [...accommodations]
       state.showSearchResults = false
     } else {
@@ -717,16 +713,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const matchLocation =
           !state.searchLocation || accommodation.location.toLowerCase().includes(state.searchLocation.toLowerCase())
 
-        // Filtrar por preço selecionado
-        let matchPriceSelect = true
-        if (state.selectedPrice) {
-          const [min, max] = state.selectedPrice.split("-").map((p) => Number.parseInt(p) || 1001)
-          matchPriceSelect = accommodation.price >= min && (max === "1000+" || accommodation.price <= max)
-        }
-
-        // Filtrar por slider de preço
-        const matchPriceRange = accommodation.price <= state.priceRange
-
         // Filtrar por filtros ativos
         const matchFilters =
           state.activeFilters.length === 0 ||
@@ -736,26 +722,20 @@ document.addEventListener("DOMContentLoaded", () => {
             ),
           )
 
-        return matchLocation && matchPriceSelect && matchPriceRange && matchFilters
+        return matchLocation && matchFilters
       })
     }
   }
 
   function clearFilters() {
     state.searchLocation = ""
-    state.searchDate = ""
-    state.selectedPrice = ""
-    state.priceRange = 500
     state.activeFilters = []
     state.showSearchResults = false
     state.filteredAccommodations = [...accommodations]
 
     // Limpar campos de formulário
     document.getElementById("location-input").value = ""
-    document.getElementById("date-input").value = ""
-    document.getElementById("price-select").value = ""
-    document.getElementById("price-slider").value = 500
-    document.getElementById("price-value").textContent = `R$ 500`
+    document.getElementById("accessibility-select").value = ""
 
     renderAccessibilityFilters()
     renderAccommodations()
@@ -820,9 +800,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="modal-content-inner">
                 <div class="modal-header">
                     <h2>${accommodation.name}</h2>
-                    <div class="price-tag">
-                        R$ ${accommodation.price}/noite
-                    </div>
                 </div>
 
                 <div class="accommodation-details">
@@ -877,7 +854,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 
                 <div class="modal-buttons">
-                    <button class="primary-button">Reservar agora</button>
+                    <button class="primary-button">Mais Informações</button>
                     <button class="secondary-button" id="close-accommodation-modal-btn">Fechar</button>
                 </div>
             </div>
@@ -909,8 +886,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `
     })
 
-    const priceDisplay = attraction.price === 0 ? "Gratuito" : `R$ ${attraction.price},00 por pessoa`
-
     modalContent.innerHTML = `
             <div class="modal-image">
                 <img src="${attraction.image}" alt="${attraction.name}">
@@ -918,9 +893,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="modal-content-inner">
                 <div class="modal-header">
                     <h2>${attraction.name}</h2>
-                    <div class="price-tag">
-                        ${priceDisplay}
-                    </div>
                 </div>
                 
                 <div class="location-info">
@@ -964,7 +936,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 
                 <div class="modal-buttons">
-                    <button class="primary-button">Reservar ingresso</button>
+                    <button class="primary-button">Mais Informações</button>
                     <button class="secondary-button" id="close-attraction-modal-btn">Fechar</button>
                 </div>
             </div>
@@ -989,26 +961,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event listeners para pesquisa
     document.getElementById("search-button").addEventListener("click", () => {
       state.searchLocation = document.getElementById("location-input").value
-      state.searchDate = document.getElementById("date-input").value
-      state.selectedPrice = document.getElementById("price-select").value
 
       filterAccommodations()
       renderAccommodations()
 
       // Rolar para a seção de resultados
       document.getElementById("accommodations").scrollIntoView({ behavior: "smooth" })
-    })
-
-    // Event listener para slider de preço
-    const priceSlider = document.getElementById("price-slider")
-    const priceValue = document.getElementById("price-value")
-
-    priceSlider.addEventListener("input", () => {
-      state.priceRange = Number.parseInt(priceSlider.value)
-      priceValue.textContent = `R$ ${state.priceRange}`
-
-      filterAccommodations()
-      renderAccommodations()
     })
 
     // Event listeners para limpar filtros
