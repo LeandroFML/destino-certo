@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const accommodations = [
     {
       name: "Hotel Copacabana Palace",
-      image: "img/copacabana_palace.jpg",
+      image: "img/palace_copacabana.jpg",
       rating: "4.9",
       description:
         "Hotel histórico de luxo em Copacabana com quartos adaptados e serviços especializados para pessoas com deficiência.",
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const attractions = [
     {
       name: "Cristo Redentor",
-      image: "img/cristo_redentor.jpg",
+      image: "img/cristo_Redentor.webp",
       distance: "8 km do Hotel Copacabana Palace",
       description:
         "Uma das Sete Maravilhas do Mundo Moderno, localizada no topo do Corcovado. Possui acesso adaptado através do Trem do Corcovado e van especial para pessoas com mobilidade reduzida.",
@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Pão de Açúcar",
-      image: "img/pao_acucar.jpg",
+      image: "img/pao_açucar.jpg",
       distance: "3 km do Hotel Copacabana Palace",
       description:
         "Complexo turístico com bondinho que oferece vista panorâmica da cidade. Possui instalações adaptadas e bondinho acessível para cadeirantes.",
