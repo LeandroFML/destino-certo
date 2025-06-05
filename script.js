@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const accommodations = [
     {
       name: "Hotel Copacabana Palace",
-      image: "img/palace_copacabana.jpg",
+      image: "img/copacabana_palace.jpg",
       rating: "4.9",
       description:
         "Hotel histórico de luxo em Copacabana com quartos adaptados e serviços especializados para pessoas com deficiência.",
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const attractions = [
     {
       name: "Cristo Redentor",
-      image: "img/cristo_Redentor.webp",
+      image: "img/cristo_redentor.jpg",
       distance: "8 km do Hotel Copacabana Palace",
       description:
         "Uma das Sete Maravilhas do Mundo Moderno, localizada no topo do Corcovado. Possui acesso adaptado através do Trem do Corcovado e van especial para pessoas com mobilidade reduzida.",
@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Pão de Açúcar",
-      image: "img/pao_açucar.jpg",
+      image: "img/pao_acucar.jpg",
       distance: "3 km do Hotel Copacabana Palace",
       description:
         "Complexo turístico com bondinho que oferece vista panorâmica da cidade. Possui instalações adaptadas e bondinho acessível para cadeirantes.",
@@ -463,6 +463,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filteredAccommodations: [...accommodations],
     showSearchResults: false,
     modalContent: null,
+    selectedAccessibilityNeeds: [],
   }
 
   // Função para lidar com cliques genéricos em botões
@@ -670,13 +671,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Renderizar equipe
   function renderTeam() {
     const teamGrid = document.querySelector(".team-grid")
-    teamGrid.innerHTML = ""
+    if (teamGrid) {
+      teamGrid.innerHTML = ""
 
-    teamMembers.forEach((member) => {
-      const teamMember = document.createElement("div")
-      teamMember.className = "team-member"
+      teamMembers.forEach((member) => {
+        const teamMember = document.createElement("div")
+        teamMember.className = "team-member"
 
-      teamMember.innerHTML = `
+        teamMember.innerHTML = `
                 <div class="member-avatar">
                     <img src="${member.image}" alt="${member.name}">
                 </div>
@@ -684,8 +686,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="member-role">${member.role}</p>
             `
 
-      teamGrid.appendChild(teamMember)
-    })
+        teamGrid.appendChild(teamMember)
+      })
+    }
   }
 
   // Funções para manipular o estado
@@ -950,6 +953,96 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  // Função para o planejador de rotas
+  function initRoutePlanner() {
+    const calculateRouteBtn = document.getElementById("calculate-route-btn")
+    const routeResults = document.getElementById("route-results")
+    const originSelect = document.getElementById("origin-select")
+    const destinationSelect = document.getElementById("destination-select")
+    const accessibilityOptions = document.querySelectorAll(".accessibility-option")
+
+    // Event listeners para opções de acessibilidade
+    accessibilityOptions.forEach((option) => {
+      option.addEventListener("click", function () {
+        this.classList.toggle("active")
+        const need = this.getAttribute("data-need")
+
+        if (state.selectedAccessibilityNeeds.includes(need)) {
+          state.selectedAccessibilityNeeds = state.selectedAccessibilityNeeds.filter((n) => n !== need)
+        } else {
+          state.selectedAccessibilityNeeds.push(need)
+        }
+      })
+    })
+
+    // Event listener para calcular rota
+    calculateRouteBtn.addEventListener("click", function () {
+      const origin = originSelect.value
+      const destination = destinationSelect.value
+
+      if (!origin || !destination) {
+        alert("Por favor, selecione a origem e o destino.")
+        return
+      }
+
+      if (origin === "sao-paulo" && destination === "cristo-redentor") {
+        // Simular carregamento
+        this.disabled = true
+        this.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <div style="width: 20px; height: 20px; border: 2px solid #ffffff; border-top: 2px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px;"></div>
+          Calculando rotas acessíveis...
+        </div>
+      `
+
+        // Adicionar animação de spin
+        const style = document.createElement("style")
+        style.textContent = `
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `
+        document.head.appendChild(style)
+
+        setTimeout(() => {
+          this.disabled = false
+          this.innerHTML = "Buscar Rotas Acessíveis"
+          routeResults.classList.remove("hidden")
+
+          // Rolar para os resultados
+          routeResults.scrollIntoView({ behavior: "smooth" })
+        }, 2000)
+      } else {
+        alert("Atualmente, oferecemos apenas a rota de São Paulo para o Cristo Redentor.")
+      }
+    })
+
+    // Event listeners para botões de ação
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("start-navigation-btn")) {
+        const buttonText = e.target.textContent
+        if (buttonText.includes("Navegação")) {
+          alert("Iniciando navegação GPS com informações de acessibilidade...")
+        } else if (buttonText.includes("Uber")) {
+          alert("Redirecionando para o aplicativo Uber...")
+        } else if (buttonText.includes("99")) {
+          alert("Redirecionando para o aplicativo 99...")
+        } else if (buttonText.includes("Táxi")) {
+          alert("Conectando com central de táxi acessível...")
+        } else if (buttonText.includes("Ônibus")) {
+          alert("Redirecionando para sistema de reservas de ônibus...")
+        } else if (buttonText.includes("Metrô")) {
+          alert("Redirecionando para informações do metrô...")
+        } else if (buttonText.includes("Voo")) {
+          alert("Redirecionando para consulta de voos...")
+        } else if (buttonText.includes("Carro")) {
+          alert("Redirecionando para locadoras de veículos adaptados...")
+        }
+      }
+    })
+  }
+
   // Inicializar a aplicação
   function init() {
     // Renderizar componentes iniciais
@@ -957,6 +1050,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderAccommodations()
     renderAttractions()
     renderTeam()
+    initRoutePlanner()
 
     // Event listeners para pesquisa
     document.getElementById("search-button").addEventListener("click", () => {

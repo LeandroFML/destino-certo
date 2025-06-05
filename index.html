@@ -25,6 +25,7 @@
                 <a href="#accommodations" class="nav-link">Hospedagens</a>
                 <a href="#attractions" class="nav-link">Atrações</a>
                 <a href="#accessibility-guide" class="nav-link">Acessibilidade</a>
+                <a href="#route-planner" class="nav-link">Planejador de Rotas</a>
                 <a href="#project-info" class="nav-link">Sobre</a>
             </nav>
 
@@ -103,6 +104,247 @@
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Route Planner Section -->
+    <section id="route-planner" class="container section route-planner-section">
+        <div class="route-planner-card">
+            <div class="route-planner-header">
+                <h2>🗺️ Planejador de Rotas Acessíveis</h2>
+                <p>Encontre a melhor rota desde sua casa até o destino</p>
+            </div>
+            
+            <div class="route-form">
+                <div class="route-inputs">
+                    <div class="route-input-group">
+                        <label>De onde você está saindo?</label>
+                        <select id="origin-select">
+                            <option value="">Selecione sua cidade de origem</option>
+                            <option value="sao-paulo">São Paulo, SP</option>
+                        </select>
+                    </div>
+                    
+                    <div class="route-input-group">
+                        <label>Para onde você vai?</label>
+                        <select id="destination-select">
+                            <option value="">Selecione o destino</option>
+                            <option value="cristo-redentor">Cristo Redentor - Rio de Janeiro, RJ</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="accessibility-needs">
+                    <label>Suas necessidades de acessibilidade:</label>
+                    <div class="accessibility-options">
+                        <button class="accessibility-option" data-need="cadeira-rodas">Cadeira de rodas</button>
+                        <button class="accessibility-option" data-need="mobilidade-reduzida">Mobilidade reduzida</button>
+                        <button class="accessibility-option" data-need="deficiencia-visual">Deficiência visual</button>
+                        <button class="accessibility-option" data-need="deficiencia-auditiva">Deficiência auditiva</button>
+                    </div>
+                </div>
+                
+                <button id="calculate-route-btn" class="calculate-route-btn">
+                    Buscar Rotas Acessíveis
+                </button>
+            </div>
+            
+            <!-- Route Results -->
+            <div id="route-results" class="route-results hidden">
+                <h3>Opções de Rota Encontradas:</h3>
+                <div class="route-options">
+                    <!-- Rota de Carro -->
+                    <div class="route-option">
+                        <div class="route-header">
+                            <div class="route-icon car-icon">🚗</div>
+                            <div class="route-info">
+                                <h4>Rota Acessível de Carro</h4>
+                                <div class="route-details">
+                                    <span>⏱️ 6h 30min</span>
+                                    <span>📍 430 km</span>
+                                    <span>💰 R$ 120,00 (combustível)</span>
+                                </div>
+                            </div>
+                            <div class="accessibility-badge">♿ Acessível</div>
+                        </div>
+                        
+                        <div class="accessibility-features">
+                            <span class="feature-tag">🛣️ Rota com menos obstáculos</span>
+                            <span class="feature-tag">⛽ Postos adaptados no caminho</span>
+                            <span class="feature-tag">🅿️ Estacionamento acessível no destino</span>
+                        </div>
+                        
+                        <div class="route-steps">
+                            <div class="route-step">
+                                <div class="step-icon">🚗</div>
+                                <div class="step-info">
+                                    <p><strong>Siga pela Rodovia Presidente Dutra (BR-116)</strong></p>
+                                    <span>4h 30min • 350 km</span>
+                                    <small>♿ Pista em boas condições, postos com acessibilidade</small>
+                                </div>
+                            </div>
+                            
+                            <div class="route-step">
+                                <div class="step-icon">🚗</div>
+                                <div class="step-info">
+                                    <p><strong>Entre na Linha Vermelha (acesso adaptado)</strong></p>
+                                    <span>1h 30min • 50 km</span>
+                                    <small>♿ Pedágios com faixas preferenciais</small>
+                                </div>
+                            </div>
+                            
+                            <div class="route-step">
+                                <div class="step-icon">🚗</div>
+                                <div class="step-info">
+                                    <p><strong>Chegada ao Cristo Redentor</strong></p>
+                                    <span>30min • 30 km</span>
+                                    <small>♿ Estacionamento adaptado disponível</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="route-warnings">
+                            <div class="warning">
+                                <span>⚠️</span>
+                                <div>
+                                    <strong>Avisos importantes:</strong>
+                                    <ul>
+                                        <li>Trânsito intenso entre 17h-19h</li>
+                                        <li>Recomendado evitar sextas-feiras</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="start-navigation-btn">Iniciar Navegação Acessível</button>
+                    </div>
+                    
+                    <!-- Rota de Ônibus -->
+                    <div class="route-option">
+                        <div class="route-header">
+                            <div class="route-icon bus-icon">🚌</div>
+                            <div class="route-info">
+                                <h4>Transporte Público</h4>
+                                <div class="route-details">
+                                    <span>⏱️ 8h 15min</span>
+                                    <span>📍 450 km</span>
+                                    <span>💰 R$ 85,00</span>
+                                </div>
+                            </div>
+                            <div class="accessibility-badge">♿ Acessível</div>
+                        </div>
+                        
+                        <div class="accessibility-features">
+                            <span class="feature-tag">🚌 Ônibus com elevador</span>
+                            <span class="feature-tag">🚉 Estações adaptadas</span>
+                            <span class="feature-tag">💺 Assentos preferenciais</span>
+                        </div>
+                        
+                        <div class="route-steps">
+                            <div class="route-step">
+                                <div class="step-icon">🚌</div>
+                                <div class="step-info">
+                                    <p><strong>Ônibus linha 1001 até Rodoviária do Tietê</strong></p>
+                                    <span>45min • 25 km</span>
+                                    <small>♿ Ônibus com rampa de acesso</small>
+                                </div>
+                            </div>
+                            
+                            <div class="route-step">
+                                <div class="step-icon">🚌</div>
+                                <div class="step-info">
+                                    <p><strong>Ônibus interestadual São Paulo → Rio de Janeiro</strong></p>
+                                    <span>6h 30min • 400 km</span>
+                                    <small>♿ Banheiro adaptado a bordo</small>
+                                </div>
+                            </div>
+                            
+                            <div class="route-step">
+                                <div class="step-icon">🚇</div>
+                                <div class="step-info">
+                                    <p><strong>Metrô até estação Corcovado</strong></p>
+                                    <span>1h • 25 km</span>
+                                    <small>♿ Todas as estações com elevador</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="start-navigation-btn">Ver Horários e Reservar</button>
+                    </div>
+                    
+                    <!-- Rota de Avião -->
+                    <div class="route-option">
+                        <div class="route-header">
+                            <div class="route-icon plane-icon">✈️</div>
+                            <div class="route-info">
+                                <h4>Viagem Aérea</h4>
+                                <div class="route-details">
+                                    <span>⏱️ 4h 20min (total)</span>
+                                    <span>📍 360 km</span>
+                                    <span>💰 R$ 280,00</span>
+                                </div>
+                            </div>
+                            <div class="accessibility-badge">♿ Acessível</div>
+                        </div>
+                        
+                        <div class="accessibility-features">
+                            <span class="feature-tag">✈️ Assistência especial no aeroporto</span>
+                            <span class="feature-tag">♿ Cadeira de rodas disponível</span>
+                            <span class="feature-tag">🎫 Embarque prioritário</span>
+                        </div>
+                        
+                        <div class="route-steps">
+                            <div class="route-step">
+                                <div class="step-icon">🚗</div>
+                                <div class="step-info">
+                                    <p><strong>Táxi adaptado até Aeroporto de Guarulhos</strong></p>
+                                    <span>1h • 35 km</span>
+                                    <small>♿ Veículo com rampa</small>
+                                </div>
+                            </div>
+                            
+                            <div class="route-step">
+                                <div class="step-icon">✈️</div>
+                                <div class="step-info">
+                                    <p><strong>Voo direto para Aeroporto Santos Dumont</strong></p>
+                                    <span>1h 20min • 360 km</span>
+                                    <small>♿ Assistência para embarque/desembarque</small>
+                                </div>
+                            </div>
+                            
+                            <div class="route-step">
+                                <div class="step-icon">🚗</div>
+                                <div class="step-info">
+                                    <p><strong>Transporte do aeroporto até Cristo Redentor</strong></p>
+                                    <span>2h • 25 km</span>
+                                    <small>♿ Serviço de táxi adaptado</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="start-navigation-btn">Consultar Voos</button>
+                    </div>
+                </div>
+                
+                <!-- Informações sobre APIs -->
+                <div class="api-info">
+                    <h4>🔗 Informações Integradas:</h4>
+                    <div class="api-list">
+                        <div class="api-item">
+                            <span>🗺️ <strong>Google Maps:</strong> Cálculo de rotas e navegação</span>
+                        </div>
+                        <div class="api-item">
+                            <span>🚌 <strong>Transporte Público:</strong> Horários e acessibilidade</span>
+                        </div>
+                        <div class="api-item">
+                            <span>🚗 <strong>Waze:</strong> Alertas de trânsito e obstáculos</span>
+                        </div>
+                        <div class="api-item">
+                            <span>♿ <strong>Acessibilidade:</strong> Informações em tempo real</span>
+                        </div>
                     </div>
                 </div>
             </div>
