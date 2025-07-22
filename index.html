@@ -30,15 +30,6 @@
             </nav>
 
             <div class="user-actions">
-                <button class="language-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    <span>Português (BR)</span>
-                </button>
-
                 <div class="user-menu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -154,75 +145,73 @@
             
             <!-- Route Results -->
             <div id="route-results" class="route-results hidden">
-                <h3>Opções de Rota Encontradas:</h3>
+                <h3>Opções de Transporte Disponíveis:</h3>
                 <div class="route-options">
-                    <!-- Rota de Carro -->
+                    
+                    <!-- Aplicativos de Transporte -->
                     <div class="route-option">
                         <div class="route-header">
-                            <div class="route-icon car-icon">🚗</div>
+                            <div class="route-icon car-icon">📱</div>
                             <div class="route-info">
-                                <h4>Rota Acessível de Carro</h4>
+                                <h4>Aplicativos de Transporte</h4>
                                 <div class="route-details">
                                     <span>⏱️ 6h 30min</span>
                                     <span>📍 430 km</span>
-                                    <span>💰 R$ 120,00 (combustível)</span>
+                                    <span>🚗 Várias opções disponíveis</span>
                                 </div>
                             </div>
                             <div class="accessibility-badge">♿ Acessível</div>
                         </div>
                         
                         <div class="accessibility-features">
-                            <span class="feature-tag">🛣️ Rota com menos obstáculos</span>
-                            <span class="feature-tag">⛽ Postos adaptados no caminho</span>
-                            <span class="feature-tag">🅿️ Estacionamento acessível no destino</span>
+                            <span class="feature-tag">📱 Apps com opções acessíveis</span>
+                            <span class="feature-tag">♿ Veículos adaptados disponíveis</span>
+                            <span class="feature-tag">🗺️ Navegação em tempo real</span>
                         </div>
                         
-                        <div class="route-steps">
-                            <div class="route-step">
-                                <div class="step-icon">🚗</div>
-                                <div class="step-info">
-                                    <p><strong>Siga pela Rodovia Presidente Dutra (BR-116)</strong></p>
-                                    <span>4h 30min • 350 km</span>
-                                    <small>♿ Pista em boas condições, postos com acessibilidade</small>
+                        <div class="transport-options">
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚗</span>
+                                    <span class="transport-name">Uber</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• Uber WAP (Wheelchair Accessible)</span>
+                                    <span>• Uber Comfort</span>
+                                    <span>• Motoristas treinados</span>
+                                </div>
+                                <button class="start-navigation-btn">Abrir Uber</button>
                             </div>
                             
-                            <div class="route-step">
-                                <div class="step-icon">🚗</div>
-                                <div class="step-info">
-                                    <p><strong>Entre na Linha Vermelha (acesso adaptado)</strong></p>
-                                    <span>1h 30min • 50 km</span>
-                                    <small>♿ Pedágios com faixas preferenciais</small>
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚗</span>
+                                    <span class="transport-name">99</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• 99 Acessível</span>
+                                    <span>• Veículos adaptados</span>
+                                    <span>• Suporte especializado</span>
+                                </div>
+                                <button class="start-navigation-btn">Abrir 99</button>
                             </div>
                             
-                            <div class="route-step">
-                                <div class="step-icon">🚗</div>
-                                <div class="step-info">
-                                    <p><strong>Chegada ao Cristo Redentor</strong></p>
-                                    <span>30min • 30 km</span>
-                                    <small>♿ Estacionamento adaptado disponível</small>
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚕</span>
+                                    <span class="transport-name">Táxi Acessível</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• Cooperativas especializadas</span>
+                                    <span>• Veículos com rampa</span>
+                                    <span>• Agendamento antecipado</span>
+                                </div>
+                                <button class="start-navigation-btn">Contatar Táxi</button>
                             </div>
                         </div>
-                        
-                        <div class="route-warnings">
-                            <div class="warning">
-                                <span>⚠️</span>
-                                <div>
-                                    <strong>Avisos importantes:</strong>
-                                    <ul>
-                                        <li>Trânsito intenso entre 17h-19h</li>
-                                        <li>Recomendado evitar sextas-feiras</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button class="start-navigation-btn">Iniciar Navegação Acessível</button>
                     </div>
                     
-                    <!-- Rota de Ônibus -->
+                    <!-- Transporte Público -->
                     <div class="route-option">
                         <div class="route-header">
                             <div class="route-icon bus-icon">🚌</div>
@@ -231,7 +220,7 @@
                                 <div class="route-details">
                                     <span>⏱️ 8h 15min</span>
                                     <span>📍 450 km</span>
-                                    <span>💰 R$ 85,00</span>
+                                    <span>🎫 Múltiplas opções</span>
                                 </div>
                             </div>
                             <div class="accessibility-badge">♿ Acessível</div>
@@ -239,111 +228,209 @@
                         
                         <div class="accessibility-features">
                             <span class="feature-tag">🚌 Ônibus com elevador</span>
-                            <span class="feature-tag">🚉 Estações adaptadas</span>
+                            <span class="feature-tag">🚇 Estações adaptadas</span>
                             <span class="feature-tag">💺 Assentos preferenciais</span>
                         </div>
                         
-                        <div class="route-steps">
-                            <div class="route-step">
-                                <div class="step-icon">🚌</div>
-                                <div class="step-info">
-                                    <p><strong>Ônibus linha 1001 até Rodoviária do Tietê</strong></p>
-                                    <span>45min • 25 km</span>
-                                    <small>♿ Ônibus com rampa de acesso</small>
+                        <div class="transport-options">
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚌</span>
+                                    <span class="transport-name">Ônibus Interestadual</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• Viação 1001</span>
+                                    <span>• Cometa</span>
+                                    <span>• Útil</span>
+                                    <span>• Banheiros adaptados</span>
+                                </div>
+                                <button class="start-navigation-btn">Ver Horários Ônibus</button>
                             </div>
                             
-                            <div class="route-step">
-                                <div class="step-icon">🚌</div>
-                                <div class="step-info">
-                                    <p><strong>Ônibus interestadual São Paulo → Rio de Janeiro</strong></p>
-                                    <span>6h 30min • 400 km</span>
-                                    <small>♿ Banheiro adaptado a bordo</small>
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚇</span>
+                                    <span class="transport-name">Metrô + Trem</span>
                                 </div>
-                            </div>
-                            
-                            <div class="route-step">
-                                <div class="step-icon">🚇</div>
-                                <div class="step-info">
-                                    <p><strong>Metrô até estação Corcovado</strong></p>
-                                    <span>1h • 25 km</span>
-                                    <small>♿ Todas as estações com elevador</small>
+                                <div class="transport-features">
+                                    <span>• CPTM São Paulo</span>
+                                    <span>• MetrôRio</span>
+                                    <span>• SuperVia</span>
+                                    <span>• Todas estações com elevador</span>
                                 </div>
+                                <button class="start-navigation-btn">Consultar Metrô</button>
                             </div>
                         </div>
-                        
-                        <button class="start-navigation-btn">Ver Horários e Reservar</button>
                     </div>
                     
-                    <!-- Rota de Avião -->
+                    <!-- Opções de Voo -->
                     <div class="route-option">
                         <div class="route-header">
                             <div class="route-icon plane-icon">✈️</div>
                             <div class="route-info">
-                                <h4>Viagem Aérea</h4>
+                                <h4>Viagens Aéreas</h4>
                                 <div class="route-details">
                                     <span>⏱️ 4h 20min (total)</span>
                                     <span>📍 360 km</span>
-                                    <span>💰 R$ 280,00</span>
+                                    <span>✈️ Várias companhias</span>
                                 </div>
                             </div>
                             <div class="accessibility-badge">♿ Acessível</div>
                         </div>
                         
                         <div class="accessibility-features">
-                            <span class="feature-tag">✈️ Assistência especial no aeroporto</span>
-                            <span class="feature-tag">♿ Cadeira de rodas disponível</span>
+                            <span class="feature-tag">✈️ Assistência especial</span>
+                            <span class="feature-tag">♿ Cadeira de rodas no aeroporto</span>
                             <span class="feature-tag">🎫 Embarque prioritário</span>
                         </div>
                         
-                        <div class="route-steps">
-                            <div class="route-step">
-                                <div class="step-icon">🚗</div>
-                                <div class="step-info">
-                                    <p><strong>Táxi adaptado até Aeroporto de Guarulhos</strong></p>
-                                    <span>1h • 35 km</span>
-                                    <small>♿ Veículo com rampa</small>
+                        <div class="transport-options">
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">✈️</span>
+                                    <span class="transport-name">GOL</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• Assistência especial gratuita</span>
+                                    <span>• Voos diretos disponíveis</span>
+                                    <span>• Equipamentos adaptados</span>
+                                </div>
+                                <button class="start-navigation-btn">Consultar Voo GOL</button>
                             </div>
                             
-                            <div class="route-step">
-                                <div class="step-icon">✈️</div>
-                                <div class="step-info">
-                                    <p><strong>Voo direto para Aeroporto Santos Dumont</strong></p>
-                                    <span>1h 20min • 360 km</span>
-                                    <small>♿ Assistência para embarque/desembarque</small>
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">✈️</span>
+                                    <span class="transport-name">LATAM</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• Programa de acessibilidade</span>
+                                    <span>• Múltiplos horários</span>
+                                    <span>• Suporte especializado</span>
+                                </div>
+                                <button class="start-navigation-btn">Consultar Voo LATAM</button>
                             </div>
                             
-                            <div class="route-step">
-                                <div class="step-icon">🚗</div>
-                                <div class="step-info">
-                                    <p><strong>Transporte do aeroporto até Cristo Redentor</strong></p>
-                                    <span>2h • 25 km</span>
-                                    <small>♿ Serviço de táxi adaptado</small>
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">✈️</span>
+                                    <span class="transport-name">Azul</span>
                                 </div>
+                                <div class="transport-features">
+                                    <span>• Azul Acessibilidade</span>
+                                    <span>• Voos regionais</span>
+                                    <span>• Atendimento personalizado</span>
+                                </div>
+                                <button class="start-navigation-btn">Consultar Voo Azul</button>
+                            </div>
+                            
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">✈️</span>
+                                    <span class="transport-name">Avianca</span>
+                                </div>
+                                <div class="transport-features">
+                                    <span>• Serviços especiais</span>
+                                    <span>• Conexões internacionais</span>
+                                    <span>• Assistência completa</span>
+                                </div>
+                                <button class="start-navigation-btn">Consultar Voo Avianca</button>
                             </div>
                         </div>
+                    </div>
+                    
+                    <!-- Veículo Próprio/Aluguel -->
+                    <div class="route-option">
+                        <div class="route-header">
+                            <div class="route-icon car-icon">🚗</div>
+                            <div class="route-info">
+                                <h4>Veículo Próprio ou Aluguel</h4>
+                                <div class="route-details">
+                                    <span>⏱️ 6h 30min</span>
+                                    <span>📍 430 km</span>
+                                    <span>🗺️ Rota personalizada</span>
+                                </div>
+                            </div>
+                            <div class="accessibility-badge">♿ Adaptável</div>
+                        </div>
                         
-                        <button class="start-navigation-btn">Consultar Voos</button>
+                        <div class="accessibility-features">
+                            <span class="feature-tag">🗺️ Rota com menos obstáculos</span>
+                            <span class="feature-tag">⛽ Postos adaptados</span>
+                            <span class="feature-tag">🅿️ Estacionamentos acessíveis</span>
+                        </div>
+                        
+                        <div class="transport-options">
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚗</span>
+                                    <span class="transport-name">Veículo Próprio</span>
+                                </div>
+                                <div class="transport-features">
+                                    <span>• Navegação GPS adaptada</span>
+                                    <span>• Paradas programadas</span>
+                                    <span>• Flexibilidade total</span>
+                                </div>
+                                <button class="start-navigation-btn">Iniciar Navegação</button>
+                            </div>
+                            
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚗</span>
+                                    <span class="transport-name">Localiza</span>
+                                </div>
+                                <div class="transport-features">
+                                    <span>• Veículos adaptados</span>
+                                    <span>• Comandos manuais</span>
+                                    <span>• Equipamentos especiais</span>
+                                </div>
+                                <button class="start-navigation-btn">Alugar Carro Localiza</button>
+                            </div>
+                            
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚗</span>
+                                    <span class="transport-name">Hertz</span>
+                                </div>
+                                <div class="transport-features">
+                                    <span>• Frota acessível</span>
+                                    <span>• Modificações especiais</span>
+                                    <span>• Suporte técnico</span>
+                                </div>
+                                <button class="start-navigation-btn">Alugar Carro Hertz</button>
+                            </div>
+                            
+                            <div class="transport-option">
+                                <div class="transport-header">
+                                    <span class="transport-icon">🚗</span>
+                                    <span class="transport-name">Movida</span>
+                                </div>
+                                <div class="transport-features">
+                                    <span>• Carros adaptados</span>
+                                    <span>• Entrega no local</span>
+                                    <span>• Assistência 24h</span>
+                                </div>
+                                <button class="start-navigation-btn">Alugar Carro Movida</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Informações sobre APIs -->
+                <!-- Informações sobre Transporte -->
                 <div class="api-info">
-                    <h4>🔗 Informações Integradas:</h4>
+                    <h4>🔗 Informações de Transporte:</h4>
                     <div class="api-list">
                         <div class="api-item">
-                            <span>🗺️ <strong>Google Maps:</strong> Cálculo de rotas e navegação</span>
+                            <span>📱 <strong>Apps de Transporte:</strong> Uber, 99, InDriver, Cabify</span>
                         </div>
                         <div class="api-item">
-                            <span>🚌 <strong>Transporte Público:</strong> Horários e acessibilidade</span>
+                            <span>🚌 <strong>Transporte Público:</strong> Ônibus, metrô, trem com acessibilidade</span>
                         </div>
                         <div class="api-item">
-                            <span>🚗 <strong>Waze:</strong> Alertas de trânsito e obstáculos</span>
+                            <span>✈️ <strong>Companhias Aéreas:</strong> GOL, LATAM, Azul, Avianca</span>
                         </div>
                         <div class="api-item">
-                            <span>♿ <strong>Acessibilidade:</strong> Informações em tempo real</span>
+                            <span>🚗 <strong>Locadoras:</strong> Localiza, Hertz, Movida, Unidas</span>
                         </div>
                     </div>
                 </div>
@@ -524,8 +611,8 @@
                     <ul>
                         <li><button class="footer-link" id="programming-button">Mobilidade Reduzida</button></li>
                         <li><button class="footer-link" id="other-projects-button">Deficiência Visual</button></li>
-                        <li><button class="footer-link">Deficiência Auditiva</button></li>
-                        <li><button class="footer-link">Alimentação Especial</button></li>
+                        <li><button class="footer-link" data-accessibility="hearing">Deficiência Auditiva</button></li>
+                        <li><button class="footer-link" data-accessibility="diet">Alimentação Especial</button></li>
                     </ul>
                 </div>
             </div>
@@ -545,210 +632,13 @@
                     </a>
                     <a href="#" class="social-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.164 7.548 2.164 9.051 0 14.002-7.496 14.002-13.986 0-.21 0-.42-.015-.63.961-.695 1.8-1.562 2.46-2.549z" />
                         </svg>
                     </a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Modais -->
-    <!-- Accommodation Modal -->
-    <div class="modal" id="accommodation-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-accommodation-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body" id="accommodation-modal-content">
-                <!-- Conteúdo do modal será inserido via JavaScript -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Attraction Modal -->
-    <div class="modal" id="attraction-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-attraction-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body" id="attraction-modal-content">
-                <!-- Conteúdo do modal será inserido via JavaScript -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Guide Modal -->
-    <div class="modal" id="guide-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-guide-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body">
-                <h2>Guia de Mobilidade e Acessibilidade</h2>
-                <p>
-                    Nosso guia completo contém informações detalhadas sobre acessibilidade em destinos turísticos,
-                    incluindo:
-                </p>
-                <ul>
-                    <li>Símbolos internacionais de acessibilidade</li>
-                    <li>Direitos das pessoas com deficiência em viagens</li>
-                    <li>Checklist para planejar uma viagem acessível</li>
-                    <li>Dicas para diferentes tipos de necessidades</li>
-                    <li>Contatos de emergência e suporte</li>
-                </ul>
-                <div class="info-box">
-                    <p>
-                        Em um cenário real, este botão permitiria o download de um PDF completo com o guia de acessibilidade.
-                        Para fins de demonstração, estamos simulando esta funcionalidade.
-                    </p>
-                </div>
-                <div class="modal-buttons">
-                    <button class="primary-button" id="download-guide-button">Baixar Guia (PDF)</button>
-                    <button class="secondary-button" id="close-guide-modal-btn">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Team Modal -->
-    <div class="modal" id="team-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-team-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body">
-                <h2>Nossa Equipe</h2>
-                <p>
-                    Este projeto foi desenvolvido por uma equipe especializada em acessibilidade e turismo, 
-                    buscando facilitar o planejamento de viagens para pessoas com necessidades especiais de mobilidade.
-                </p>
-                <div class="team-grid">
-                    <!-- Membros da equipe serão inseridos via JavaScript -->
-                </div>
-                <div class="info-box">
-                    <p>
-                        Este projeto foi desenvolvido com foco em informações detalhadas sobre hospedagens, atrações e recursos de acessibilidade,
-                        para garantir que todos possam desfrutar de experiências de viagem incríveis.
-                    </p>
-                </div>
-                <button class="secondary-button" id="close-team-modal-btn">Fechar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Privacy Modal -->
-    <div class="modal" id="privacy-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-privacy-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body">
-                <h2>Política de Privacidade</h2>
-                <p>
-                    O Destino Certo está comprometido com a proteção da sua privacidade. Esta política explica como
-                    coletamos e usamos seus dados:
-                </p>
-                <ul>
-                    <li>Coletamos apenas informações necessárias para melhorar sua experiência</li>
-                    <li>Não compartilhamos seus dados com terceiros sem seu consentimento</li>
-                    <li>Utilizamos cookies para personalizar sua experiência no site</li>
-                    <li>Você pode solicitar a exclusão dos seus dados a qualquer momento</li>
-                </ul>
-                <button class="secondary-button" id="close-privacy-modal-btn">Fechar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terms Modal -->
-    <div class="modal" id="terms-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-terms-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body">
-                <h2>Termos de Uso</h2>
-                <p>
-                    Ao utilizar o Destino Certo, você concorda com os seguintes termos:
-                </p>
-                <ul>
-                    <li>Este é um projeto focado em informações de acessibilidade para viajantes</li>
-                    <li>As informações fornecidas são baseadas em pesquisas e avaliações de usuários</li>
-                    <li>Recomendamos sempre confirmar detalhes de acessibilidade diretamente com os estabelecimentos</li>
-                    <li>Não é permitido copiar ou distribuir o conteúdo sem autorização</li>
-                </ul>
-                <button class="secondary-button" id="close-terms-modal-btn">Fechar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Programming Modal -->
-    <div class="modal" id="programming-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-programming-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-body">
-                <h2>Informações para Mobilidade Reduzida</h2>
-                <p>Nossa plataforma oferece informações detalhadas para pessoas com mobilidade reduzida:</p>
-                <div class="schedule-day">
-                    <h3>Hospedagens</h3>
-                    <ul class="schedule-list">
-                        <li>
-                            <span>Quartos adaptados com medidas e especificações</span>
-                        </li>
-                        <li>
-                            <span>Acesso por rampas ou elevadores</span>
-                        </li>
-                        <li>
-                            <span>Banheiros adaptados com barras de apoio</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="schedule-day">
-                    <h3>Atrações</h3>
-                    <ul class="schedule-list">
-                        <li>
-                            <span>Informações sobre acessibilidade em pontos turísticos</span>
-                        </li>
-                        <li>
-                            <span>Transporte adaptado entre atrações</span>
-                        </li>
-                        <li>
-                            <span>Estacionamento acessível e serviços de apoio</span>
-                        </li>
-                    </ul>
-                </div>
-                <button class="secondary-button" id="close-programming-modal-btn">Fechar</button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
