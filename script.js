@@ -1,4 +1,7 @@
+// Aguardar o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("JavaScript carregado com sucesso!")
+
   // Dados
   const accessibilityFilters = [
     {
@@ -462,389 +465,136 @@ document.addEventListener("DOMContentLoaded", () => {
     activeFilters: [],
     filteredAccommodations: [...accommodations],
     showSearchResults: false,
-    modalContent: null,
     selectedAccessibilityNeeds: [],
   }
 
-  // Adicionar dados para as novas funcionalidades
-  const accessibilityInfo = {
-    mobilityReduced: {
-      title: "Mobilidade Reduzida",
-      content: `
-        <h3>Recursos para Pessoas com Mobilidade Reduzida</h3>
-        <div class="accessibility-content">
-          <div class="accessibility-section">
-            <h4>🏨 Hospedagens</h4>
-            <ul>
-              <li>Quartos adaptados com portas largas (mín. 80cm)</li>
-              <li>Banheiros com barras de apoio e box acessível</li>
-              <li>Camas com altura adequada para transferência</li>
-              <li>Controles de luz e ar condicionado ao alcance</li>
-              <li>Rampas de acesso em todas as áreas</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>🎯 Atrações</h4>
-            <ul>
-              <li>Elevadores e rampas em pontos turísticos</li>
-              <li>Estacionamento preferencial próximo</li>
-              <li>Cadeiras de rodas disponíveis para empréstimo</li>
-              <li>Guias treinados para assistência</li>
-              <li>Rotas alternativas para locais de difícil acesso</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>🚗 Transporte</h4>
-            <ul>
-              <li>Veículos adaptados com rampa ou elevador</li>
-              <li>Espaço para fixação de cadeira de rodas</li>
-              <li>Motoristas treinados para assistência</li>
-              <li>Agendamento prioritário</li>
-            </ul>
-          </div>
-        </div>
-      `,
-    },
-    visualImpairment: {
-      title: "Deficiência Visual",
-      content: `
-        <h3>Recursos para Pessoas com Deficiência Visual</h3>
-        <div class="accessibility-content">
-          <div class="accessibility-section">
-            <h4>🏨 Hospedagens</h4>
-            <ul>
-              <li>Quartos com layout padronizado e móveis fixos</li>
-              <li>Informações em Braille (cardápio, instruções)</li>
-              <li>Piso tátil nos corredores principais</li>
-              <li>Telefones com teclas em Braille</li>
-              <li>Equipe treinada para orientação</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>🎯 Atrações</h4>
-            <ul>
-              <li>Audioguias com descrições detalhadas</li>
-              <li>Maquetes táteis de monumentos</li>
-              <li>Placas informativas em Braille</li>
-              <li>Guias especializados em audiodescrição</li>
-              <li>Caminhos com piso tátil</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>🐕 Cão-Guia</h4>
-            <ul>
-              <li>Acesso liberado em todos os estabelecimentos</li>
-              <li>Área específica para necessidades do animal</li>
-              <li>Água e alimentação disponível</li>
-              <li>Equipe orientada sobre legislação</li>
-            </ul>
-          </div>
-        </div>
-      `,
-    },
-    hearingImpairment: {
-      title: "Deficiência Auditiva",
-      content: `
-        <h3>Recursos para Pessoas com Deficiência Auditiva</h3>
-        <div class="accessibility-content">
-          <div class="accessibility-section">
-            <h4>🏨 Hospedagens</h4>
-            <ul>
-              <li>Quartos com sinalizadores visuais (campainha, telefone)</li>
-              <li>Despertadores com vibração</li>
-              <li>TV com closed caption</li>
-              <li>Funcionários com conhecimento básico de Libras</li>
-              <li>Comunicação por escrito disponível</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>🎯 Atrações</h4>
-            <ul>
-              <li>Intérpretes de Libras em tours</li>
-              <li>Materiais informativos visuais</li>
-              <li>Aplicativos com tradução em Libras</li>
-              <li>Legendas em vídeos informativos</li>
-              <li>Sinalizadores visuais de emergência</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>📱 Tecnologia</h4>
-            <ul>
-              <li>Apps de tradução instantânea</li>
-              <li>QR codes com informações visuais</li>
-              <li>Chat online para comunicação</li>
-              <li>Vídeos com legendas e Libras</li>
-            </ul>
-          </div>
-        </div>
-      `,
-    },
-    specialDiet: {
-      title: "Alimentação Especial",
-      content: `
-        <h3>Opções de Alimentação Especial</h3>
-        <div class="accessibility-content">
-          <div class="accessibility-section">
-            <h4>🥗 Restrições Alimentares</h4>
-            <ul>
-              <li>Cardápios sem glúten certificados</li>
-              <li>Opções veganas e vegetarianas</li>
-              <li>Pratos sem lactose</li>
-              <li>Alimentação kosher e halal</li>
-              <li>Cardápios para diabéticos</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>👨‍🍳 Preparo Especializado</h4>
-            <ul>
-              <li>Cozinha separada para alérgicos</li>
-              <li>Chefs treinados em dietas especiais</li>
-              <li>Ingredientes orgânicos disponíveis</li>
-              <li>Informações nutricionais detalhadas</li>
-              <li>Personalização de pratos</li>
-            </ul>
-          </div>
-          
-          <div class="accessibility-section">
-            <h4>🏥 Necessidades Médicas</h4>
-            <ul>
-              <li>Dietas para disfagia (dificuldade de deglutição)</li>
-              <li>Alimentação pastosa ou líquida</li>
-              <li>Controle de sódio e açúcar</li>
-              <li>Suplementação nutricional</li>
-              <li>Horários flexíveis para medicação</li>
-            </ul>
-          </div>
-        </div>
-      `,
-    },
-  }
-
-  // Função para gerar PDF
-  function generateAccessibilityGuide() {
-    const pdfContent = `
-GUIA DE ACESSIBILIDADE - DESTINO CERTO
-
-ÍNDICE
-1. Introdução à Acessibilidade no Turismo
-2. Direitos das Pessoas com Deficiência
-3. Tipos de Acessibilidade
-4. Checklist para Viagem Acessível
-5. Recursos por Tipo de Necessidade
-6. Contatos de Emergência
-7. Legislação Aplicável
-
-1. INTRODUÇÃO À ACESSIBILIDADE NO TURISMO
-
-O turismo acessível é um direito fundamental que garante que todas as pessoas, independentemente de suas limitações físicas, sensoriais ou cognitivas, possam desfrutar de experiências de viagem seguras e prazerosas.
-
-2. DIREITOS DAS PESSOAS COM DEFICIÊNCIA
-
-- Acesso a todos os espaços públicos e privados de uso coletivo
-- Atendimento prioritário
-- Acompanhante gratuito quando necessário
-- Transporte adaptado
-- Informações em formatos acessíveis
-
-3. TIPOS DE ACESSIBILIDADE
-
-3.1 ACESSIBILIDADE FÍSICA
-- Rampas com inclinação adequada (máx. 8,33%)
-- Elevadores com dimensões mínimas
-- Portas com largura mínima de 80cm
-- Banheiros adaptados com barras de apoio
-- Estacionamento preferencial
-
-3.2 ACESSIBILIDADE SENSORIAL
-- Piso tátil para orientação
-- Informações em Braille
-- Audioguias e audiodescrição
-- Intérpretes de Libras
-- Sinalizadores visuais
-
-3.3 ACESSIBILIDADE COGNITIVA
-- Informações claras e objetivas
-- Pictogramas universais
-- Ambientes com baixo estímulo sensorial
-- Rotinas previsíveis
-- Apoio personalizado
-
-4. CHECKLIST PARA VIAGEM ACESSÍVEL
-
-ANTES DA VIAGEM:
-□ Verificar acessibilidade do transporte
-□ Confirmar adaptações da hospedagem
-□ Pesquisar acessibilidade das atrações
-□ Levar documentos médicos
-□ Verificar seguro de viagem
-□ Confirmar medicamentos necessários
-
-DURANTE A VIAGEM:
-□ Manter documentos acessíveis
-□ Ter contatos de emergência
-□ Verificar rotas alternativas
-□ Confirmar horários e reservas
-□ Manter comunicação com familiares
-
-5. RECURSOS POR TIPO DE NECESSIDADE
-
-MOBILIDADE REDUZIDA:
-- Cadeiras de rodas disponíveis
-- Veículos adaptados
-- Quartos no térreo ou com elevador
-- Banheiros com barras de apoio
-- Rampas de acesso
-
-DEFICIÊNCIA VISUAL:
-- Cão-guia permitido
-- Audioguias disponíveis
-- Piso tátil
-- Informações em Braille
-- Guias especializados
-
-DEFICIÊNCIA AUDITIVA:
-- Intérpretes de Libras
-- Legendas em vídeos
-- Sinalizadores visuais
-- Aplicativos de tradução
-- Comunicação escrita
-
-6. CONTATOS DE EMERGÊNCIA
-
-SAMU: 192
-Bombeiros: 193
-Polícia: 190
-Defesa Civil: 199
-Ouvidoria Nacional de Direitos Humanos: 100
-
-7. LEGISLAÇÃO APLICÁVEL
-
-- Lei Brasileira de Inclusão (Lei 13.146/2015)
-- NBR 9050 (Acessibilidade a edificações)
-- Decreto 5.296/2004
-- Lei 10.098/2000
-- Convenção sobre os Direitos das Pessoas com Deficiência
-
----
-
-Este guia foi desenvolvido pelo projeto Destino Certo para promover o turismo acessível e inclusivo.
-
-Para mais informações, visite nosso site ou entre em contato conosco.
-    `
-
-    const blob = new Blob([pdfContent], { type: "text/plain" })
-    const url = window.URL.createObjectURL(blob)
-
-    const a = document.createElement("a")
-    a.href = url
-    a.download = "Guia_Acessibilidade_Destino_Certo.txt"
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    window.URL.revokeObjectURL(url)
-  }
-
-  // Função para mostrar informações de acessibilidade
-  function showAccessibilityInfo(type) {
-    const info = accessibilityInfo[type]
-    if (!info) return
-
+  // Função para criar modal genérico
+  function createModal(content) {
     const modal = document.createElement("div")
     modal.className = "modal active"
-    modal.innerHTML = `
+    modal.innerHTML = content
+    document.body.appendChild(modal)
+
+    // Fechar modal ao clicar no X ou fora do modal
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal || e.target.closest(".close-button")) {
+        modal.remove()
+      }
+    })
+
+    return modal
+  }
+
+  // Função para mostrar Nossa Missão
+  function showMissionModal() {
+    const content = `
       <div class="modal-content">
-        <button class="close-button" onclick="this.closest('.modal').remove()">
+        <button class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
         <div class="modal-body">
-          ${info.content}
+          <h2>🎯 Nossa Missão</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>🌟 Visão</h4>
+              <ul>
+                <li>Ser a principal plataforma de turismo acessível do Brasil</li>
+                <li>Conectar pessoas com necessidades especiais a experiências incríveis</li>
+                <li>Transformar o turismo em uma atividade verdadeiramente inclusiva</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🎯 Missão</h4>
+              <ul>
+                <li>Facilitar o planejamento de viagens acessíveis para todos</li>
+                <li>Fornecer informações precisas sobre acessibilidade</li>
+                <li>Promover a inclusão no setor turístico</li>
+                <li>Capacitar pessoas com deficiência a explorar o mundo</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>💎 Valores</h4>
+              <ul>
+                <li>Inclusão e diversidade em primeiro lugar</li>
+                <li>Transparência nas informações de acessibilidade</li>
+                <li>Inovação tecnológica para melhor experiência</li>
+                <li>Compromisso com a qualidade e confiabilidade</li>
+                <li>Respeito às necessidades individuais</li>
+              </ul>
+            </div>
+          </div>
+          
           <div class="modal-buttons">
+            <button class="primary-button" onclick="showContactModal(); this.closest('.modal').remove();">Entre em Contato</button>
             <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
           </div>
         </div>
       </div>
     `
-
-    document.body.appendChild(modal)
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.remove()
-      }
-    })
+    createModal(content)
   }
 
-  // Função para mostrar sistema de cadastro
-  function showRegistrationModal() {
-    const modal = document.createElement("div")
-    modal.className = "modal active"
-    modal.innerHTML = `
+  // Função para mostrar Contato
+  function showContactModal() {
+    const content = `
       <div class="modal-content">
-        <button class="close-button" onclick="this.closest('.modal').remove()">
+        <button class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
         <div class="modal-body">
-          <h2>Cadastro Opcional</h2>
-          <p>Cadastre-se para receber dicas personalizadas e novidades sobre turismo acessível!</p>
+          <h2>📞 Entre em Contato</h2>
           
-          <form id="registration-form" class="registration-form">
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>📧 Informações de Contato</h4>
+              <ul>
+                <li>Email: contato@destinocerto.com.br</li>
+                <li>WhatsApp: (11) 99999-9999</li>
+                <li>Telefone: (11) 3333-4444</li>
+                <li>Horário: Segunda a Sexta, 8h às 18h</li>
+              </ul>
+            </div>
+          </div>
+          
+          <form id="contact-form" class="registration-form">
             <div class="form-group">
-              <label for="reg-name">Nome Completo:</label>
-              <input type="text" id="reg-name" name="name" required>
+              <label for="contact-name">Nome Completo:</label>
+              <input type="text" id="contact-name" name="name" required>
             </div>
             
             <div class="form-group">
-              <label for="reg-email">E-mail:</label>
-              <input type="email" id="reg-email" name="email" required>
+              <label for="contact-email">E-mail:</label>
+              <input type="email" id="contact-email" name="email" required>
             </div>
             
             <div class="form-group">
-              <label for="reg-phone">Telefone (opcional):</label>
-              <input type="tel" id="reg-phone" name="phone">
-            </div>
-            
-            <div class="form-group">
-              <label for="reg-accessibility">Necessidades de Acessibilidade:</label>
-              <select id="reg-accessibility" name="accessibility">
-                <option value="">Selecione (opcional)</option>
-                <option value="mobility">Mobilidade Reduzida</option>
-                <option value="visual">Deficiência Visual</option>
-                <option value="hearing">Deficiência Auditiva</option>
-                <option value="cognitive">Deficiência Cognitiva</option>
-                <option value="multiple">Múltiplas Necessidades</option>
-                <option value="none">Nenhuma Necessidade Especial</option>
+              <label for="contact-subject">Assunto:</label>
+              <select id="contact-subject" name="subject" required>
+                <option value="">Selecione o assunto</option>
+                <option value="duvida">Dúvida sobre acessibilidade</option>
+                <option value="sugestao">Sugestão de melhoria</option>
+                <option value="problema">Problema técnico</option>
+                <option value="parceria">Proposta de parceria</option>
+                <option value="outro">Outro</option>
               </select>
             </div>
             
-            <div class="form-group checkbox-group">
-              <label>
-                <input type="checkbox" id="reg-newsletter" name="newsletter" checked>
-                Quero receber newsletter com dicas de turismo acessível
-              </label>
-            </div>
-            
-            <div class="form-group checkbox-group">
-              <label>
-                <input type="checkbox" id="reg-terms" name="terms" required>
-                Aceito os termos de uso e política de privacidade
-              </label>
+            <div class="form-group">
+              <label for="contact-message">Mensagem:</label>
+              <textarea id="contact-message" name="message" rows="4" style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; resize: vertical;" required></textarea>
             </div>
             
             <div class="modal-buttons">
-              <button type="submit" class="primary-button">Cadastrar</button>
+              <button type="submit" class="primary-button">Enviar Mensagem</button>
               <button type="button" class="secondary-button" onclick="this.closest('.modal').remove()">Cancelar</button>
             </div>
           </form>
@@ -852,51 +602,32 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       </div>
     `
 
-    document.body.appendChild(modal)
+    const modal = createModal(content)
 
-    document.getElementById("registration-form").addEventListener("submit", function (e) {
+    // Adicionar evento de envio do formulário
+    const form = modal.querySelector("#contact-form")
+    form.addEventListener("submit", function (e) {
       e.preventDefault()
-
       const formData = new FormData(this)
-      const userData = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        phone: formData.get("phone"),
-        accessibility: formData.get("accessibility"),
-        newsletter: formData.get("newsletter") === "on",
-        terms: formData.get("terms") === "on",
-      }
-
-      localStorage.setItem("destinoCertoUser", JSON.stringify(userData))
-
       alert(
-        `Cadastro realizado com sucesso!\n\nOlá ${userData.name}, você receberá nossas dicas de turismo acessível em ${userData.email}`,
+        `Mensagem enviada com sucesso!\n\nObrigado ${formData.get("name")}, responderemos em breve no email ${formData.get("email")}.`,
       )
-
       modal.remove()
-    })
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.remove()
-      }
     })
   }
 
   // Função para mostrar modal da equipe
   function showTeamModal() {
-    const modal = document.createElement("div")
-    modal.className = "modal active"
-    modal.innerHTML = `
+    const content = `
       <div class="modal-content">
-        <button class="close-button" onclick="this.closest('.modal').remove()">
+        <button class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
         <div class="modal-body">
-          <h2>Nossa Equipe</h2>
+          <h2>👥 Nossa Equipe</h2>
           <p>Conheça os membros da equipe que desenvolveram o projeto Destino Certo:</p>
           
           <div class="team-grid">
@@ -921,22 +652,609 @@ Para mais informações, visite nosso site ou entre em contato conosco.
         </div>
       </div>
     `
+    createModal(content)
+  }
 
-    document.body.appendChild(modal)
+  // Função para mostrar Certificações
+  function showCertificationsModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>🏆 Certificações e Parcerias</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>🏅 Certificações Oficiais</h4>
+              <ul>
+                <li>ABNT NBR 9050 - Acessibilidade a edificações</li>
+                <li>ISO 14001 - Sistema de Gestão Ambiental</li>
+                <li>Certificação UNWTO - Turismo Acessível</li>
+                <li>Selo de Acessibilidade Digital - W3C</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🤝 Parceiros Institucionais</h4>
+              <ul>
+                <li>Ministério do Turismo</li>
+                <li>EMBRATUR - Instituto Brasileiro de Turismo</li>
+                <li>Secretaria Nacional dos Direitos da Pessoa com Deficiência</li>
+                <li>APAE - Associação de Pais e Amigos dos Excepcionais</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🏨 Parceiros Comerciais</h4>
+              <ul>
+                <li>Rede Hoteleira Accor</li>
+                <li>Booking.com - Programa de Acessibilidade</li>
+                <li>TAM/LATAM - Assistência Especial</li>
+                <li>Localiza - Veículos Adaptados</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="info-box">
+            <p><strong>Processo de Certificação:</strong> Todos os estabelecimentos passam por auditoria presencial para verificação dos recursos de acessibilidade antes de serem listados em nossa plataforma.</p>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="alert('Redirecionando para formulário de certificação...')">Solicitar Certificação</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
+  }
 
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.remove()
-      }
+  // Função para mostrar Recursos Adicionais
+  function showResourcesModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>📚 Recursos Adicionais</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>📖 Downloads Disponíveis</h4>
+              <ul>
+                <li><button onclick="downloadGuide('acessibilidade')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Guia Completo de Acessibilidade</button></li>
+                <li><button onclick="downloadGuide('checklist')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Checklist para Viagem Acessível</button></li>
+                <li><button onclick="downloadGuide('emergencia')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Contatos de Emergência</button></li>
+                <li><button onclick="downloadGuide('direitos')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Direitos da Pessoa com Deficiência</button></li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>📱 Aplicativos Recomendados</h4>
+              <ul>
+                <li>Be My Eyes - Assistência visual remota</li>
+                <li>Wheelmap - Mapa de acessibilidade</li>
+                <li>Voice Dream Reader - Leitor de texto</li>
+                <li>Moovit - Transporte público acessível</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🔗 Links Úteis</h4>
+              <ul>
+                <li><button onclick="alert('Redirecionando para site do Ministério do Turismo...')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Ministério do Turismo</button></li>
+                <li><button onclick="alert('Redirecionando para EMBRATUR...')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">EMBRATUR</button></li>
+                <li><button onclick="alert('Redirecionando para Secretaria dos Direitos da Pessoa com Deficiência...')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Secretaria dos Direitos PcD</button></li>
+                <li><button onclick="alert('Redirecionando para APAE...')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">APAE Nacional</button></li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🚨 Contatos de Emergência</h4>
+              <ul>
+                <li>SAMU: 192</li>
+                <li>Bombeiros: 193</li>
+                <li>Polícia: 190</li>
+                <li>Ouvidoria Nacional: 100</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="downloadAllResources()">Baixar Todos os Recursos</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
+  }
+
+  // Função para mostrar Avaliações
+  function showReviewsModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>⭐ Sistema de Avaliações</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>📊 Estatísticas Gerais</h4>
+              <ul>
+                <li>Avaliação média: 4.8/5 estrelas</li>
+                <li>Total de avaliações: 2.847</li>
+                <li>95% dos usuários recomendam</li>
+                <li>Tempo médio de resposta: 2 horas</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>💬 Avaliações Recentes</h4>
+              <ul>
+                <li><strong>Maria S.</strong> - "Excelente plataforma! Encontrei tudo que precisava para minha viagem." ⭐⭐⭐⭐⭐</li>
+                <li><strong>João P.</strong> - "Informações muito úteis sobre acessibilidade." ⭐⭐⭐⭐⭐</li>
+                <li><strong>Ana C.</strong> - "Facilitou muito o planejamento da nossa viagem." ⭐⭐⭐⭐</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="alert('Redirecionando para formulário de avaliação...')">Deixar Avaliação</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
+  }
+
+  // Função para mostrar Roteiros Personalizados
+  function showCustomItinerariesModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>🗺️ Roteiros Personalizados</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>✨ Exemplos de Roteiros</h4>
+              <ul>
+                <li><strong>Rio de Janeiro Acessível (3 dias)</strong> - Cristo Redentor, Pão de Açúcar, Copacabana</li>
+                <li><strong>São Paulo Cultural (2 dias)</strong> - Museus, Parque Ibirapuera, Centro Histórico</li>
+                <li><strong>Bahia Histórica (4 dias)</strong> - Salvador, Pelourinho, Praia do Forte</li>
+                <li><strong>Campos do Jordão Romântico (2 dias)</strong> - Teleférico, Parques, Centro</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🎯 Como Funciona</h4>
+              <ul>
+                <li>Preencha suas necessidades de acessibilidade</li>
+                <li>Escolha destinos e duração da viagem</li>
+                <li>Receba roteiro personalizado por email</li>
+                <li>Suporte especializado durante toda a viagem</li>
+              </ul>
+            </div>
+          </div>
+          
+          <form id="itinerary-form" class="registration-form">
+            <div class="form-group">
+              <label for="itinerary-name">Nome Completo:</label>
+              <input type="text" id="itinerary-name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="itinerary-email">E-mail:</label>
+              <input type="email" id="itinerary-email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="itinerary-destination">Destino Desejado:</label>
+              <select id="itinerary-destination" name="destination" required>
+                <option value="">Selecione o destino</option>
+                <option value="rio">Rio de Janeiro</option>
+                <option value="sao-paulo">São Paulo</option>
+                <option value="salvador">Salvador</option>
+                <option value="campos-jordao">Campos do Jordão</option>
+                <option value="outro">Outro destino</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="itinerary-duration">Duração da Viagem:</label>
+              <select id="itinerary-duration" name="duration" required>
+                <option value="">Selecione a duração</option>
+                <option value="1-2">1-2 dias</option>
+                <option value="3-4">3-4 dias</option>
+                <option value="5-7">5-7 dias</option>
+                <option value="mais-7">Mais de 7 dias</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="itinerary-accessibility">Necessidades de Acessibilidade:</label>
+              <select id="itinerary-accessibility" name="accessibility" required>
+                <option value="">Selecione suas necessidades</option>
+                <option value="cadeira-rodas">Cadeira de rodas</option>
+                <option value="mobilidade-reduzida">Mobilidade reduzida</option>
+                <option value="deficiencia-visual">Deficiência visual</option>
+                <option value="deficiencia-auditiva">Deficiência auditiva</option>
+                <option value="multiplas">Múltiplas necessidades</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="itinerary-notes">Observações Especiais:</label>
+              <textarea id="itinerary-notes" name="notes" rows="3" style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; resize: vertical;" placeholder="Descreva outras necessidades específicas..."></textarea>
+            </div>
+            
+            <div class="modal-buttons">
+              <button type="submit" class="primary-button">Solicitar Roteiro</button>
+              <button type="button" class="secondary-button" onclick="this.closest('.modal').remove()">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    `
+
+    const modal = createModal(content)
+
+    // Adicionar evento de envio do formulário
+    const form = modal.querySelector("#itinerary-form")
+    form.addEventListener("submit", function (e) {
+      e.preventDefault()
+      const formData = new FormData(this)
+      alert(
+        `Solicitação enviada com sucesso!\n\nOlá ${formData.get("name")}, seu roteiro personalizado para ${formData.get("destination")} será enviado em até 24 horas no email ${formData.get("email")}.`,
+      )
+      modal.remove()
     })
   }
 
-  // Função para lidar com cliques genéricos em botões
-  function handleGenericButtonClick(message) {
-    alert(message || "Esta funcionalidade será implementada em breve!")
+  // Função para mostrar modal de Mobilidade Reduzida
+  function showMobilityModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>♿ Mobilidade Reduzida</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>🏨 Hospedagens Adaptadas</h4>
+              <ul>
+                <li>Quartos com portas largas (mín. 80cm)</li>
+                <li>Banheiros com barras de apoio</li>
+                <li>Rampas de acesso em todas as áreas</li>
+                <li>Elevadores com comandos em braile</li>
+                <li>Vagas de estacionamento próximas</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🚗 Transporte Acessível</h4>
+              <ul>
+                <li>Veículos com rampa ou elevador</li>
+                <li>Espaço para fixação de cadeira de rodas</li>
+                <li>Cintos de segurança adaptados</li>
+                <li>Motoristas treinados para assistência</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🎯 Atrações Inclusivas</h4>
+              <ul>
+                <li>Entrada gratuita para acompanhante</li>
+                <li>Filas preferenciais</li>
+                <li>Equipamentos de apoio disponíveis</li>
+                <li>Rotas alternativas acessíveis</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="showCustomItinerariesModal(); this.closest('.modal').remove();">Solicitar Roteiro Personalizado</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
   }
 
-  // Renderizar filtros de acessibilidade
+  // Função para mostrar modal de Deficiência Visual
+  function showVisualModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>👁️ Deficiência Visual</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>🏨 Recursos para Hospedagem</h4>
+              <ul>
+                <li>Piso tátil em corredores e áreas comuns</li>
+                <li>Sinalização em braile</li>
+                <li>Quartos com layout padronizado</li>
+                <li>Telefones com teclas em braile</li>
+                <li>Cardápios em braile ou áudio</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🎯 Atrações Adaptadas</h4>
+              <ul>
+                <li>Audioguias detalhados</li>
+                <li>Maquetes táteis</li>
+                <li>Descrições verbais de obras e paisagens</li>
+                <li>Guias especializados</li>
+                <li>Cães-guia permitidos</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🚌 Transporte Inclusivo</h4>
+              <ul>
+                <li>Avisos sonoros de paradas</li>
+                <li>Piso tátil nas estações</li>
+                <li>Assistência para embarque/desembarque</li>
+                <li>Informações em áudio</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="showCustomItinerariesModal(); this.closest('.modal').remove();">Solicitar Roteiro Personalizado</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
+  }
+
+  // Função para mostrar modal de Deficiência Auditiva
+  function showHearingModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>👂 Deficiência Auditiva</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>🏨 Hospedagens Inclusivas</h4>
+              <ul>
+                <li>Sistemas de alerta visual (luzes piscantes)</li>
+                <li>Telefones com amplificador de som</li>
+                <li>TV com closed caption</li>
+                <li>Funcionários com conhecimento em LIBRAS</li>
+                <li>Despertadores vibratórios</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🎯 Atrações Adaptadas</h4>
+              <ul>
+                <li>Intérpretes de LIBRAS</li>
+                <li>Materiais informativos visuais</li>
+                <li>Legendas em vídeos e apresentações</li>
+                <li>Aplicativos com tradução em tempo real</li>
+                <li>Mapas e guias visuais detalhados</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🚌 Transporte Adaptado</h4>
+              <ul>
+                <li>Painéis informativos visuais</li>
+                <li>Aplicativos de comunicação</li>
+                <li>Sinalizações luminosas</li>
+                <li>Mapas de rotas visuais</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="showCustomItinerariesModal(); this.closest('.modal').remove();">Solicitar Roteiro Personalizado</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
+  }
+
+  // Função para mostrar modal de Alimentação Especial
+  function showDietModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>🍽️ Alimentação Especial</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>🏨 Opções em Hospedagens</h4>
+              <ul>
+                <li>Cardápios para diabéticos</li>
+                <li>Opções sem glúten</li>
+                <li>Pratos vegetarianos e veganos</li>
+                <li>Alimentos sem lactose</li>
+                <li>Cozinha adaptada para alergias alimentares</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🍴 Restaurantes Parceiros</h4>
+              <ul>
+                <li>Certificação para alergias alimentares</li>
+                <li>Cardápios com informações nutricionais</li>
+                <li>Chefs treinados em dietas especiais</li>
+                <li>Ingredientes orgânicos disponíveis</li>
+                <li>Preparo separado para evitar contaminação</li>
+              </ul>
+            </div>
+            
+            <div class="accessibility-section">
+              <h4>🛒 Facilidades Adicionais</h4>
+              <ul>
+                <li>Supermercados com produtos especiais</li>
+                <li>Farmácias com suplementos</li>
+                <li>Delivery de alimentos especiais</li>
+                <li>Geladeiras nos quartos</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="modal-buttons">
+            <button class="primary-button" onclick="showCustomItinerariesModal(); this.closest('.modal').remove();">Solicitar Roteiro Personalizado</button>
+            <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    `
+    createModal(content)
+  }
+
+  // Função para mostrar modal de cadastro/login
+  function showRegistrationModal() {
+    const content = `
+      <div class="modal-content">
+        <button class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <h2>👤 Cadastro / Login</h2>
+          
+          <div class="accessibility-content">
+            <div class="accessibility-section">
+              <h4>✨ Benefícios do Cadastro</h4>
+              <ul>
+                <li>Salvar suas preferências de acessibilidade</li>
+                <li>Histórico de pesquisas e reservas</li>
+                <li>Roteiros personalizados salvos</li>
+                <li>Notificações sobre novos destinos</li>
+                <li>Avaliações e comentários</li>
+              </ul>
+            </div>
+          </div>
+          
+          <form id="registration-form" class="registration-form">
+            <div class="form-group">
+              <label for="reg-name">Nome Completo:</label>
+              <input type="text" id="reg-name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-email">E-mail:</label>
+              <input type="email" id="reg-email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-password">Senha:</label>
+              <input type="password" id="reg-password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-accessibility">Suas necessidades de acessibilidade:</label>
+              <select id="reg-accessibility" name="accessibility">
+                <option value="">Selecione (opcional)</option>
+                <option value="cadeira-rodas">Cadeira de rodas</option>
+                <option value="mobilidade-reduzida">Mobilidade reduzida</option>
+                <option value="deficiencia-visual">Deficiência visual</option>
+                <option value="deficiencia-auditiva">Deficiência auditiva</option>
+                <option value="alimentacao-especial">Alimentação especial</option>
+                <option value="multiplas">Múltiplas necessidades</option>
+              </select>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                Aceito os <a href="#" onclick="alert('Termos de uso seriam exibidos aqui!')">termos de uso</a> e <a href="#" onclick="alert('Política de privacidade seria exibida aqui!')">política de privacidade</a>
+              </label>
+            </div>
+            
+            <div class="modal-buttons">
+              <button type="submit" class="primary-button">Criar Conta</button>
+              <button type="button" class="secondary-button" onclick="alert('Funcionalidade de login seria implementada aqui!')">Já tenho conta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    `
+
+    const modal = createModal(content)
+
+    // Adicionar evento de envio do formulário
+    const form = modal.querySelector("#registration-form")
+    form.addEventListener("submit", function (e) {
+      e.preventDefault()
+      const formData = new FormData(this)
+      alert(
+        `Conta criada com sucesso!\n\nBem-vindo(a) ${formData.get("name")}! Sua conta foi criada e você já pode aproveitar todos os recursos personalizados do Destino Certo.`,
+      )
+      modal.remove()
+    })
+  }
+
+  // Função para download de guias
+  function downloadGuide(guideType) {
+    alert(`Baixando guia de ${guideType}...`)
+  }
+
+  // Função para download de todos os recursos
+  function downloadAllResources() {
+    alert("Baixando todos os recursos de acessibilidade...")
+  }
+
+  // Função para renderizar filtros de acessibilidade
   function renderAccessibilityFilters() {
     const filtersContainer = document.getElementById("accessibility-filters")
     if (!filtersContainer) return
@@ -955,18 +1273,15 @@ Para mais informações, visite nosso site ou entre em contato conosco.
         ${isActive ? '<span class="filter-check"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ""}
       `
 
-      filtersContainer.appendChild(filterButton)
-    })
-
-    document.querySelectorAll(".filter-button").forEach((button) => {
-      button.addEventListener("click", function () {
-        const filterName = this.getAttribute("data-filter")
-        toggleFilter(filterName)
+      filterButton.addEventListener("click", () => {
+        toggleFilter(filter.name)
       })
+
+      filtersContainer.appendChild(filterButton)
     })
   }
 
-  // Renderizar hospedagens
+  // Função para renderizar hospedagens
   function renderAccommodations() {
     const accommodationsGrid = document.getElementById("accommodations-grid")
     const noResults = document.getElementById("no-results")
@@ -1061,6 +1376,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
         accommodationsGrid.appendChild(accommodationCard)
       })
 
+      // Adicionar event listeners para os botões de detalhes
       document.querySelectorAll(".details-button").forEach((button) => {
         button.addEventListener("click", function () {
           const accommodationName = this.getAttribute("data-accommodation")
@@ -1078,7 +1394,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
     }
   }
 
-  // Renderizar atrações próximas
+  // Função para renderizar atrações
   function renderAttractions() {
     const attractionsGrid = document.getElementById("attractions-grid")
     if (!attractionsGrid) return
@@ -1129,6 +1445,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       attractionsGrid.appendChild(attractionCard)
     })
 
+    // Adicionar event listeners para os botões "Ver mais"
     document.querySelectorAll(".view-more-button").forEach((button) => {
       button.addEventListener("click", function () {
         const attractionName = this.getAttribute("data-attraction")
@@ -1163,38 +1480,40 @@ Para mais informações, visite nosso site ou entre em contato conosco.
     })
 
     let itineraryHTML = ""
-    accommodation.itinerary.forEach((day) => {
-      let activitiesHTML = ""
-      day.activities.forEach((activity) => {
-        activitiesHTML += `
-          <div class="itinerary-activity">
-            <div class="itinerary-activity-time">${activity.time}</div>
-            <div class="itinerary-activity-details">
-              <div class="itinerary-activity-title">${activity.title}</div>
-              <div class="itinerary-activity-description">${activity.description}</div>
+    if (accommodation.itinerary && accommodation.itinerary.length > 0) {
+      accommodation.itinerary.forEach((day) => {
+        let activitiesHTML = ""
+        day.activities.forEach((activity) => {
+          activitiesHTML += `
+            <div class="itinerary-activity">
+              <div class="itinerary-activity-time">${activity.time}</div>
+              <div class="itinerary-activity-details">
+                <div class="itinerary-activity-title">${activity.title}</div>
+                <div class="itinerary-activity-description">${activity.description}</div>
+              </div>
+            </div>
+          `
+        })
+
+        itineraryHTML += `
+          <div class="itinerary-day">
+            <div class="itinerary-day-header">
+              <div class="itinerary-day-title">${day.day}</div>
+              <div class="itinerary-day-date">${day.date}</div>
+            </div>
+            <div class="itinerary-activities">
+              ${activitiesHTML}
             </div>
           </div>
         `
       })
+    } else {
+      itineraryHTML = `<p>Itinerário personalizado disponível mediante solicitação.</p>`
+    }
 
-      itineraryHTML += `
-        <div class="itinerary-day">
-          <div class="itinerary-day-header">
-            <div class="itinerary-day-title">${day.day}</div>
-            <div class="itinerary-day-date">${day.date}</div>
-          </div>
-          <div class="itinerary-activities">
-            ${activitiesHTML}
-          </div>
-        </div>
-      `
-    })
-
-    const modal = document.createElement("div")
-    modal.className = "modal active"
-    modal.innerHTML = `
+    const content = `
       <div class="modal-content">
-        <button class="close-button" onclick="this.closest('.modal').remove()">
+        <button class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -1262,7 +1581,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
             </div>
 
             <div class="modal-buttons">
-              <button class="primary-button">Reservar Agora</button>
+              <button class="primary-button" onclick="alert('Redirecionando para reserva...')">Reservar Agora</button>
               <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
             </div>
           </div>
@@ -1270,13 +1589,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       </div>
     `
 
-    document.body.appendChild(modal)
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.remove()
-      }
-    })
+    createModal(content)
   }
 
   // Função para abrir modal de atração
@@ -1296,11 +1609,9 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       `
     })
 
-    const modal = document.createElement("div")
-    modal.className = "modal active"
-    modal.innerHTML = `
+    const content = `
       <div class="modal-content">
-        <button class="close-button" onclick="this.closest('.modal').remove()">
+        <button class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -1329,7 +1640,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
             </div>
 
             <div class="modal-buttons">
-              <button class="primary-button">Agendar Visita</button>
+              <button class="primary-button" onclick="alert('Redirecionando para agendamento...')">Agendar Visita</button>
               <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
             </div>
           </div>
@@ -1337,39 +1648,10 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       </div>
     `
 
-    document.body.appendChild(modal)
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.remove()
-      }
-    })
+    createModal(content)
   }
 
-  // Renderizar equipe
-  function renderTeam() {
-    const teamGrid = document.querySelector(".team-grid")
-    if (teamGrid) {
-      teamGrid.innerHTML = ""
-
-      teamMembers.forEach((member) => {
-        const teamMember = document.createElement("div")
-        teamMember.className = "team-member"
-
-        teamMember.innerHTML = `
-          <div class="member-avatar">
-            <img src="${member.image}" alt="${member.name}">
-          </div>
-          <h3 class="member-name">${member.name}</h3>
-          <p class="member-role">${member.role}</p>
-        `
-
-        teamGrid.appendChild(teamMember)
-      })
-    }
-  }
-
-  // Funções para manipular o estado
+  // Função para alternar filtros
   function toggleFilter(filterName) {
     if (state.activeFilters.includes(filterName)) {
       state.activeFilters = state.activeFilters.filter((f) => f !== filterName)
@@ -1382,6 +1664,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
     renderAccommodations()
   }
 
+  // Função para filtrar hospedagens
   function filterAccommodations() {
     if (state.activeFilters.length === 0 && !state.searchLocation) {
       state.filteredAccommodations = [...accommodations]
@@ -1406,6 +1689,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
     }
   }
 
+  // Função para limpar filtros
   function clearFilters() {
     state.searchLocation = ""
     state.activeFilters = []
@@ -1422,7 +1706,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
     renderAccommodations()
   }
 
-  // Função para o planejador de rotas
+  // Função para inicializar o planejador de rotas
   function initRoutePlanner() {
     const calculateRouteBtn = document.getElementById("calculate-route-btn")
     const routeResults = document.getElementById("route-results")
@@ -1487,7 +1771,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       })
     }
 
-    // Event listeners para botões de ação
+    // Event listeners para botões de transporte
     document.addEventListener("click", (e) => {
       if (e.target.classList.contains("start-navigation-btn")) {
         const buttonText = e.target.textContent
@@ -1507,20 +1791,15 @@ Para mais informações, visite nosso site ou entre em contato conosco.
           alert("Redirecionando para consulta de voos...")
         } else if (buttonText.includes("Carro")) {
           alert("Redirecionando para locadoras de veículos adaptados...")
+        } else {
+          alert("Redirecionando para serviço de transporte...")
         }
       }
     })
   }
 
-  // Inicializar a aplicação
-  function init() {
-    // Renderizar componentes iniciais
-    renderAccessibilityFilters()
-    renderAccommodations()
-    renderAttractions()
-    renderTeam()
-    initRoutePlanner()
-
+  // Função para inicializar todos os event listeners
+  function initEventListeners() {
     // Event listeners para pesquisa
     const searchButton = document.getElementById("search-button")
     if (searchButton) {
@@ -1548,7 +1827,7 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       }
     })
 
-    // Event listeners para navegação
+    // Event listeners para navegação suave
     document.querySelectorAll("[data-scroll-to]").forEach((link) => {
       link.addEventListener("click", function () {
         const target = this.getAttribute("data-scroll-to")
@@ -1559,43 +1838,23 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       })
     })
 
-    // Event listeners para botões do footer e modais
+    // Event listeners para todos os botões do footer e modais
     const buttonMappings = [
-      { id: "guide-download-button", action: () => generateAccessibilityGuide() },
+      { id: "guide-download-button", action: () => downloadGuide("acessibilidade") },
       { id: "team-button", action: () => showTeamModal() },
       { id: "team-button-alt", action: () => showTeamModal() },
+      { id: "mission-button", action: () => showMissionModal() },
+      { id: "contact-button", action: () => showContactModal() },
+      { id: "certifications-button", action: () => showCertificationsModal() },
+      { id: "resources-button", action: () => showResourcesModal() },
+      { id: "reviews-button", action: () => showReviewsModal() },
+      { id: "custom-itineraries-button", action: () => showCustomItinerariesModal() },
+      { id: "guide-button", action: () => downloadGuide("acessibilidade") },
       { id: "privacy-button", action: () => alert("Política de privacidade seria exibida aqui!") },
       { id: "terms-button", action: () => alert("Termos de uso seriam exibidos aqui!") },
-      { id: "programming-button", action: () => showAccessibilityInfo("mobilityReduced") },
-      { id: "guide-button", action: () => generateAccessibilityGuide() },
-      { id: "other-projects-button", action: () => showAccessibilityInfo("visualImpairment") },
-      {
-        id: "mission-button",
-        action: () =>
-          handleGenericButtonClick("Nossa missão é facilitar o planejamento de viagens acessíveis para todos!"),
-      },
-      {
-        id: "more-info-button",
-        action: () =>
-          handleGenericButtonClick("Mais informações sobre o projeto de roteiros acessíveis seriam exibidas aqui!"),
-      },
-      {
-        id: "certifications-button",
-        action: () =>
-          handleGenericButtonClick("Certificações de acessibilidade e parceiros oficiais seriam exibidos aqui!"),
-      },
-      {
-        id: "reviews-button",
-        action: () =>
-          handleGenericButtonClick("Sistema de avaliações de acessibilidade de hospedagens seria exibido aqui!"),
-      },
-      {
-        id: "resources-button",
-        action: () =>
-          handleGenericButtonClick(
-            "Recursos adicionais para viajantes com necessidades especiais seriam exibidos aqui!",
-          ),
-      },
+      { id: "programming-button", action: () => showMobilityModal() },
+      { id: "other-projects-button", action: () => showVisualModal() },
+      { id: "more-info-button", action: () => alert("Mais informações sobre o projeto seriam exibidas aqui!") },
     ]
 
     buttonMappings.forEach(({ id, action }) => {
@@ -1631,22 +1890,58 @@ Para mais informações, visite nosso site ou entre em contato conosco.
       }
     })
 
-    // Event listeners para acessibilidade no footer
+    // Event listeners para acessibilidade específica
     document.querySelectorAll('[data-accessibility="hearing"]').forEach((button) => {
-      button.addEventListener("click", () => showAccessibilityInfo("hearingImpairment"))
+      button.addEventListener("click", () => showHearingModal())
     })
 
     document.querySelectorAll('[data-accessibility="diet"]').forEach((button) => {
-      button.addEventListener("click", () => showAccessibilityInfo("specialDiet"))
+      button.addEventListener("click", () => showDietModal())
     })
 
-    // Event listener para cadastro
+    // Event listener para cadastro/menu do usuário
     const userMenu = document.querySelector(".user-menu")
     if (userMenu) {
-      userMenu.addEventListener("click", showRegistrationModal)
+      userMenu.addEventListener("click", () => {
+        showRegistrationModal()
+      })
     }
   }
 
-  // Iniciar a aplicação quando o DOM estiver carregado
+  // Função principal de inicialização
+  function init() {
+    console.log("Inicializando aplicação...")
+
+    // Renderizar componentes iniciais
+    renderAccessibilityFilters()
+    renderAccommodations()
+    renderAttractions()
+
+    // Inicializar planejador de rotas
+    initRoutePlanner()
+
+    // Inicializar todos os event listeners
+    initEventListeners()
+
+    console.log("Aplicação inicializada com sucesso!")
+  }
+
+  // Tornar funções globais para uso em onclick
+  window.showMissionModal = showMissionModal
+  window.showContactModal = showContactModal
+  window.showTeamModal = showTeamModal
+  window.showCertificationsModal = showCertificationsModal
+  window.showResourcesModal = showResourcesModal
+  window.showReviewsModal = showReviewsModal
+  window.showCustomItinerariesModal = showCustomItinerariesModal
+  window.showMobilityModal = showMobilityModal
+  window.showVisualModal = showVisualModal
+  window.showHearingModal = showHearingModal
+  window.showDietModal = showDietModal
+  window.showRegistrationModal = showRegistrationModal
+  window.downloadGuide = downloadGuide
+  window.downloadAllResources = downloadAllResources
+
+  // Inicializar a aplicação
   init()
 })
