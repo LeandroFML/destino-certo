@@ -34,32 +34,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const teamMembers = [
     {
       name: "Vitor",
-      role: "Sub-Lider",
+      role: "Sub-Líder do Projeto",
       image: "img/vitao_img.jpeg",
     },
     {
       name: "Leandro",
-      role: "Conversa com Especialista",
+      role: "Especialista em Acessibilidade",
       image: "img/leandro_img.jpeg",
     },
     {
       name: "Leandro",
-      role: "Pesquisa de Campo",
+      role: "Pesquisador de Campo",
       image: "img/leandro2_img.jpeg",
     },
     {
       name: "Jonathan",
-      role: "Documentação",
+      role: "Responsável pela Documentação",
       image: "img/jhow_img.jpeg",
     },
     {
       name: "Arthur",
-      role: "Lider",
+      role: "Líder do Projeto",
       image: "img/arthur_img.PNG",
     },
     {
       name: "Mesquita",
-      role: "Design Logo",
+      role: "Designer Gráfico",
       image: "img/mesquita_img.jpeg",
     },
   ]
@@ -496,11 +496,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>🎯 Nossa Missão</h2>
+          <h2>Nossa Missão</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>🌟 Visão</h4>
+              <h4>Visão</h4>
               <ul>
                 <li>Ser a principal plataforma de turismo acessível do Brasil</li>
                 <li>Conectar pessoas com necessidades especiais a experiências incríveis</li>
@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🎯 Missão</h4>
+              <h4>Missão</h4>
               <ul>
                 <li>Facilitar o planejamento de viagens acessíveis para todos</li>
                 <li>Fornecer informações precisas sobre acessibilidade</li>
@@ -519,7 +519,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>💎 Valores</h4>
+              <h4>Valores</h4>
               <ul>
                 <li>Inclusão e diversidade em primeiro lugar</li>
                 <li>Transparência nas informações de acessibilidade</li>
@@ -551,11 +551,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>📞 Entre em Contato</h2>
+          <h2>Entre em Contato</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>📧 Informações de Contato</h4>
+              <h4>Informações de Contato</h4>
               <ul>
                 <li>Email: contato@destinocerto.com.br</li>
                 <li>WhatsApp: (11) 99999-9999</li>
@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>👥 Nossa Equipe</h2>
+          <h2>Nossa Equipe</h2>
           <p>Conheça os membros da equipe que desenvolveram o projeto Destino Certo:</p>
           
           <div class="team-grid">
@@ -666,11 +666,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>🏆 Certificações e Parcerias</h2>
+          <h2>Certificações e Parcerias</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>🏅 Certificações Oficiais</h4>
+              <h4>Certificações Oficiais</h4>
               <ul>
                 <li>ABNT NBR 9050 - Acessibilidade a edificações</li>
                 <li>ISO 14001 - Sistema de Gestão Ambiental</li>
@@ -680,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🤝 Parceiros Institucionais</h4>
+              <h4>Parceiros Institucionais</h4>
               <ul>
                 <li>Ministério do Turismo</li>
                 <li>EMBRATUR - Instituto Brasileiro de Turismo</li>
@@ -690,7 +690,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🏨 Parceiros Comerciais</h4>
+              <h4>Parceiros Comerciais</h4>
               <ul>
                 <li>Rede Hoteleira Accor</li>
                 <li>Booking.com - Programa de Acessibilidade</li>
@@ -725,11 +725,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>📚 Recursos Adicionais</h2>
+          <h2>Recursos Adicionais</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>📖 Downloads Disponíveis</h4>
+              <h4>Downloads Disponíveis</h4>
               <ul>
                 <li><button onclick="downloadGuide('acessibilidade')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Guia Completo de Acessibilidade</button></li>
                 <li><button onclick="downloadGuide('checklist')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Checklist para Viagem Acessível</button></li>
@@ -739,7 +739,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>📱 Aplicativos Recomendados</h4>
+              <h4>Aplicativos Recomendados</h4>
               <ul>
                 <li>Be My Eyes - Assistência visual remota</li>
                 <li>Wheelmap - Mapa de acessibilidade</li>
@@ -749,7 +749,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🔗 Links Úteis</h4>
+              <h4>Links Úteis</h4>
               <ul>
                 <li><button onclick="alert('Redirecionando para site do Ministério do Turismo...')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">Ministério do Turismo</button></li>
                 <li><button onclick="alert('Redirecionando para EMBRATUR...')" style="color: #3b82f6; text-decoration: underline; background: none; border: none; cursor: pointer;">EMBRATUR</button></li>
@@ -759,7 +759,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🚨 Contatos de Emergência</h4>
+              <h4>Contatos de Emergência</h4>
               <ul>
                 <li>SAMU: 192</li>
                 <li>Bombeiros: 193</li>
@@ -790,11 +790,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>⭐ Sistema de Avaliações</h2>
+          <h2>Sistema de Avaliações</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>📊 Estatísticas Gerais</h4>
+              <h4>Estatísticas Gerais</h4>
               <ul>
                 <li>Avaliação média: 4.8/5 estrelas</li>
                 <li>Total de avaliações: 2.847</li>
@@ -804,11 +804,11 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>💬 Avaliações Recentes</h4>
+              <h4>Avaliações Recentes</h4>
               <ul>
-                <li><strong>Maria S.</strong> - "Excelente plataforma! Encontrei tudo que precisava para minha viagem." ⭐⭐⭐⭐⭐</li>
-                <li><strong>João P.</strong> - "Informações muito úteis sobre acessibilidade." ⭐⭐⭐⭐⭐</li>
-                <li><strong>Ana C.</strong> - "Facilitou muito o planejamento da nossa viagem." ⭐⭐⭐⭐</li>
+                <li><strong>Maria S.</strong> - "Excelente plataforma! Encontrei tudo que precisava para minha viagem." ★★★★★</li>
+                <li><strong>João P.</strong> - "Informações muito úteis sobre acessibilidade." ★★★★★</li>
+                <li><strong>Ana C.</strong> - "Facilitou muito o planejamento da nossa viagem." ★★★★</li>
               </ul>
             </div>
           </div>
@@ -834,11 +834,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>🗺️ Roteiros Personalizados</h2>
+          <h2>Roteiros Personalizados</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>✨ Exemplos de Roteiros</h4>
+              <h4>Exemplos de Roteiros</h4>
               <ul>
                 <li><strong>Rio de Janeiro Acessível (3 dias)</strong> - Cristo Redentor, Pão de Açúcar, Copacabana</li>
                 <li><strong>São Paulo Cultural (2 dias)</strong> - Museus, Parque Ibirapuera, Centro Histórico</li>
@@ -848,7 +848,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🎯 Como Funciona</h4>
+              <h4>Como Funciona</h4>
               <ul>
                 <li>Preencha suas necessidades de acessibilidade</li>
                 <li>Escolha destinos e duração da viagem</li>
@@ -943,11 +943,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>♿ Mobilidade Reduzida</h2>
+          <h2>Mobilidade Reduzida</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>🏨 Hospedagens Adaptadas</h4>
+              <h4>Hospedagens Adaptadas</h4>
               <ul>
                 <li>Quartos com portas largas (mín. 80cm)</li>
                 <li>Banheiros com barras de apoio</li>
@@ -958,7 +958,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🚗 Transporte Acessível</h4>
+              <h4>Transporte Acessível</h4>
               <ul>
                 <li>Veículos com rampa ou elevador</li>
                 <li>Espaço para fixação de cadeira de rodas</li>
@@ -968,7 +968,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🎯 Atrações Inclusivas</h4>
+              <h4>Atrações Inclusivas</h4>
               <ul>
                 <li>Entrada gratuita para acompanhante</li>
                 <li>Filas preferenciais</li>
@@ -999,11 +999,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>👁️ Deficiência Visual</h2>
+          <h2>Deficiência Visual</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>🏨 Recursos para Hospedagem</h4>
+              <h4>Recursos para Hospedagem</h4>
               <ul>
                 <li>Piso tátil em corredores e áreas comuns</li>
                 <li>Sinalização em braile</li>
@@ -1014,7 +1014,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🎯 Atrações Adaptadas</h4>
+              <h4>Atrações Adaptadas</h4>
               <ul>
                 <li>Audioguias detalhados</li>
                 <li>Maquetes táteis</li>
@@ -1025,7 +1025,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🚌 Transporte Inclusivo</h4>
+              <h4>Transporte Inclusivo</h4>
               <ul>
                 <li>Avisos sonoros de paradas</li>
                 <li>Piso tátil nas estações</li>
@@ -1056,11 +1056,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>👂 Deficiência Auditiva</h2>
+          <h2>Deficiência Auditiva</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>🏨 Hospedagens Inclusivas</h4>
+              <h4>Hospedagens Inclusivas</h4>
               <ul>
                 <li>Sistemas de alerta visual (luzes piscantes)</li>
                 <li>Telefones com amplificador de som</li>
@@ -1071,7 +1071,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🎯 Atrações Adaptadas</h4>
+              <h4>Atrações Adaptadas</h4>
               <ul>
                 <li>Intérpretes de LIBRAS</li>
                 <li>Materiais informativos visuais</li>
@@ -1082,7 +1082,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🚌 Transporte Adaptado</h4>
+              <h4>Transporte Adaptado</h4>
               <ul>
                 <li>Painéis informativos visuais</li>
                 <li>Aplicativos de comunicação</li>
@@ -1113,11 +1113,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>🍽️ Alimentação Especial</h2>
+          <h2>Alimentação Especial</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>🏨 Opções em Hospedagens</h4>
+              <h4>Opções em Hospedagens</h4>
               <ul>
                 <li>Cardápios para diabéticos</li>
                 <li>Opções sem glúten</li>
@@ -1128,7 +1128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🍴 Restaurantes Parceiros</h4>
+              <h4>Restaurantes Parceiros</h4>
               <ul>
                 <li>Certificação para alergias alimentares</li>
                 <li>Cardápios com informações nutricionais</li>
@@ -1139,7 +1139,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
             <div class="accessibility-section">
-              <h4>🛒 Facilidades Adicionais</h4>
+              <h4>Facilidades Adicionais</h4>
               <ul>
                 <li>Supermercados com produtos especiais</li>
                 <li>Farmácias com suplementos</li>
@@ -1170,11 +1170,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </svg>
         </button>
         <div class="modal-body">
-          <h2>👤 Cadastro / Login</h2>
+          <h2>Cadastro / Login</h2>
           
           <div class="accessibility-content">
             <div class="accessibility-section">
-              <h4>✨ Benefícios do Cadastro</h4>
+              <h4>Benefícios do Cadastro</h4>
               <ul>
                 <li>Salvar suas preferências de acessibilidade</li>
                 <li>Histórico de pesquisas e reservas</li>
