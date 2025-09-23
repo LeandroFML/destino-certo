@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Ibis Budget Foz do Iguaçu",
-      image: "/hotel-economico-foz-do-iguacu.jpg",
+      image: "img/ibis_img.jpg",
       rating: "4.2",
       description:
         "Hotel econômico com cerca de 10 quartos adaptados e excelente localização próxima às Cataratas do Iguaçu.",
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Hotel Sesc Gramado",
-      image: "/hotel-sesc-gramado.jpg",
+      image: "img/SescGramado_img.jpg",
       rating: "4.5",
       description: "Hotel com tarifa social acessível e estrutura completamente adaptada para pessoas com deficiência.",
       details: {
@@ -253,225 +253,225 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    {
-      name: "Pousada Brisa do Mar",
-      image: "img/brisa_img.jpg",
-      rating: "4.8",
-      description: "Pousada à beira-mar com quartos adaptados e vista deslumbrante para o oceano.",
-      details: {
-        rooms: 2,
-        bathrooms: 1,
-        capacity: 4,
-      },
-      location: "Praia do Forte, Bahia",
-      city: "salvador",
-      category: "praia", // Adicionado
-      accessibilityFeatures: [
-        {
-          name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-        {
-          name: "Esteiras na Areia",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 16h16"></path></svg>`,
-        },
-      ],
-      nearbyAttractions: ["Projeto TAMAR", "Mercado de Artesanato", "Reserva Natural"],
-      itinerary: [
-        {
-          day: "Dia 1",
-          date: "15/06/2023",
-          activities: [
-            {
-              time: "09:00",
-              title: "Check-in",
-              description: "Recepção com equipe especializada em acessibilidade.",
-            },
-            {
-              time: "12:00",
-              title: "Almoço no Restaurante da Pousada",
-              description: "Cardápio com opções para dietas especiais.",
-            },
-            {
-              time: "15:00",
-              title: "Visita ao Projeto TAMAR",
-              description: "Atração totalmente acessível com trilhas adaptadas.",
-            },
-          ],
-        },
-        {
-          day: "Dia 2",
-          date: "16/06/2023",
-          activities: [
-            {
-              time: "08:00",
-              title: "Café da manhã",
-              description: "Buffet variado com atendimento personalizado.",
-            },
-            {
-              time: "10:00",
-              title: "Passeio pela praia",
-              description: "Cadeiras anfíbias disponíveis mediante agendamento.",
-            },
-            {
-              time: "14:00",
-              title: "Tour pelo Mercado de Artesanato",
-              description: "Local com acessibilidade completa e guias especializados.",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "Hotel Central Park",
-      image: "img/park_img.jpg",
-      rating: "4.7",
-      description: "Hotel no coração da cidade com excelente infraestrutura para pessoas com mobilidade reduzida.",
-      details: {
-        rooms: 3,
-        bathrooms: 2,
-        capacity: 6,
-      },
-      location: "São Paulo, SP",
-      city: "sao-paulo",
-      category: "parque", // Adicionado
-      accessibilityFeatures: [
-        {
-          name: "Elevadores",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-        },
-        {
-          name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-        {
-          name: "Piso Tátil",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
-        },
-      ],
-      nearbyAttractions: ["Parque Ibirapuera", "Museu de Arte", "Shopping Center"],
-      itinerary: [
-        {
-          day: "Dia 1",
-          date: "20/07/2023",
-          activities: [
-            {
-              time: "14:00",
-              title: "Check-in",
-              description: "Recepção com equipe especializada e assistência personalizada.",
-            },
-            {
-              time: "16:00",
-              title: "Tour pelo hotel",
-              description: "Apresentação das instalações e recursos de acessibilidade.",
-            },
-            {
-              time: "19:00",
-              title: "Jantar no restaurante do hotel",
-              description: "Cardápio com opções para diversas restrições alimentares.",
-            },
-          ],
-        },
-        {
-          day: "Dia 2",
-          date: "21/07/2023",
-          activities: [
-            {
-              time: "09:00",
-              title: "Visita ao Parque Ibirapuera",
-              description: "Transporte adaptado e guia especializado disponíveis.",
-            },
-            {
-              time: "13:00",
-              title: "Almoço em restaurante parceiro",
-              description: "Local totalmente acessível próximo ao parque.",
-            },
-            {
-              time: "15:00",
-              title: "Visita ao Museu de Arte",
-              description: "Museu com instalações acessíveis e exposições táteis.",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "Pousada Montanha Verde",
-      image: "img/MV_img.jpg",
-      rating: "4.6",
-      description: "Pousada em meio à natureza com chalés adaptados e trilhas acessíveis.",
-      details: {
-        rooms: 1,
-        bathrooms: 1,
-        capacity: 2,
-      },
-      location: "Campos do Jordão, SP",
-      city: "campos-jordao",
-      category: "historica", // Adicionado
-      accessibilityFeatures: [
-        {
-          name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-        {
-          name: "Estacionamento",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
-        },
-      ],
-      nearbyAttractions: ["Parque Amantikir", "Teleférico", "Centro Histórico"],
-      itinerary: [
-        {
-          day: "Dia 1",
-          date: "10/08/2023",
-          activities: [
-            {
-              time: "12:00",
-              title: "Check-in",
-              description: "Recepção com assistência personalizada para hospedagem.",
-            },
-            {
-              time: "15:00",
-              title: "Passeio pelo jardim da pousada",
-              description: "Caminhos adaptados com belas paisagens naturais.",
-            },
-            {
-              time: "18:00",
-              title: "Jantar especial",
-              description: "Gastronomia típica da montanha com opções para dietas especiais.",
-            },
-          ],
-        },
-        {
-          day: "Dia 2",
-          date: "11/08/2023",
-          activities: [
-            {
-              time: "09:30",
-              title: "Visita ao Parque Amantikir",
-              description: "Jardins com caminhos acessíveis e belezas naturais.",
-            },
-            {
-              time: "14:00",
-              title: "Passeio de teleférico",
-              description: "Cabines adaptadas para cadeiras de rodas com vista panorâmica.",
-            },
-            {
-              time: "17:00",
-              title: "Tour pelo Centro Histórico",
-              description: "Visita guiada com informações sobre a história local.",
-            },
-          ],
-        },
-      ],
-    },
+    // {
+    //   name: "Pousada Brisa do Mar",
+    //   image: "img/brisa_img.jpg",
+    //   rating: "4.8",
+    //   description: "Pousada à beira-mar com quartos adaptados e vista deslumbrante para o oceano.",
+    //   details: {
+    //     rooms: 2,
+    //     bathrooms: 1,
+    //     capacity: 4,
+    //   },
+    //   location: "Praia do Forte, Bahia",
+    //   city: "salvador",
+    //   category: "praia", // Adicionado
+    //   accessibilityFeatures: [
+    //     {
+    //       name: "Rampas de Acesso",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Banheiros Adaptados",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Esteiras na Areia",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 16h16"></path></svg>`,
+    //     },
+    //   ],
+    //   nearbyAttractions: ["Projeto TAMAR", "Mercado de Artesanato", "Reserva Natural"],
+    //   itinerary: [
+    //     {
+    //       day: "Dia 1",
+    //       date: "15/06/2023",
+    //       activities: [
+    //         {
+    //           time: "09:00",
+    //           title: "Check-in",
+    //           description: "Recepção com equipe especializada em acessibilidade.",
+    //         },
+    //         {
+    //           time: "12:00",
+    //           title: "Almoço no Restaurante da Pousada",
+    //           description: "Cardápio com opções para dietas especiais.",
+    //         },
+    //         {
+    //           time: "15:00",
+    //           title: "Visita ao Projeto TAMAR",
+    //           description: "Atração totalmente acessível com trilhas adaptadas.",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       day: "Dia 2",
+    //       date: "16/06/2023",
+    //       activities: [
+    //         {
+    //           time: "08:00",
+    //           title: "Café da manhã",
+    //           description: "Buffet variado com atendimento personalizado.",
+    //         },
+    //         {
+    //           time: "10:00",
+    //           title: "Passeio pela praia",
+    //           description: "Cadeiras anfíbias disponíveis mediante agendamento.",
+    //         },
+    //         {
+    //           time: "14:00",
+    //           title: "Tour pelo Mercado de Artesanato",
+    //           description: "Local com acessibilidade completa e guias especializados.",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Hotel Central Park",
+    //   image: "img/park_img.jpg",
+    //   rating: "4.7",
+    //   description: "Hotel no coração da cidade com excelente infraestrutura para pessoas com mobilidade reduzida.",
+    //   details: {
+    //     rooms: 3,
+    //     bathrooms: 2,
+    //     capacity: 6,
+    //   },
+    //   location: "São Paulo, SP",
+    //   city: "sao-paulo",
+    //   category: "parque", // Adicionado
+    //   accessibilityFeatures: [
+    //     {
+    //       name: "Elevadores",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Banheiros Adaptados",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Piso Tátil",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
+    //     },
+    //   ],
+    //   nearbyAttractions: ["Parque Ibirapuera", "Museu de Arte", "Shopping Center"],
+    //   itinerary: [
+    //     {
+    //       day: "Dia 1",
+    //       date: "20/07/2023",
+    //       activities: [
+    //         {
+    //           time: "14:00",
+    //           title: "Check-in",
+    //           description: "Recepção com equipe especializada e assistência personalizada.",
+    //         },
+    //         {
+    //           time: "16:00",
+    //           title: "Tour pelo hotel",
+    //           description: "Apresentação das instalações e recursos de acessibilidade.",
+    //         },
+    //         {
+    //           time: "19:00",
+    //           title: "Jantar no restaurante do hotel",
+    //           description: "Cardápio com opções para diversas restrições alimentares.",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       day: "Dia 2",
+    //       date: "21/07/2023",
+    //       activities: [
+    //         {
+    //           time: "09:00",
+    //           title: "Visita ao Parque Ibirapuera",
+    //           description: "Transporte adaptado e guia especializado disponíveis.",
+    //         },
+    //         {
+    //           time: "13:00",
+    //           title: "Almoço em restaurante parceiro",
+    //           description: "Local totalmente acessível próximo ao parque.",
+    //         },
+    //         {
+    //           time: "15:00",
+    //           title: "Visita ao Museu de Arte",
+    //           description: "Museu com instalações acessíveis e exposições táteis.",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Pousada Montanha Verde",
+    //   image: "img/MV_img.jpg",
+    //   rating: "4.6",
+    //   description: "Pousada em meio à natureza com chalés adaptados e trilhas acessíveis.",
+    //   details: {
+    //     rooms: 1,
+    //     bathrooms: 1,
+    //     capacity: 2,
+    //   },
+    //   location: "Campos do Jordão, SP",
+    //   city: "campos-jordao",
+    //   category: "historica", // Adicionado
+    //   accessibilityFeatures: [
+    //     {
+    //       name: "Rampas de Acesso",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Banheiros Adaptados",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Estacionamento",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
+    //     },
+    //   ],
+    //   nearbyAttractions: ["Parque Amantikir", "Teleférico", "Centro Histórico"],
+    //   itinerary: [
+    //     {
+    //       day: "Dia 1",
+    //       date: "10/08/2023",
+    //       activities: [
+    //         {
+    //           time: "12:00",
+    //           title: "Check-in",
+    //           description: "Recepção com assistência personalizada para hospedagem.",
+    //         },
+    //         {
+    //           time: "15:00",
+    //           title: "Passeio pelo jardim da pousada",
+    //           description: "Caminhos adaptados com belas paisagens naturais.",
+    //         },
+    //         {
+    //           time: "18:00",
+    //           title: "Jantar especial",
+    //           description: "Gastronomia típica da montanha com opções para dietas especiais.",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       day: "Dia 2",
+    //       date: "11/08/2023",
+    //       activities: [
+    //         {
+    //           time: "09:30",
+    //           title: "Visita ao Parque Amantikir",
+    //           description: "Jardins com caminhos acessíveis e belezas naturais.",
+    //         },
+    //         {
+    //           time: "14:00",
+    //           title: "Passeio de teleférico",
+    //           description: "Cabines adaptadas para cadeiras de rodas com vista panorâmica.",
+    //         },
+    //         {
+    //           time: "17:00",
+    //           title: "Tour pelo Centro Histórico",
+    //           description: "Visita guiada com informações sobre a história local.",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
   ];
 
   const attractions = [
@@ -538,7 +538,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Cataratas do Iguaçu",
-      image: "/cataratas-do-iguacu.jpg",
+      image: "img/cataratas_img.jpg",
       distance: "2 km do Ibis Budget Foz do Iguaçu",
       city: "foz-do-iguacu",
       category: "parque", // Adicionado
@@ -571,7 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Parque das Aves",
-      image: "/parque-das-aves-foz-do-iguacu.jpg",
+      image: "img/aves_img.jpg",
       distance: "3 km do Ibis Budget Foz do Iguaçu",
       city: "foz-do-iguacu",
       category: "parque", // Adicionado
@@ -599,7 +599,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Catedral de Pedra",
-      image: "/catedral-de-pedra-canela.jpg",
+      image: "img/catedral_img.jpg",
       distance: "5 km do Hotel Sesc Gramado",
       city: "gramado",
       category: "historica", // Adicionado
@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Centro de Gramado",
-      image: "/centro-de-gramado.jpg",
+      image: "img/cgramadp_img.jpg",
       distance: "1 km do Hotel Sesc Gramado",
       city: "gramado",
       category: "historica", // Adicionado
@@ -648,7 +648,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           name: "Restaurantes Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>`,
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 6a4 4 0 0 1-4-4V8z"></path></svg>`,
         },
       ],
       details: {
@@ -680,29 +680,29 @@ document.addEventListener("DOMContentLoaded", () => {
         services: "Guias especializados, Cadeiras de rodas disponíveis",
       },
     },
-    {
-      name: "Parque Ibirapuera",
-      image: "img/ibira_img.jpg",
-      distance: "1,5 km do Hotel Central Park",
-      city: "sao-paulo",
-      category: "parque", // Adicionado
-      description: "Maior parque urbano de São Paulo com trilhas acessíveis e atividades inclusivas.",
-      accessibilityFeatures: [
-        {
-          name: "Trilhas Acessíveis",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-      ],
-      details: {
-        duration: "Meio dia a dia inteiro",
-        bestTime: "Manhã (dias de semana)",
-        services: "Empréstimo de cadeiras de rodas, mapas táteis, bicicletário adaptado",
-      },
-    },
+    // {
+    //   name: "Parque Ibirapuera",
+    //   image: "img/ibira_img.jpg",
+    //   distance: "1,5 km do Hotel Central Park",
+    //   city: "sao-paulo",
+    //   category: "parque", // Adicionado
+    //   description: "Maior parque urbano de São Paulo com trilhas acessíveis e atividades inclusivas.",
+    //   accessibilityFeatures: [
+    //     {
+    //       name: "Trilhas Acessíveis",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+    //     },
+    //     {
+    //       name: "Banheiros Adaptados",
+    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
+    //     },
+    //   ],
+    //   details: {
+    //     duration: "Meio dia a dia inteiro",
+    //     bestTime: "Manhã (dias de semana)",
+    //     services: "Empréstimo de cadeiras de rodas, mapas táteis, bicicletário adaptado",
+    //   },
+    // },
   ];
 
   // Dados de rotas para cada destino
@@ -718,7 +718,7 @@ document.addEventListener("DOMContentLoaded", () => {
         distance: "450 km",
       },
       flight: {
-        time: "4h 20min (total)",
+        time: "1h 10min (total)",
         distance: "360 km",
       },
       car: {
@@ -731,20 +731,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "cataratas-iguacu": {
       city: "foz-do-iguacu",
       transport: {
-        time: "10h 15min",
-        distance: "630 km",
+        time: "12h 15min",
+        distance: "1044 km",
       },
       public: {
         time: "12h 30min",
         distance: "650 km",
       },
       flight: {
-        time: "3h 45min (total)",
-        distance: "550 km",
+        time: "1h 45min (total)",
+        distance: "850 km",
       },
       car: {
-        time: "10h 15min",
-        distance: "630 km",
+        time: "12h 15min",
+        distance: "1044 km",
       },
       busCompanies: ["• Viação Catarinense", "• Pluma", "• Kaissara", "• Banheiros adaptados"],
       metroCompanies: [
@@ -757,20 +757,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "gramado-centro": {
       city: "gramado",
       transport: {
-        time: "7h 45min",
-        distance: "470 km",
+        time: "12h 00min",
+        distance: "1.118 km",
       },
       public: {
         time: "9h 20min",
         distance: "490 km",
       },
       flight: {
-        time: "3h 30min (total)",
-        distance: "380 km",
+        time: "1h 30min (total)",
+        distance: "883 km",
       },
       car: {
-        time: "7h 45min",
-        distance: "470 km",
+        time: "12h 00min",
+        distance: "1.118 km",
       },
       busCompanies: ["• Viação Unesul", "• Eucatur", "• Planalto", "• Banheiros adaptados"],
       metroCompanies: [
@@ -1600,35 +1600,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <input type="email" id="reg-email" name="email" required>
             </div>
 
-            <div class="form-group">
-              <label for="reg-password">Senha:</label>
-              <input type="password" id="reg-password" name="password" required>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-accessibility">Suas necessidades de acessibilidade:</label>
-              <select id="reg-accessibility" name="accessibility">
-                <option value="">Selecione (opcional)</option>
-                <option value="cadeira-rodas">Cadeira de rodas</option>
-                <option value="mobilidade-reduzida">Mobilidade reduzida</option>
-                <option value="deficiencia-visual">Deficiência visual</option>
-                <option value="deficiencia-auditiva">Deficiência auditiva</option>
-                <option value="alimentacao-especial">Alimentação especial</option>
-                <option value="multiplas">Múltiplas necessidades</option>
-              </select>
-            </div>
-
-            <div class="form-group checkbox-group">
-              <label>
-                <input type="checkbox" required>
-                Aceito os <a href="#" onclick="alert('Termos de uso seriam exibidos aqui!')">termos de uso</a> e <a href="#" onclick="alert('Política de privacidade seria exibida aqui!')">política de privacidade</a>
-              </label>
-            </div>
-
-            <div class="modal-buttons">
-              <button type="submit" class="primary-button">Criar Conta</button>
-              <button type="button" class="secondary-button" onclick="alert('Funcionalidade de login seria implementada aqui!')">Já tenho conta</button>
-            </div>
+            
           </form>
         </div>
       </div>
@@ -2010,7 +1982,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="modal-buttons">
-            <button class="primary-button" onclick="alert('Redirecionando para reserva...')">Reservar Agora</button>
+           
             <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
           </div>
         </div>
@@ -2080,7 +2052,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="modal-buttons">
-            <button class="primary-button" onclick="alert('Redirecionando para mais informações...')">Mais Informações</button>
+            
             <button class="secondary-button" onclick="this.closest('.modal').remove()">Fechar</button>
           </div>
         </div>
