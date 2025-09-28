@@ -253,225 +253,132 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    // {
-    //   name: "Pousada Brisa do Mar",
-    //   image: "img/brisa_img.jpg",
-    //   rating: "4.8",
-    //   description: "Pousada à beira-mar com quartos adaptados e vista deslumbrante para o oceano.",
-    //   details: {
-    //     rooms: 2,
-    //     bathrooms: 1,
-    //     capacity: 4,
-    //   },
-    //   location: "Praia do Forte, Bahia",
-    //   city: "salvador",
-    //   category: "praia", // Adicionado
-    //   accessibilityFeatures: [
-    //     {
-    //       name: "Rampas de Acesso",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Banheiros Adaptados",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Esteiras na Areia",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 16h16"></path></svg>`,
-    //     },
-    //   ],
-    //   nearbyAttractions: ["Projeto TAMAR", "Mercado de Artesanato", "Reserva Natural"],
-    //   itinerary: [
-    //     {
-    //       day: "Dia 1",
-    //       date: "15/06/2023",
-    //       activities: [
-    //         {
-    //           time: "09:00",
-    //           title: "Check-in",
-    //           description: "Recepção com equipe especializada em acessibilidade.",
-    //         },
-    //         {
-    //           time: "12:00",
-    //           title: "Almoço no Restaurante da Pousada",
-    //           description: "Cardápio com opções para dietas especiais.",
-    //         },
-    //         {
-    //           time: "15:00",
-    //           title: "Visita ao Projeto TAMAR",
-    //           description: "Atração totalmente acessível com trilhas adaptadas.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       day: "Dia 2",
-    //       date: "16/06/2023",
-    //       activities: [
-    //         {
-    //           time: "08:00",
-    //           title: "Café da manhã",
-    //           description: "Buffet variado com atendimento personalizado.",
-    //         },
-    //         {
-    //           time: "10:00",
-    //           title: "Passeio pela praia",
-    //           description: "Cadeiras anfíbias disponíveis mediante agendamento.",
-    //         },
-    //         {
-    //           time: "14:00",
-    //           title: "Tour pelo Mercado de Artesanato",
-    //           description: "Local com acessibilidade completa e guias especializados.",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "Hotel Central Park",
-    //   image: "img/park_img.jpg",
-    //   rating: "4.7",
-    //   description: "Hotel no coração da cidade com excelente infraestrutura para pessoas com mobilidade reduzida.",
-    //   details: {
-    //     rooms: 3,
-    //     bathrooms: 2,
-    //     capacity: 6,
-    //   },
-    //   location: "São Paulo, SP",
-    //   city: "sao-paulo",
-    //   category: "parque", // Adicionado
-    //   accessibilityFeatures: [
-    //     {
-    //       name: "Elevadores",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Banheiros Adaptados",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Piso Tátil",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
-    //     },
-    //   ],
-    //   nearbyAttractions: ["Parque Ibirapuera", "Museu de Arte", "Shopping Center"],
-    //   itinerary: [
-    //     {
-    //       day: "Dia 1",
-    //       date: "20/07/2023",
-    //       activities: [
-    //         {
-    //           time: "14:00",
-    //           title: "Check-in",
-    //           description: "Recepção com equipe especializada e assistência personalizada.",
-    //         },
-    //         {
-    //           time: "16:00",
-    //           title: "Tour pelo hotel",
-    //           description: "Apresentação das instalações e recursos de acessibilidade.",
-    //         },
-    //         {
-    //           time: "19:00",
-    //           title: "Jantar no restaurante do hotel",
-    //           description: "Cardápio com opções para diversas restrições alimentares.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       day: "Dia 2",
-    //       date: "21/07/2023",
-    //       activities: [
-    //         {
-    //           time: "09:00",
-    //           title: "Visita ao Parque Ibirapuera",
-    //           description: "Transporte adaptado e guia especializado disponíveis.",
-    //         },
-    //         {
-    //           time: "13:00",
-    //           title: "Almoço em restaurante parceiro",
-    //           description: "Local totalmente acessível próximo ao parque.",
-    //         },
-    //         {
-    //           time: "15:00",
-    //           title: "Visita ao Museu de Arte",
-    //           description: "Museu com instalações acessíveis e exposições táteis.",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "Pousada Montanha Verde",
-    //   image: "img/MV_img.jpg",
-    //   rating: "4.6",
-    //   description: "Pousada em meio à natureza com chalés adaptados e trilhas acessíveis.",
-    //   details: {
-    //     rooms: 1,
-    //     bathrooms: 1,
-    //     capacity: 2,
-    //   },
-    //   location: "Campos do Jordão, SP",
-    //   city: "campos-jordao",
-    //   category: "historica", // Adicionado
-    //   accessibilityFeatures: [
-    //     {
-    //       name: "Rampas de Acesso",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Banheiros Adaptados",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Estacionamento",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
-    //     },
-    //   ],
-    //   nearbyAttractions: ["Parque Amantikir", "Teleférico", "Centro Histórico"],
-    //   itinerary: [
-    //     {
-    //       day: "Dia 1",
-    //       date: "10/08/2023",
-    //       activities: [
-    //         {
-    //           time: "12:00",
-    //           title: "Check-in",
-    //           description: "Recepção com assistência personalizada para hospedagem.",
-    //         },
-    //         {
-    //           time: "15:00",
-    //           title: "Passeio pelo jardim da pousada",
-    //           description: "Caminhos adaptados com belas paisagens naturais.",
-    //         },
-    //         {
-    //           time: "18:00",
-    //           title: "Jantar especial",
-    //           description: "Gastronomia típica da montanha com opções para dietas especiais.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       day: "Dia 2",
-    //       date: "11/08/2023",
-    //       activities: [
-    //         {
-    //           time: "09:30",
-    //           title: "Visita ao Parque Amantikir",
-    //           description: "Jardins com caminhos acessíveis e belezas naturais.",
-    //         },
-    //         {
-    //           time: "14:00",
-    //           title: "Passeio de teleférico",
-    //           description: "Cabines adaptadas para cadeiras de rodas com vista panorâmica.",
-    //         },
-    //         {
-    //           time: "17:00",
-    //           title: "Tour pelo Centro Histórico",
-    //           description: "Visita guiada com informações sobre a história local.",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
+    // NOVAS HOSPEDAGENS ADICIONADAS AQUI
+    {
+      name: "Hotel Cataratas Park",
+      image: "img/cataratas_park_hotel.jpg", // Imagem de exemplo
+      rating: "4.3", // Avaliação de exemplo
+      description: "Localizado a poucos minutos do Parque Nacional, é uma opção com ótimo custo-benefício para quem busca acessibilidade sem abrir mão do conforto.",
+      details: {
+        rooms: 50, // Exemplo
+        bathrooms: 1,
+        capacity: 3,
+      },
+      location: "Foz do Iguaçu, PR",
+      city: "foz-do-iguacu",
+      category: "parque",
+      accessibilityFeatures: [
+        { name: "Quartos com Portas Largas", icon: "" },
+        { name: "Barras de Apoio nos Banheiros", icon: "" },
+        { name: "Chuveiro com Banco Dobrável", icon: "" },
+        { name: "Elevadores e Rampas", icon: "" },
+      ],
+      nearbyAttractions: ["Cataratas do Iguaçu", "Parque das Aves"],
+      itinerary: [], // Itinerário pode ser adicionado depois
+    },
+    {
+      name: "Vivaz Cataratas Hotel & Resort",
+      image: "img/vivaz_cataratas.jpg", // Imagem de exemplo
+      rating: "4.8", // Avaliação de exemplo
+      description: "Mais sofisticado, o Vivaz oferece estrutura de resort, com áreas de lazer completas e acessíveis. Ideal para quem deseja combinar descanso com entretenimento.",
+      details: {
+        rooms: 100, // Exemplo
+        bathrooms: 1,
+        capacity: 4,
+      },
+      location: "Foz do Iguaçu, PR",
+      city: "foz-do-iguacu",
+      category: "parque",
+      accessibilityFeatures: [
+        { name: "Piscina Acessível", icon: "" },
+        { name: "Restaurante com Mesas Acessíveis", icon: "" },
+        { name: "Spa com Agendamento Preferencial", icon: "" },
+      ],
+      nearbyAttractions: ["Cataratas do Iguaçu", "Parque das Aves", "Itaipu"],
+      itinerary: [],
+    },
+    {
+      name: "Miramar by Windsor Copacabana",
+      image: "img/miramar_windsor.jpg", // Imagem de exemplo
+      rating: "4.7", // Avaliação de exemplo
+      description: "Hotel de luxo com vista para a praia de Copacabana, oferecendo sinalização em Braille e acessibilidade completa.",
+      details: {
+        rooms: 200, // Exemplo
+        bathrooms: 1,
+        capacity: 2,
+      },
+      location: "Copacabana, Rio de Janeiro - RJ",
+      city: "rio-de-janeiro",
+      category: "praia",
+      accessibilityFeatures: [
+        { name: "Sinalização em Braille", icon: "" },
+        { name: "Elevador", icon: "" },
+        { name: "Acessível para Cadeira de Rodas", icon: "" },
+      ],
+      nearbyAttractions: ["Praia de Copacabana", "Forte de Copacabana", "Pão de Açúcar"],
+      itinerary: [],
+    },
+    {
+      name: "Copacabana Mar Hotel",
+      image: "img/copacabana_mar.jpg", // Imagem de exemplo
+      rating: "4.1", // Avaliação de exemplo
+      description: "Hotel bem localizado em Copacabana, com infraestrutura para receber hóspedes com mobilidade reduzida.",
+      details: {
+        rooms: 96, // Exemplo
+        bathrooms: 1,
+        capacity: 3,
+      },
+      location: "Copacabana, Rio de Janeiro - RJ",
+      city: "rio-de-janeiro",
+      category: "praia",
+      accessibilityFeatures: [
+        { name: "Acesso para Cadeiras de Rodas", icon: "" },
+        { name: "Balcão de Recepção Acessível", icon: "" },
+        { name: "Elevador", icon: "" },
+      ],
+      nearbyAttractions: ["Praia de Copacabana", "Cristo Redentor"],
+      itinerary: [],
+    },
+    {
+      name: "Prodigy Gramado",
+      image: "img/prodigy_gramado.jpg", // Imagem de exemplo
+      rating: "4.6", // Avaliação de exemplo
+      description: "Localizado em frente à rodoviária de Gramado, com excelente acessibilidade e fácil deslocamento a pé pelo centro.",
+      details: {
+        rooms: 156, // Exemplo
+        bathrooms: 1,
+        capacity: 2,
+      },
+      location: "Gramado, RS",
+      city: "gramado",
+      category: "historica",
+      accessibilityFeatures: [
+        { name: "Entrada com Rampa", icon: "" },
+        { name: "Elevadores Amplos", icon: "" },
+        { name: "Apartamentos Adaptados", icon: "" },
+      ],
+      nearbyAttractions: ["Centro de Gramado", "Mini Mundo", "Lago Negro"],
+      itinerary: [],
+    },
+    {
+      name: "Pousada Bella Terra",
+      image: "img/bella_terra.jpg", // Imagem de exemplo
+      rating: "4.4", // Avaliação de exemplo
+      description: "Pousada charmosa próxima ao centro, com quartos adaptados no térreo. Ideal para quem viaja de carro.",
+      details: {
+        rooms: 20, // Exemplo
+        bathrooms: 1,
+        capacity: 2,
+      },
+      location: "Gramado, RS",
+      city: "gramado",
+      category: "historica",
+      accessibilityFeatures: [
+        { name: "Quartos Adaptados no Térreo", icon: "" },
+      ],
+      nearbyAttractions: ["Centro de Gramado", "Lago Negro"],
+      itinerary: [],
+    }
   ];
 
   const attractions = [
@@ -510,12 +417,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Pão de Açúcar",
-      image: "img/pao_açucar.jpg",
+      image: "img/pao_acucar.jpg",
       distance: "3 km do Hotel Copacabana Palace",
       city: "rio-de-janeiro",
       category: "praia", // Adicionado
-      description:
-        "Complexo turístico com bondinho que oferece vista panorâmica da cidade. Possui instalações adaptadas e bondinho acessível para cadeirantes.",
+      description: "Complexo turístico com bondinho que oferece vista panorâmica da cidade. Possui instalações adaptadas e bondinho acessível para cadeirantes.",
       accessibilityFeatures: [
         {
           name: "Bondinho Adaptado",
@@ -542,8 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
       distance: "2 km do Ibis Budget Foz do Iguaçu",
       city: "foz-do-iguacu",
       category: "parque", // Adicionado
-      description:
-        "Uma das maiores quedas d'água do mundo com ônibus adaptados, mirantes acessíveis, passarelas com elevadores e banheiros adaptados.",
+      description: "Uma das maiores quedas d'água do mundo com ônibus adaptados, mirantes acessíveis, passarelas com elevadores e banheiros adaptados.",
       accessibilityFeatures: [
         {
           name: "Ônibus Adaptados",
@@ -564,145 +469,89 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       details: {
         duration: "4-6 horas",
-        bestTime: "Manhã (8h às 12h) para melhor iluminação",
-        services:
-          "Ônibus adaptados, passarelas com elevadores, mirantes acessíveis, restaurante Porto Canoas com estrutura inclusiva",
+        bestTime: "Manhã (9h às 12h)",
+        services: "Transporte interno adaptado, guias especializados, aluguel de cadeiras de rodas",
       },
     },
+    // ANTIGAS ATRAÇÕES ADICIONADAS
     {
-      name: "Parque das Aves",
-      image: "img/aves_img.jpg",
-      distance: "3 km do Ibis Budget Foz do Iguaçu",
+      name: "Restaurante Porto Canoas",
+      image: "img/porto_canoas.jpg", // Imagem de exemplo
+      distance: "Dentro do Parque Nacional do Iguaçu",
       city: "foz-do-iguacu",
-      category: "parque", // Adicionado
-      description:
-        "Parque com trilhas planas e estruturadas, perfeito para cadeirantes, com mais de 1.400 aves de 150 espécies diferentes.",
+      category: "gastronomia",
+      description: "Restaurante com vista para as Cataratas, oferecendo culinária regional e acessibilidade completa.",
       accessibilityFeatures: [
-        {
-          name: "Trilhas Planas",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Estrutura Adaptada",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
-        },
-        {
-          name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
+        { name: "Rampas de Acesso", icon: "" },
+        { name: "Banheiros Adaptados", icon: "" },
+        { name: "Mesas Acessíveis", icon: "" },
       ],
-      details: {
-        duration: "2-3 horas",
-        bestTime: "Manhã (9h às 12h) quando as aves estão mais ativas",
-        services: "Trilhas estruturadas para cadeirantes, viveiros acessíveis, loja de souvenirs adaptada",
-      },
+      details: {},
     },
     {
-      name: "Catedral de Pedra",
-      image: "img/catedral_img.jpg",
+      name: "Forte de Copacabana",
+      image: "img/forte_copacabana.jpg", // Imagem de exemplo
+      distance: "1 km do Hotel Copacabana Palace",
+      city: "rio-de-janeiro",
+      category: "historica",
+      description: "Forte histórico com vista panorâmica, museu e cafés. Possui rampas de acesso e áreas planas para circulação.",
+      accessibilityFeatures: [
+        { name: "Rampas de Acesso", icon: "" },
+        { name: "Banheiros Adaptados", icon: "" },
+      ],
+      details: {},
+    },
+    {
+      name: "Bela Vista Café Colonial",
+      image: "img/bela_vista_cafe.jpg", // Imagem de exemplo
       distance: "5 km do Hotel Sesc Gramado",
       city: "gramado",
-      category: "historica", // Adicionado
-      description:
-        "Catedral gótica construída em pedra basáltica com entrada acessível, um clássico obrigatório da região.",
+      category: "gastronomia",
+      description: "Tradicional café colonial de Gramado, com ambiente acolhedor e acessibilidade para cadeirantes.",
       accessibilityFeatures: [
-        {
-          name: "Entrada Acessível",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Estacionamento Adaptado",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
-        },
+        { name: "Entrada Acessível", icon: "" },
+        { name: "Mesas Acessíveis", icon: "" },
       ],
-      details: {
-        duration: "1-2 horas",
-        bestTime: "Qualquer horário, especialmente ao entardecer",
-        services: "Entrada gratuita, estacionamento adaptado, arquitetura gótica impressionante",
-      },
+      details: {},
+    },
+    // NOVAS ATRAÇÕES ADICIONADAS AQUI
+    {
+        name: "Equilíbrio Gastronomia Funcional",
+        image: "img/equilibrio_gastronomia.jpg", // Imagem de exemplo
+        distance: "Próximo ao centro",
+        city: "foz-do-iguacu",
+        category: "gastronomia",
+        description: "Restaurante saudável, com opções sem glúten/lactose e ambiente acolhedor.",
+        accessibilityFeatures: [],
+        details: {},
     },
     {
-      name: "Centro de Gramado",
-      image: "img/cgramadp_img.jpg",
-      distance: "1 km do Hotel Sesc Gramado",
-      city: "gramado",
-      category: "historica", // Adicionado
-      description:
-        "Centro turístico com arquitetura europeia, lojas, restaurantes e cafés, todos com excelente acessibilidade.",
-      accessibilityFeatures: [
-        {
-          name: "Calçadas Adaptadas",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Lojas Acessíveis",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
-        },
-        {
-          name: "Restaurantes Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 6a4 4 0 0 1-4-4V8z"></path></svg>`,
-        },
-      ],
-      details: {
-        duration: "2-4 horas",
-        bestTime: "Tarde e noite para aproveitar a iluminação",
-        services: "Lojas com entrada acessível, restaurantes adaptados, estacionamento público adaptado",
-      },
+        name: "Lago Negro",
+        image: "img/lago_negro.jpg", // Imagem de exemplo
+        distance: "Próximo ao centro de Gramado",
+        city: "gramado",
+        category: "parque",
+        description: "Um dos pontos mais tranquilos e bonitos de Gramado. O caminho ao redor do lago é plano e bem sinalizado, com bancos de descanso ao longo da trilha. Acesso facilitado para cadeiras de rodas.",
+        accessibilityFeatures: [
+          { name: "Caminho Plano", icon: "" },
+          { name: "Bancos de Descanso", icon: "" },
+        ],
+        details: {},
     },
     {
-      name: "Projeto TAMAR",
-      image: "img/PT_img.jpg",
-      distance: "2 km da Praia do Forte",
-      city: "salvador",
-      category: "praia", // Adicionado
-      description: "Centro de conservação de tartarugas marinhas com estrutura acessível para visitantes.",
-      accessibilityFeatures: [
-        {
-          name: "Rampas",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
-        {
-          name: "Banheiros",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
-      ],
-      details: {
-        duration: "2-3 horas",
-        bestTime: "Manhã ou fim de tarde",
-        services: "Guias especializados, Cadeiras de rodas disponíveis",
-      },
-    },
-    // {
-    //   name: "Parque Ibirapuera",
-    //   image: "img/ibira_img.jpg",
-    //   distance: "1,5 km do Hotel Central Park",
-    //   city: "sao-paulo",
-    //   category: "parque", // Adicionado
-    //   description: "Maior parque urbano de São Paulo com trilhas acessíveis e atividades inclusivas.",
-    //   accessibilityFeatures: [
-    //     {
-    //       name: "Trilhas Acessíveis",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-    //     },
-    //     {
-    //       name: "Banheiros Adaptados",
-    //       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-    //     },
-    //   ],
-    //   details: {
-    //     duration: "Meio dia a dia inteiro",
-    //     bestTime: "Manhã (dias de semana)",
-    //     services: "Empréstimo de cadeiras de rodas, mapas táteis, bicicletário adaptado",
-    //   },
-    // },
+        name: "Mini Mundo",
+        image: "img/mini_mundo.jpg", // Imagem de exemplo
+        distance: "Próximo ao centro de Gramado",
+        city: "gramado",
+        category: "parque",
+        description: "Parque com réplicas em miniatura de prédios e cidades do mundo. Possui entrada com rampa, caminhos nivelados e banheiro acessível.",
+        accessibilityFeatures: [
+          { name: "Entrada com Rampa", icon: "" },
+          { name: "Caminhos Nivelados", icon: "" },
+          { name: "Banheiro Acessível", icon: "" },
+        ],
+        details: {},
+    }
   ];
 
   // Dados de rotas para cada destino
