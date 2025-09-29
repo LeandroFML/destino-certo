@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
     },
     {
-      name: "Piso Tátil",
+      name: "Braille",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
     },
     {
-      name: "Audiodescrição",
+      name: "Quartos Adaptados",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 010-7.072m12.728 0l-3.536 3.536m-3.536 3.536L7.758 8.464"></path></svg>`,
     },
     {
@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
     },
   ];
+
+  
 
   // Dados da equipe
   const teamMembers = [
@@ -64,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  
+
   const accommodations = [
     {
       name: "Hotel Copacabana Palace",
@@ -83,6 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Rampas de Acesso",
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+        },
+        {
+          name: "Estacionamento",
+          icon: ``,
         },
         {
           name: "Elevadores Adaptados",
@@ -164,6 +172,11 @@ document.addEventListener("DOMContentLoaded", () => {
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
         },
         {
+          name: "Estacionamento",
+          icon: ``,
+        },
+        
+        {
           name: "Rampas de Acesso",
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
         },
@@ -213,6 +226,10 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Tarifa Social",
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6"></path></svg>`,
+        },
+        {
+          name: "Estacionamento",
           icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6"></path></svg>`,
         },
         {
@@ -268,10 +285,12 @@ document.addEventListener("DOMContentLoaded", () => {
       city: "foz-do-iguacu",
       category: "parque",
       accessibilityFeatures: [
-        { name: "Quartos com Portas Largas", icon: "" },
+        { name: "Quartos Adaptados", icon: "" },
+        { name: "Estacionamento", icon: "" },
         { name: "Barras de Apoio nos Banheiros", icon: "" },
         { name: "Chuveiro com Banco Dobrável", icon: "" },
-        { name: "Elevadores e Rampas", icon: "" },
+        { name: "Banheiros Adaptados", icon: "" },
+        { name: "Elevadores", icon: "" },
       ],
       nearbyAttractions: ["Cataratas do Iguaçu", "Parque das Aves"],
       itinerary: [], // Itinerário pode ser adicionado depois
@@ -291,6 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "parque",
       accessibilityFeatures: [
         { name: "Piscina Acessível", icon: "" },
+        { name: "Estacionamento", icon: "" },
         { name: "Restaurante com Mesas Acessíveis", icon: "" },
         { name: "Spa com Agendamento Preferencial", icon: "" },
       ],
@@ -311,9 +331,10 @@ document.addEventListener("DOMContentLoaded", () => {
       city: "rio-de-janeiro",
       category: "praia",
       accessibilityFeatures: [
-        { name: "Sinalização em Braille", icon: "" },
-        { name: "Elevador", icon: "" },
-        { name: "Acessível para Cadeira de Rodas", icon: "" },
+        { name: "Braille", icon: "" },
+        { name: "Estacionamento", icon: "" },
+        { name: "Elevadores", icon: "" },
+        { name: "Rampas de Acesso", icon: "" },
       ],
       nearbyAttractions: ["Praia de Copacabana", "Forte de Copacabana", "Pão de Açúcar"],
       itinerary: [],
@@ -332,9 +353,10 @@ document.addEventListener("DOMContentLoaded", () => {
       city: "rio-de-janeiro",
       category: "praia",
       accessibilityFeatures: [
-        { name: "Acesso para Cadeiras de Rodas", icon: "" },
+        { name: "Rampas de Acesso", icon: "" },
+        { name: "Estacionamento", icon: "" },
         { name: "Balcão de Recepção Acessível", icon: "" },
-        { name: "Elevador", icon: "" },
+        { name: "Elevadores", icon: "" },
       ],
       nearbyAttractions: ["Praia de Copacabana", "Cristo Redentor"],
       itinerary: [],
@@ -353,8 +375,9 @@ document.addEventListener("DOMContentLoaded", () => {
       city: "gramado",
       category: "historica",
       accessibilityFeatures: [
-        { name: "Entrada com Rampa", icon: "" },
-        { name: "Elevadores Amplos", icon: "" },
+        { name: "Rampas de Acesso", icon: "" },
+        { name: "Estacionamento", icon: "" },
+        { name: "Elevadores", icon: "" },
         { name: "Apartamentos Adaptados", icon: "" },
       ],
       nearbyAttractions: ["Centro de Gramado", "Mini Mundo", "Lago Negro"],
@@ -374,7 +397,8 @@ document.addEventListener("DOMContentLoaded", () => {
       city: "gramado",
       category: "historica",
       accessibilityFeatures: [
-        { name: "Quartos Adaptados no Térreo", icon: "" },
+        { name: "Quartos Adaptados", icon: "" },
+        { name: "Estacionamento", icon: "" },
       ],
       nearbyAttractions: ["Centro de Gramado", "Lago Negro"],
       itinerary: [],
