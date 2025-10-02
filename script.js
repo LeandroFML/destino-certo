@@ -31,38 +31,56 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   
+  const moreInfoButton = document.getElementById("more-info-button");
+  const moreInfoText = document.getElementById("more-info-text");
+
+  if (moreInfoButton && moreInfoText) {
+    moreInfoButton.addEventListener("click", () => {
+      const currentDisplay = window.getComputedStyle(moreInfoText).display;
+
+      if (currentDisplay === "none") {
+        moreInfoText.style.display = "block";
+        moreInfoButton.textContent = "Mostrar Menos";
+      } else {
+        moreInfoText.style.display = "none";
+        moreInfoButton.textContent = "Saiba Mais";
+      }
+    });
+  }
+
+  
 
   // Dados da equipe
   const teamMembers = [
     {
       name: "Vitor",
       role: "Sub-Líder do Projeto",
-      image: "img/vitao_img.jpeg",
+      image: "img/vitao_img.jpg",
     },
     {
       name: "Leandro",
-      role: "Especialista em Acessibilidade",
-      image: "img/leandro_img.jpeg",
+      role: "Responsável pelo Site",
+      image: "img/leandro_img.jpg",
     },
     {
       name: "Leandro",
-      role: "Pesquisador de Campo",
-      image: "img/leandro2_img.jpeg",
+      role: "Responsável pela Documentação",
+      image: "img/leandro2_img.jpg",
     },
     {
       name: "Jonathan",
-      role: "Responsável pela Documentação",
-      image: "img/jhow_img.jpeg",
+      role: "Responsável pelo Diário de Bordo",
+      image: "img/jhow_img.jpg",
     },
     {
       name: "Arthur",
       role: "Líder do Projeto",
-      image: "img/arthur_img.PNG",
+      image: "img/arthur_img.jpg",
     },
     {
       name: "Mesquita",
-      role: "Designer Gráfico",
-      image: "img/mesquita_img.jpeg",
+      role: "Designer",
+      image: "img/mesquita_img.jpg",
     },
   ];
 
@@ -273,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // NOVAS HOSPEDAGENS ADICIONADAS AQUI
     {
       name: "Hotel Cataratas Park",
-      image: "img/cataratas_park_hotel.jpg", // Imagem de exemplo
+      image: "img/HotelCataratasPark_Img.webp", // Imagem de exemplo
       rating: "4.3", // Avaliação de exemplo
       description: "Localizado a poucos minutos do Parque Nacional, é uma opção com ótimo custo-benefício para quem busca acessibilidade sem abrir mão do conforto.",
       details: {
@@ -297,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Vivaz Cataratas Hotel & Resort",
-      image: "img/vivaz_cataratas.jpg", // Imagem de exemplo
+      image: "img/Vivaz Cataratas Hotel & Resort.webp",
       rating: "4.8", // Avaliação de exemplo
       description: "Mais sofisticado, o Vivaz oferece estrutura de resort, com áreas de lazer completas e acessíveis. Ideal para quem deseja combinar descanso com entretenimento.",
       details: {
@@ -319,7 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Miramar by Windsor Copacabana",
-      image: "img/miramar_windsor.jpg", // Imagem de exemplo
+      image: "img/Miramar by Windsor Copacabana.webp", // Imagem de exemplo
       rating: "4.7", // Avaliação de exemplo
       description: "Hotel de luxo com vista para a praia de Copacabana, oferecendo sinalização em Braille e acessibilidade completa.",
       details: {
@@ -341,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Copacabana Mar Hotel",
-      image: "img/copacabana_mar.jpg", // Imagem de exemplo
+      image: "img/Copacabana Mar Hotel.jpg", // Imagem de exemplo
       rating: "4.1", // Avaliação de exemplo
       description: "Hotel bem localizado em Copacabana, com infraestrutura para receber hóspedes com mobilidade reduzida.",
       details: {
@@ -363,7 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Prodigy Gramado",
-      image: "img/prodigy_gramado.jpg", // Imagem de exemplo
+      image: "img/Prodigy Gramado.jpg", // Imagem de exemplo
       rating: "4.6", // Avaliação de exemplo
       description: "Localizado em frente à rodoviária de Gramado, com excelente acessibilidade e fácil deslocamento a pé pelo centro.",
       details: {
@@ -385,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Pousada Bella Terra",
-      image: "img/bella_terra.jpg", // Imagem de exemplo
+      image: "img/Pousada Bella Terra.webp", // Imagem de exemplo
       rating: "4.4", // Avaliação de exemplo
       description: "Pousada charmosa próxima ao centro, com quartos adaptados no térreo. Ideal para quem viaja de carro.",
       details: {
@@ -441,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Pão de Açúcar",
-      image: "img/pao_acucar.jpg",
+      image: "img/pao_açucar.jpg",
       distance: "3 km do Hotel Copacabana Palace",
       city: "rio-de-janeiro",
       category: "praia", // Adicionado
@@ -500,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ANTIGAS ATRAÇÕES ADICIONADAS
     {
       name: "Restaurante Porto Canoas",
-      image: "img/porto_canoas.jpg", // Imagem de exemplo
+      image: "img/Restaurante Porto Canoas.webp", // Imagem de exemplo
       distance: "Dentro do Parque Nacional do Iguaçu",
       city: "foz-do-iguacu",
       category: "gastronomia",
@@ -514,7 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Forte de Copacabana",
-      image: "img/forte_copacabana.jpg", // Imagem de exemplo
+      image: "img/Forte de Copacabana.webp", // Imagem de exemplo
       distance: "1 km do Hotel Copacabana Palace",
       city: "rio-de-janeiro",
       category: "historica",
@@ -527,7 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Bela Vista Café Colonial",
-      image: "img/bela_vista_cafe.jpg", // Imagem de exemplo
+      image: "img/Bela Vista Café Colonial.webp", // Imagem de exemplo
       distance: "5 km do Hotel Sesc Gramado",
       city: "gramado",
       category: "gastronomia",
@@ -541,7 +559,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // NOVAS ATRAÇÕES ADICIONADAS AQUI
     {
         name: "Equilíbrio Gastronomia Funcional",
-        image: "img/equilibrio_gastronomia.jpg", // Imagem de exemplo
+        image: "img/Equilibrio Gastronomia Restaurante.webp", // Imagem de exemplo
         distance: "Próximo ao centro",
         city: "foz-do-iguacu",
         category: "gastronomia",
@@ -551,7 +569,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
         name: "Lago Negro",
-        image: "img/lago_negro.jpg", // Imagem de exemplo
+        image: "img/Lago Negro.jpg", // Imagem de exemplo
         distance: "Próximo ao centro de Gramado",
         city: "gramado",
         category: "parque",
@@ -564,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
         name: "Mini Mundo",
-        image: "img/mini_mundo.jpg", // Imagem de exemplo
+        image: "img/Mini Mundo.webp", // Imagem de exemplo
         distance: "Próximo ao centro de Gramado",
         city: "gramado",
         category: "parque",
@@ -1436,67 +1454,103 @@ document.addEventListener("DOMContentLoaded", () => {
     createModal(content);
   }
 
-  // Função para mostrar modal de cadastro/login
-  function showRegistrationModal() {
-    const content = `
-      <div class="modal-content">
-        <button class="close-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-        <div class="modal-body">
-          <h2>Cadastro / Login</h2>
+  /**
+ /**
+ * Mostra o modal de cadastro simplificado e prepara o formulário.
+ */
+function showRegistrationModal() {
+  const modal = document.getElementById("registration-modal");
 
-          <div class="accessibility-content">
-            <div class="accessibility-section">
-              <h4>Benefícios do Cadastro</h4>
-              <ul>
-                <li>Salvar suas preferências de acessibilidade</li>
-                <li>Histórico de pesquisas e reservas</li>
-                <li>Roteiros personalizados salvos</li>
-                <li>Notificações sobre novos destinos</li>
-                <li>Avaliações e comentários</li>
-              </ul>
-            </div>
+  // Injeta o conteúdo do modal
+  modal.innerHTML = `
+    <div class="modal-content" id="registration-modal-content">
+      <button class="close-button" id="close-reg-modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-body">
+        <h2>Cadastro Rápido</h2>
+        <p>Informe seus dados para uma experiência personalizada.</p>
+        
+        <form id="simple-registration-form" class="registration-form">
+          <div class="form-group">
+            <label for="reg-name">Nome:</label>
+            <input type="text" id="reg-name" required>
           </div>
-
-          <form id="registration-form" class="registration-form">
-            <div class="form-group">
-              <label for="reg-name">Nome Completo:</label>
-              <input type="text" id="reg-name" name="name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-email">E-mail:</label>
-              <input type="email" id="reg-email" name="email" required>
-            </div>
-
-            
-          </form>
-        </div>
+          
+          <div class="form-group">
+            <label for="reg-age">Idade:</label>
+            <input type="number" id="reg-age" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="reg-accessibility">Tipo de Acessibilidade:</label>
+            <select id="reg-accessibility" required>
+              <option value="">Selecione...</option>
+              <option value="mobilidade">Mobilidade Reduzida</option>
+              <option value="visual">Deficiência Visual</option>
+              <option value="auditiva">Deficiência Auditiva</option>
+              <option value="nenhuma">Nenhuma</option>
+              <option value="outra">Outra</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="primary-button">Registrar</button>
+        </form>
       </div>
-    `;
+    </div>
+  `;
 
-    const modal = createModal(content);
+  // Exibe o modal
+  modal.classList.add("active");
 
-    // Adicionar evento de envio do formulário
-    const form = modal.querySelector("#registration-form");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      alert(
-        `Conta criada com sucesso!\n\nBem-vindo(a) ${formData.get("name")}! Sua conta foi criada e você já pode aproveitar todos os recursos personalizados do Destino Certo.`,
-      );
-      modal.remove();
-    });
-  }
+  // Botão de fechar
+  document.getElementById("close-reg-modal").addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  // Listener do formulário
+  document.getElementById("simple-registration-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("reg-name").value;
+    const age = document.getElementById("reg-age").value;
+    const accessibility = document.getElementById("reg-accessibility").value;
+
+    console.log("Cadastrado:", { name, age, accessibility });
+
+    // Mostra saudação (se o elemento existir)
+    const greeting = document.getElementById("user-greeting");
+    if (greeting) {
+      greeting.textContent = `Olá, ${name}!`;
+      greeting.classList.remove("hidden");
+    }
+
+    // Fecha o modal
+    modal.classList.remove("active");
+    
+  });
+}
 
   // Função para download de guias
-  function downloadGuide(guideType) {
-    alert(`Baixando guia de ${guideType}...`);
+ function downloadGuide(guideType) {
+  if (guideType === "completo") {
+    // Caminho para o arquivo PDF no seu projeto
+    const fileUrl = "assets/Guia_Completo_Acessibilidade_Turismo.pdf";
+
+    // Cria um link temporário para download
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "Guia_Completo_Acessibilidade_Turismo.pdf"; // Nome do arquivo para salvar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
+    alert(`Guia de ${guideType} não disponível.`);
   }
+}
 
   // Função para download de todos os recursos
   function downloadAllResources() {
@@ -1992,6 +2046,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return true;
       });
 
+
+ 
+
       // Filtrar atrações
       state.filteredAttractions = attractions.filter((attraction) => {
         // Filtro por rota
@@ -2058,7 +2115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listeners para outros botões do footer e header
   const missionButton = document.getElementById("mission-button");
   const contactButton = document.getElementById("contact-button");
-  const teamButton = document.getElementById("team-button"); // Botão na seção "Sobre o Projeto"
+  const teamButton = document.getElementById("team-button"); // Botão na seção " o Projeto"
   const teamButtonAlt = document.getElementById("team-button-alt"); // Botão no footer
   const certificationsButton = document.getElementById("certifications-button");
   const resourcesButton = document.getElementById("resources-button");
