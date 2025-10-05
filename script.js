@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       itinerary: [
         {
           day: "Dia 1",
-          date: "15/03/2024",
+          date: "",
           activities: [
             {
               time: "09:00",
@@ -147,32 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
           ],
         },
-        {
-          day: "Dia 2",
-          date: "16/03/2024",
-          activities: [
-            {
-              time: "08:00",
-              title: "Café da manhã",
-              description: "Buffet com estações de altura acessível e assistência disponível.",
-            },
-            {
-              time: "10:00",
-              title: "Passeio pela Praia de Copacabana",
-              description: "Cadeiras anfíbias disponíveis e acesso facilitado à praia.",
-            },
-            {
-              time: "15:00",
-              title: "Visita ao Pão de Açúcar",
-              description: "Bondinho com acesso para cadeirantes e vista panorâmica da cidade.",
-            },
-          ],
-        },
+        
       ],
     },
     {
       name: "Ibis Budget Foz do Iguaçu",
-      image: "img/ibis_img.jpg",
+      image: "img/ibis_IMG2.jpg",
       rating: "4.2",
       description:
         "Hotel econômico com cerca de 10 quartos adaptados e excelente localização próxima às Cataratas do Iguaçu.",
@@ -207,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
       itinerary: [
         {
           day: "Dia 1",
-          date: "20/04/2024",
+          date: "",
           activities: [
             {
               time: "09:00",
@@ -267,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
       itinerary: [
         {
           day: "Dia 1",
-          date: "10/05/2024",
+          date: "",
           activities: [
             {
               time: "10:00",
@@ -311,7 +291,29 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Elevadores", icon: "" },
       ],
       nearbyAttractions: ["Cataratas do Iguaçu", "Parque das Aves"],
-      itinerary: [], // Itinerário pode ser adicionado depois
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "",
+          activities: [
+            {
+              time: "10:00",
+              title: "Check-in no Hotel",
+              description: "Recepção com informações sobre acessibilidade local",
+            },
+            {
+              time: "15:00",
+              title: "Visita às Cataratas do Iguaçu",
+              description: "Ônibus adaptados e mirantes acessíveis com vista espetacular das cataratas.",
+            },
+            {
+              time: "19:00",
+              title: "Jantar no Porto Canoas",
+              description: "Restaurante com estrutura inclusiva e vista para as cataratas.",
+            },
+          ],
+        },
+      ], // Itinerário pode ser adicionado depois
     },
     {
       name: "Vivaz Cataratas Hotel & Resort",
@@ -333,7 +335,29 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Spa com Agendamento Preferencial", icon: "" },
       ],
       nearbyAttractions: ["Cataratas do Iguaçu", "Parque das Aves", "Itaipu"],
-      itinerary: [],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "",
+          activities: [
+            {
+              time: "09:00",
+              title: "Check-in no Hotel",
+              description: "Recepção com informações sobre acessibilidade local.",
+            },
+            {
+              time: "14:00",
+              title: "Visita às Cataratas do Iguaçu",
+              description: "Ônibus adaptados e mirantes acessíveis com vista espetacular das cataratas.",
+            },
+            {
+              time: "18:00",
+              title: "Jantar Equilíbrio Gastronomia Funcional",
+              description: "Restaurante saudável, com opções sem glúten/lactose e ambiente acolhedor.",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "Miramar by Windsor Copacabana",
@@ -355,7 +379,30 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Rampas de Acesso", icon: "" },
       ],
       nearbyAttractions: ["Praia de Copacabana", "Forte de Copacabana", "Pão de Açúcar"],
-      itinerary: [],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "",
+          activities: [
+            {
+              time: "09:00",
+              title: "Check-in no Hotel",
+              description:
+                "Recepção com confirmação das informações sobre acessibilidade",
+            },
+            {
+              time: "14:00",
+              title: "Visita ao Forte de Copacabana",
+              description: "Forte histórico com vista panorâmica, museu e cafés. Possui rampas de acesso e áreas planas para circulação.",
+            },
+            {
+              time: "18:00",
+              title: "Jantar no Restaurante do Hotel",
+              description: "Sinalização em Braile",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "Copacabana Mar Hotel",
@@ -377,7 +424,30 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Elevadores", icon: "" },
       ],
       nearbyAttractions: ["Praia de Copacabana", "Cristo Redentor"],
-      itinerary: [],
+      itinerary: [
+        {
+          day: "Dia 1",
+          date: "",
+          activities: [
+            {
+              time: "09:00",
+              title: "Check-in no Hotel",
+              description:
+                "Recepção no balcão de recepção acessível",
+            },
+            {
+              time: "14:00",
+              title: "Visita ao Pão de Açúcar",
+              description: "Complexo turístico com bondinho que oferece vista panorâmica da cidade. Possui instalações adaptadas e bondinho acessível para cadeirantes.",
+            },
+            {
+              time: "18:00",
+              title: "Jantar no Restaurante do Hotel",
+              description: "Rampas de acesso e elevdores para melhor mobilidade",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "Prodigy Gramado",
@@ -399,7 +469,27 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Apartamentos Adaptados", icon: "" },
       ],
       nearbyAttractions: ["Centro de Gramado", "Mini Mundo", "Lago Negro"],
-      itinerary: [],
+      itinerary: [{
+          day: "Dia 1",
+          date: "",
+          activities: [
+            {
+              time: "10:00",
+              title: "Check-in no Hotel",
+              description: "Recepção com orientações sobre acessibilidade no hotel.",
+            },
+            {
+              time: "15:00",
+              title: "Visita ao Lago Negro",
+              description: "Um dos pontos mais tranquilos e bonitos de Gramado. O caminho ao redor do lago é plano e bem sinalizado, com bancos de descanso ao longo da trilha. ",
+            },
+            {
+              time: "19:00",
+              title: "Jantar no Bela Vista Café Colonial",
+              description: "Tradicional café colonial de Gramado, com ambiente acolhedor e acessibilidade para cadeirantes.",
+            },
+          ],
+        },],
     },
     {
       name: "Pousada Bella Terra",
@@ -419,7 +509,27 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Estacionamento", icon: "" },
       ],
       nearbyAttractions: ["Centro de Gramado", "Lago Negro"],
-      itinerary: [],
+      itinerary: [{
+          day: "Dia 1",
+          date: "",
+          activities: [
+            {
+              time: "10:00",
+              title: "Check-in no Hotel",
+              description: "Recepção com tarifas sociais e orientações sobre acessibilidade na cidade.",
+            },
+            {
+              time: "15:00",
+              title: "Visita ao Mini Mundo",
+              description: "Parque com réplicas em miniatura de prédios e cidades do mundo. Possui entrada com rampa, caminhos nivelados e banheiro acessível.",
+            },
+            {
+              time: "19:00",
+              title: "Jantar no Bela Vista Café Colonial",
+              description: "Restaurante com excelente acessibilidade e ambiente acolhedor.",
+            },
+          ],
+        },],
     }
   ];
 
@@ -528,7 +638,11 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Banheiros Adaptados", icon: "" },
         { name: "Mesas Acessíveis", icon: "" },
       ],
-      details: {},
+      details: {
+        duration: "1-2 horas",
+        bestTime: "Almoço (12h às 15h)",
+        services: "Buffet variado, vista panorâmica das Cataratas, acesso para pessoas com mobilidade reduzida, estacionamento no local",
+      },
     },
     {
       name: "Forte de Copacabana",
@@ -541,7 +655,11 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Rampas de Acesso", icon: "" },
         { name: "Banheiros Adaptados", icon: "" },
       ],
-      details: {},
+      details: {
+        duration: "2-3 horas",
+        bestTime: "Manhã ou final da tarde (8h às 11h / 16h às 18h)",
+        services: "Visitação guiada, café histórico, sanitários acessíveis, áreas de descanso, estacionamento próximo",
+      },
     },
     {
       name: "Bela Vista Café Colonial",
@@ -554,18 +672,30 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Entrada Acessível", icon: "" },
         { name: "Mesas Acessíveis", icon: "" },
       ],
-      details: {},
+      details: {
+         duration: "1-2 horas",
+        bestTime: "Tarde (15h às 17h)",
+        services: "Buffet colonial completo, estacionamento gratuito, ambiente climatizado, acessibilidade total",
+      },
     },
     // NOVAS ATRAÇÕES ADICIONADAS AQUI
     {
         name: "Equilíbrio Gastronomia Funcional",
         image: "img/Equilibrio Gastronomia Restaurante.webp", // Imagem de exemplo
-        distance: "Próximo ao centro",
+        distance: "Próximo ao centro de Gramado",
         city: "foz-do-iguacu",
         category: "gastronomia",
         description: "Restaurante saudável, com opções sem glúten/lactose e ambiente acolhedor.",
-        accessibilityFeatures: [],
-        details: {},
+        accessibilityFeatures: [
+          { name: "Opções sem glúten/lactose", icon: "" },
+          { name: "Ambiente acolhedor.", icon: "" },
+          
+        ],
+        details: {
+          duration: "1-1,5 hora",
+        bestTime: "Almoço (11h às 14h)",
+        services: "Cardápio saudável e funcional, opções veganas e sem glúten, ambiente moderno, delivery disponível",
+        },
     },
     {
         name: "Lago Negro",
@@ -578,7 +708,11 @@ document.addEventListener("DOMContentLoaded", () => {
           { name: "Caminho Plano", icon: "" },
           { name: "Bancos de Descanso", icon: "" },
         ],
-        details: {},
+        details: {
+          duration: "2-4 horas",
+        bestTime: "Manhã (9h às 12h)",
+        services: "Passeios de pedalinho, trilhas leves, cafés e lojas de lembranças, estacionamento e acesso adaptado",
+        },
     },
     {
         name: "Mini Mundo",
@@ -592,7 +726,11 @@ document.addEventListener("DOMContentLoaded", () => {
           { name: "Caminhos Nivelados", icon: "" },
           { name: "Banheiro Acessível", icon: "" },
         ],
-        details: {},
+        details: {
+          duration: "2-3 horas",
+        bestTime: "Manhã (9h às 12h)",
+        services: "Parque temático em miniatura, área infantil, lanchonete, estacionamento, acessibilidade para cadeirantes",
+        },
     }
   ];
 
