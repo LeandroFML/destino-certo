@@ -104,24 +104,21 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
+          icon: ``,
         },
         {
           name: "Estacionamento",
           icon: ``,
         },
         {
-          name: "Elevadores Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-        },
+          name: "Elevadores",
+icon: ``,        },
         {
           name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Piscina Acessível",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M7 21l4-9"></path><path d="M17 21l-4-9"></path><path d="M2 6h4c2 0 4 1.1 4 4"></path><path d="M22 6h-4c-2 0-4 1.1-4 4"></path></svg>`,
-        },
+icon: ``,        },
       ],
       nearbyAttractions: ["Cristo Redentor", "Pão de Açúcar", "Praia de Copacabana", "Forte de Copacabana"],
       itinerary: [
@@ -167,8 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Quartos Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Estacionamento",
           icon: ``,
@@ -176,12 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
         
         {
           name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
+icon: ``,        },
       ],
       nearbyAttractions: ["Cataratas do Iguaçu", "Parque das Aves", "Itaipu", "Marco das Três Fronteiras"],
       itinerary: [
@@ -224,24 +218,19 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Tarifa Social",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Estacionamento",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Elevadores",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Quartos Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
-        },
+icon: ``,        },
       ],
       nearbyAttractions: ["Catedral de Pedra", "Centro de Gramado", "Lago Negro", "Mini Mundo"],
       itinerary: [
@@ -545,20 +534,16 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Trem Adaptado",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><circle cx="12" cy="12" r="2"></circle></svg>`,
-        },
+icon: ``,        },
         {
           name: "Van Especial",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Plataforma Acessível",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>`,
-        },
+icon: ``,        },
       ],
       details: {
         duration: "3-4 horas (incluindo transporte)",
@@ -577,16 +562,13 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Bondinho Adaptado",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Rampas de Acesso",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
+icon: ``,        },
       ],
       details: {
         duration: "2-3 horas",
@@ -604,20 +586,16 @@ document.addEventListener("DOMContentLoaded", () => {
       accessibilityFeatures: [
         {
           name: "Ônibus Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><circle cx="7" cy="17" r="1"></circle><circle cx="17" cy="17" r="1"></circle></svg>`,
-        },
+icon: ``,        },
         {
           name: "Mirantes Acessíveis",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Elevadores",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
-        },
+icon: ``,        },
         {
           name: "Banheiros Adaptados",
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 16.3c0-3 2.5-5.3 5-5.3s5 2.3 5 5.3"></path></svg>`,
-        },
+icon: ``,        },
       ],
       details: {
         duration: "4-6 horas",
@@ -2351,7 +2329,7 @@ function showRegistrationModal() {
     clearFiltersButtonAlt.addEventListener("click", clearFilters);
   }
 
-  // Botões do planejador de rotas
+// Botões do planejador de rotas
   document.querySelectorAll(".accessibility-option").forEach(button => {
     button.addEventListener("click", function() {
       this.classList.toggle("active");
@@ -2375,21 +2353,35 @@ function showRegistrationModal() {
         alert("Por favor, selecione a cidade de origem e o destino.");
         return;
       }
+      
+      // --- ETAPA 1: INICIA A ANIMAÇÃO ---
+      calculateRouteBtn.classList.add("loading"); // Adiciona a classe para o CSS da animação
+      calculateRouteBtn.disabled = true; // Desabilita o botão
 
-      // Atualiza as informações de transporte com base no destino selecionado
-      updateTransportInfo(destination);
+      // --- ETAPA 2: SIMULA O CARREGAMENTO (1.5 segundos) ---
+      setTimeout(() => {
+        // --- ETAPA 3: EXECUTA O CÓDIGO ORIGINAL ---
+        
+        // Atualiza as informações de transporte
+        updateTransportInfo(destination);
 
-      // Exibe os resultados da rota
-      const routeResults = document.getElementById("route-results");
-      if (routeResults) routeResults.classList.remove("hidden");
+        // Exibe os resultados da rota
+        const routeResults = document.getElementById("route-results");
+        if (routeResults) routeResults.classList.remove("hidden");
 
-      // Aplica o filtro de cidade para hospedagens e atrações
-      state.searchLocation = ""; // Limpa a pesquisa principal
-      state.activeFilters = []; // Limpa os filtros de acessibilidade principais
-      state.currentCategory = null; // Limpa a categoria
-      state.routeDestination = destination; // Define o destino da rota como filtro
-      applyFilters();
-      renderAccessibilityFilters(); // Re-renderiza os filtros para refletir o estado limpo
+        // Aplica o filtro de cidade para hospedagens e atrações
+        state.searchLocation = ""; 
+        state.activeFilters = [];
+        state.currentCategory = null; 
+        state.routeDestination = destination;
+        applyFilters();
+        renderAccessibilityFilters();
+
+        // --- ETAPA 4: FINALIZA A ANIMAÇÃO ---
+        calculateRouteBtn.classList.remove("loading"); // Remove a classe da animação
+        calculateRouteBtn.disabled = false; // Reabilita o botão
+
+      }, 1500); // 1.5 segundos de espera. Mude este valor se desejar.
     });
   }
 
