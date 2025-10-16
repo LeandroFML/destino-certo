@@ -712,6 +712,37 @@ icon: ``,        },
     }
   ];
 
+  const tourGuides = [
+  {
+    name: "Carlos Oliveira",
+    city: "rio-de-janeiro",
+    cadastur: "RJ123456",
+    validity: "12/2026",
+    languages: ["Português", "Inglês"],
+    category: "Cultural e Histórico",
+    skills: "Acessibilidade urbana, História local"
+  },
+  {
+    name: "Mariana Souza",
+    city: "foz-do-iguacu",
+    cadastur: "PR987654",
+    validity: "05/2027",
+    languages: ["Português", "Espanhol"],
+    category: "Ecoturismo e Natureza",
+    skills: "Guiamento em trilhas acessíveis, Educação ambiental"
+  },
+  {
+    name: "Rafael Lima",
+    city: "gramado",
+    cadastur: "RS246810",
+    validity: "08/2026",
+    languages: ["Português", "Inglês", "Espanhol"],
+    category: "Gastronômico e Cultural",
+    skills: "Atendimento inclusivo, Turismo gastronômico"
+  }
+];
+
+
   // Dados de rotas para cada destino
   const routeData = {
     "cristo-redentor": {
@@ -819,6 +850,7 @@ icon: ``,        },
     renderAccommodations();
     renderAttractions();
     renderAccessibilityFilters(); // Atualiza os botões de filtro
+    
 
     // Scroll para a seção de resultados
     const accommodationsSection = document.getElementById("accommodations");
@@ -2382,6 +2414,15 @@ function showRegistrationModal() {
         calculateRouteBtn.disabled = false; // Reabilita o botão
 
       }, 1500); // 1.5 segundos de espera. Mude este valor se desejar.
+      
+      // Atualiza guias com base no destino escolhido
+const destinationSelect = document.getElementById("destination-select");
+const selectedDestination = destinationSelect.value;
+const selectedRoute = routeData[selectedDestination];
+if (selectedRoute) {
+  renderTourGuides(selectedRoute.city);
+}
+
     });
   }
 
@@ -2389,6 +2430,8 @@ function showRegistrationModal() {
   renderAccessibilityFilters();
   renderAccommodations();
   renderAttractions();
+  renderGuides();
+
 
   // Tornar funções globais para uso nos modais (se necessário, embora com event listeners diretos seja menos comum)
   window.showMissionModal = showMissionModal;
@@ -2408,3 +2451,198 @@ function showRegistrationModal() {
   window.updateTransportInfo = updateTransportInfo;
   window.clearFilters = clearFilters;
 });
+
+// ----- FORMULÁRIO DE CADASTRO DE GUIA -----
+document.addEventListener("DOMContentLoaded", () => {
+  const abrirBtn = document.getElementById("abrir-cadastro-btn");
+  const form = document.getElementById("form-cadastro-guia");
+  const mensagem = document.getElementById("mensagem-sucesso");
+
+  if (abrirBtn && form) {
+    abrirBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      form.classList.toggle("hidden");
+      mensagem.classList.add("hidden");
+    });
+  }
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Capturar dados (só para demonstrar)
+      const dados = {
+        nome: document.getElementById("nome").value,
+        cadastur: document.getElementById("cadastur").value,
+        validade: document.getElementById("validade").value,
+        expedicao: document.getElementById("expedicao").value,
+        documento: document.getElementById("documento").value,
+        idiomas: document.getElementById("idiomas").value,
+        categoria: document.getElementById("categoria").value,
+        habilidades: document.getElementById("habilidades").value,
+      };
+
+      console.log("📋 Dados do guia cadastrado:", dados);
+
+      // Mostrar mensagem de sucesso
+      form.reset();
+      form.classList.add("hidden");
+      mensagem.classList.remove("hidden");
+
+      // Esconder a mensagem após alguns segundos
+      setTimeout(() => mensagem.classList.add("hidden"), 4000);
+    });
+  }
+});
+
+// Função para renderizar guias turísticos
+function renderTourGuides(city = null) {
+  const container = document.getElementById("tour-guides-list");
+  if (!container) return;
+
+  container.innerHTML = ""; // Limpa guias anteriores
+
+  let filteredGuides = tourGuides;
+  if (city) {
+    filteredGuides = tourGuides.filter(guide => guide.city === city);
+  }
+
+  if (filteredGuides.length === 0) {
+    container.innerHTML = `<p class="no-results">Nenhum guia turístico disponível para este destino.</p>`;
+    return;
+  }
+
+  filteredGuides.forEach(guide => {
+    const guideCard = document.createElement("div");
+    guideCard.className = "guide-card";
+    guideCard.innerHTML = `
+      <div class="guide-info">
+        <h3>${guide.name}</h3>
+        <p><strong>Nº Cadastur:</strong> ${guide.cadastur}</p>
+        <p><strong>Validade:</strong> ${guide.validity}</p>
+        <p><strong>Idiomas:</strong> ${guide.languages.join(", ")}</p>
+        <p><strong>Categoria:</strong> ${guide.category}</p>
+        <p><strong>Habilidades:</strong> ${guide.skills}</p>
+      </div>
+    `;
+    container.appendChild(guideCard);
+  });
+}
+
+// ----- GUIAS TURÍSTICOS INDICADOS -----
+const guias = [
+  {
+    id: "cristo-redentor",
+    nome: "Marcos Silva",
+    cidade: "Rio de Janeiro",
+    cadastur: "RJ123456",
+    idiomas: "Português, Inglês, Espanhol",
+    categoria: "Guia Regional",
+    habilidades: "História, Cultura Carioca, Turismo Acessível",
+    numeros: "+55 021 98600-9048",
+    
+  },
+  {
+    id: "cataratas-iguacu",
+    nome: "Fernanda Oliveira",
+    cidade: "Foz do Iguaçu",
+    cadastur: "PR987654",
+    idiomas: "Português, Espanhol",
+    categoria: "Guia de Excursão Nacional",
+    habilidades: "Ecoturismo, Aventura Segura, Inclusão",
+    numeros: "+55 045 97798-6313",
+  },
+  {
+    id: "gramado-centro",
+    nome: "Carlos Andrade",
+    cidade: "Gramado",
+    cadastur: "RS543210",
+    idiomas: "Português, Inglês",
+    categoria: "Guia de Atrativo Turístico",
+    habilidades: "Cultura Gaúcha, Acessibilidade, Gastronomia",
+    numeros: "+55 054 99691-1112",
+  }
+];
+
+// Função para renderizar os guias
+function renderGuias(destinoId = null) {
+  const container = document.getElementById("guias-container");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const guiasFiltrados = destinoId
+    ? guias.filter(g => g.id === destinoId)
+    : guias;
+
+  guiasFiltrados.forEach(guia => {
+    const card = document.createElement("div");
+    card.className = "guia-card";
+
+    card.innerHTML = `
+     
+      <h3>${guia.nome}</h3>
+      <p><strong>Cidade:</strong> ${guia.cidade}</p>
+      <p><strong>CADASTUR:</strong> ${guia.cadastur}</p>
+      <p class="idiomas"><strong>Idiomas:</strong> ${guia.idiomas}</p>
+      <p><strong>Categoria:</strong> ${guia.categoria}</p>
+      <p><strong>Habilidades:</strong> ${guia.habilidades}</p>
+      <p><strong>Número:</strong> ${guia.numeros}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Renderiza todos os guias inicialmente
+document.addEventListener("DOMContentLoaded", () => {
+  renderGuias();
+});
+
+// ----- INTEGRAÇÃO COM A ROTA -----
+function showRoute(origin, destination) {
+  // mantemos sua função original — só adicionamos a linha abaixo:
+  if (!map) initMap();
+  if (routeLayer) {
+    map.removeLayer(routeLayer);
+    routeLayer = null;
+  }
+  poiMarkers.forEach(m => map.removeLayer(m));
+  poiMarkers = [];
+
+  // Chama renderGuias() com o destino selecionado
+  renderGuias(Object.keys(destinations).find(key => destinations[key][0] === destination[0]));
+
+  const url = `https://router.project-osrm.org/route/v1/driving/${origin[1]},${origin[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson`;
+
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      if (!data.routes || data.routes.length === 0) {
+        alert("Rota não encontrada.");
+        return;
+      }
+      const route = data.routes[0];
+      routeLayer = L.geoJSON(route.geometry, {
+        style: { color: "#3b82f6", weight: 5, opacity: 0.8 }
+      }).addTo(map);
+
+      const originMarker = L.marker(origin).addTo(map).bindPopup("Origem");
+      const destMarker = L.marker(destination).addTo(map).bindPopup("Destino");
+      poiMarkers.push(originMarker, destMarker);
+
+      map.fitBounds(routeLayer.getBounds(), { padding: [30, 30] });
+
+      const distancia = (route.distance / 1000).toFixed(1);
+      const duracao = Math.round(route.duration / 60);
+      const infoEl = document.getElementById("route-info");
+      if (infoEl) infoEl.innerHTML = `<strong>Distância:</strong> ${distancia} km | <strong>Duração:</strong> ${duracao} min`;
+
+      fetchPOIs(destination[0], destination[1], 3000);
+    })
+    .catch(err => {
+      console.error("Erro OSRM:", err);
+      alert("Erro ao calcular rota.");
+    });
+}
+

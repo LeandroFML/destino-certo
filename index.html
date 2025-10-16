@@ -15,7 +15,7 @@
                 <div class="logo-placeholder">
                     <span><img src="img/Design sem nome.png" alt=""></span>
                 </div>
-                <a href="/" class="logo-link">
+                <a href="#top" class="logo-link">
                     <div class="logo-text">DestinoCerto</div>
                     <span class="logo-badge">Roteiros Acessíveis</span>
                 </a>
@@ -540,6 +540,22 @@
         </div>
     </section>
 
+   <!-- =================================================== -->
+<!-- SEÇÃO: GUIAS TURÍSTICOS INDICADOS -->
+<!-- =================================================== -->
+<section id="guias-indicados" class="container section guias-section">
+  <div class="section-header">
+    <h2>Guias Turísticos Indicados</h2>
+    <p>Profissionais certificados pelo CADASTUR para cada destino.</p>
+  </div>
+
+  <div id="guias-container" class="guias-grid">
+    <!-- Os guias serão carregados dinamicamente via script.js -->
+  </div>
+</section>
+
+
+
     <!-- Accessibility Guide -->
     <section id="accessibility-guide" class="container section">
         <div class="guide-card">
@@ -603,6 +619,86 @@
             </div>
         </div>
     </section>
+
+    <!-- =================================================== -->
+<!-- SEÇÃO: CADASTRO DE GUIA TURÍSTICO -->
+<!-- =================================================== -->
+<section id="guia" class="container section guia-section">
+  <div class="route-planner-card">
+    <div class="route-planner-header">
+      <h2>Cadastrar Guia Turístico</h2>
+      <p>Cadastre guias cadastrados no CADASTUR para integrar à plataforma.</p>
+    </div>
+
+    <div class="route-form">
+      <!-- Botão para abrir o formulário -->
+      <button id="abrir-cadastro-btn" class="calculate-route-btn">
+        Cadastrar Guia Turístico
+      </button>
+
+      <!-- Formulário oculto -->
+      <form id="form-cadastro-guia" class="guia-form hidden">
+        <div class="route-inputs">
+          <div class="route-input-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Digite o nome completo" required>
+          </div>
+
+          <div class="route-input-group">
+            <label for="cadastur">Nº da Carteirinha CADASTUR</label>
+            <input type="text" id="cadastur" placeholder="Ex: 1234567890" required>
+          </div>
+
+          <div class="route-input-group">
+            <label for="validade">Validade</label>
+            <input type="date" id="validade" required>
+          </div>
+
+          <div class="route-input-group">
+            <label for="expedicao">Data de Expedição</label>
+            <input type="date" id="expedicao" required>
+          </div>
+
+          <div class="route-input-group">
+            <label for="documento">Documento de Identificação</label>
+            <input type="text" id="documento" placeholder="RG ou CPF" required>
+          </div>
+
+          <div class="route-input-group">
+            <label for="idiomas">Idiomas</label>
+            <input type="text" id="idiomas" placeholder="Ex: Português, Inglês, Espanhol" required>
+          </div>
+
+          <div class="route-input-group">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" required>
+              <option value="">Selecione...</option>
+              <option value="guiainterprete">Guia-Intérprete</option>
+              <option value="guiadeexcursao">Guia de Excursão Nacional</option>
+              <option value="guiadetour">Guia de Turismo Regional</option>
+              <option value="guiadeatracao">Guia de Atrativo Turístico</option>
+            </select>
+          </div>
+
+          <div class="route-input-group">
+            <label for="habilidades">Habilidades de Acessibilidade</label>
+            <textarea id="habilidades" rows="3" placeholder="Descreva as habilidades do guia" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="calculate-route-btn">
+          Enviar Cadastro
+        </button>
+      </form>
+
+      <!-- Mensagem de sucesso -->
+      <div id="mensagem-sucesso" class="success-message hidden">
+        ✅ Guia cadastrado com sucesso!
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Project Info -->
     <section id="project-info" class="project-info-section">
