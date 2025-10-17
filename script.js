@@ -1317,7 +1317,7 @@ icon: ``,        },
               <select id="itinerary-destination" name="destination" required>
                 <option value="">Selecione o destino</option>
                 <option value="rio">Rio de Janeiro</option>
-                <option value="foz">Foz do Iguaçu</option>
+                <option value="foz">Foz de Iguaçu</option>
                 <option value="gramado">Gramado</option>
                 <option value="sao-paulo">São Paulo</option>
                 <option value="outro">Outro destino</option>
@@ -1607,10 +1607,10 @@ icon: ``,        },
  * Mostra o modal de cadastro simplificado e prepara o formulário.
  */
 function showRegistrationModal() {
-  const modal = document.getElementById("registration-modal");
+  const modalEl = document.getElementById("registration-modal");
 
-  // Injeta o conteúdo do modal
-  modal.innerHTML = `
+  // Injeta o conteúdo do modal com um container para as opções geradas dinamicamente
+  modalEl.innerHTML = `
     <div class="modal-content" id="registration-modal-content">
       <button class="close-button" id="close-reg-modal">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1634,15 +1634,8 @@ function showRegistrationModal() {
           </div>
           
           <div class="form-group">
-            <label for="reg-accessibility">Tipo de Acessibilidade:</label>
-            <select id="reg-accessibility" required>
-              <option value="">Selecione...</option>
-              <option value="mobilidade">Mobilidade Reduzida</option>
-              <option value="visual">Deficiência Visual</option>
-              <option value="auditiva">Deficiência Auditiva</option>
-              <option value="nenhuma">Nenhuma</option>
-              <option value="outra">Outra</option>
-            </select>
+            <label>Tipos de Acessibilidade (marque os que se aplicam):</label>
+            <div id="reg-accessibility-options" class="accessibility-checkboxes" style="display: grid; gap:8px; margin-top:8px;"></div>
           </div>
           
           <button type="submit" class="primary-button">Registrar</button>
@@ -1652,11 +1645,27 @@ function showRegistrationModal() {
   `;
 
   // Exibe o modal
-  modal.classList.add("active");
+  modalEl.classList.add("active");
+
+  // Gerar checkboxes a partir de accessibilityFilters
+  const optionsContainer = document.getElementById("reg-accessibility-options");
+  if (optionsContainer) {
+    optionsContainer.innerHTML = accessibilityFilters
+      .map((f, idx) => {
+        const safeId = `reg-filter-${idx}`;
+        return `
+          <label style="display:flex;align-items:center;gap:8px;">
+            <input type="checkbox" id="${safeId}" name="reg-accessibility" value="${f.name}">
+            <span>${f.name}</span>
+          </label>
+        `;
+      })
+      .join("");
+  }
 
   // Botão de fechar
   document.getElementById("close-reg-modal").addEventListener("click", () => {
-    modal.classList.remove("active");
+    modalEl.classList.remove("active");
   });
 
   // Listener do formulário
@@ -1665,9 +1674,23 @@ function showRegistrationModal() {
 
     const name = document.getElementById("reg-name").value;
     const age = document.getElementById("reg-age").value;
-    const accessibility = document.getElementById("reg-accessibility").value;
 
-    console.log("Cadastrado:", { name, age, accessibility });
+    // Coletar filtros selecionados
+    const selected = Array.from(document.querySelectorAll('input[name="reg-accessibility"]:checked')).map(
+      (el) => el.value,
+    );
+
+    console.log("Cadastrado:", { name, age, accessibility: selected });
+
+    // Aplicar os filtros selecionados globalmente
+    state.activeFilters = selected.slice(); // copia
+    state.searchLocation = "";
+    state.currentCategory = null;
+    state.routeDestination = null;
+    state.showSearchResults = true;
+
+    applyFilters();
+    renderAccessibilityFilters();
 
     // Mostra saudação (se o elemento existir)
     const greeting = document.getElementById("user-greeting");
@@ -1677,8 +1700,13 @@ function showRegistrationModal() {
     }
 
     // Fecha o modal
-    modal.classList.remove("active");
-    
+    modalEl.classList.remove("active");
+
+    // Rola para a seção de hospedagens para mostrar os resultados filtrados
+    const accommodationsSection = document.getElementById("accommodations");
+    if (accommodationsSection) {
+      accommodationsSection.scrollIntoView({ behavior: "smooth" });
+    }
   });
 }
 
@@ -2416,12 +2444,12 @@ function showRegistrationModal() {
       }, 1500); // 1.5 segundos de espera. Mude este valor se desejar.
       
       // Atualiza guias com base no destino escolhido
-const destinationSelect = document.getElementById("destination-select");
-const selectedDestination = destinationSelect.value;
-const selectedRoute = routeData[selectedDestination];
-if (selectedRoute) {
-  renderTourGuides(selectedRoute.city);
-}
+      const destinationSelect = document.getElementById("destination-select");
+      const selectedDestination = destinationSelect.value;
+      const selectedRoute = routeData[selectedDestination];
+      if (selectedRoute) {
+        renderGuias(selectedDestination);
+      }
 
     });
   }
@@ -2430,7 +2458,7 @@ if (selectedRoute) {
   renderAccessibilityFilters();
   renderAccommodations();
   renderAttractions();
-  renderGuides();
+  renderGuias();
 
 
   // Tornar funções globais para uso nos modais (se necessário, embora com event listeners diretos seja menos comum)
@@ -2645,4 +2673,3 @@ function showRoute(origin, destination) {
       alert("Erro ao calcular rota.");
     });
 }
-
